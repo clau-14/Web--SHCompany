@@ -39,7 +39,19 @@
 
             <div class="carousel-item position-relative">
               <video class="w-100 h-100 object-fit-cover rounded-bottom" autoplay muted loop playsinline>
-              <source src="./image/Video4.mp4" type="video/mp4">
+              <source src="./image/video1.mp4" type="video/mp4" alt="Banner 1">
+              Tu navegador no soporta el elemento de video.
+              </video>
+                <div class="overlay"></div>
+              <div class="carousel-caption-custom">
+                <p class="lead">Internet veloz y confiable para tu hogar o empresa</p>
+              <a href="#planes" class="btn-elegante mt-2">Ver planes</a>
+          </div>
+        </div>
+
+              <div class="carousel-item position-relative">
+              <video class="w-100 h-100 object-fit-cover rounded-bottom" autoplay muted loop playsinline>
+              <source src="./image/Video4.mp4" type="video/mp4" alt="Banner 2">
               Tu navegador no soporta el elemento de video.
               </video>
                 <div class="overlay"></div>
@@ -48,35 +60,16 @@
                 <p class="lead">Explora nuestra red con calidad y velocidad garantizada</p>
           </div>
         </div>
-        
+
         <div class="carousel-item active position-relative">
-          <img src="./image/ayapel.png" class="w-100 h-100 object-fit-cover rounded-bottom" alt="Banner 1">
+          <img src="./image/ayapel.png" class="w-100 h-100 object-fit-cover rounded-bottom" alt="Banner 3">
               <div class="carousel-caption-custom">
             <h1 class="fw-bold display-5">Conéctate sin límites</h1>
             <p class="lead">Internet veloz y confiable para tu hogar o empresa</p>
             <a href="#planes" class="btn-elegante mt-2">Ver planes</a>
           </div>
           <div class="overlay"></div>
-    
         </div>
-
-        <div class="carousel-item position-relative">
-          <img src="./image/carrusel1.png" class="w-100 h-100 object-fit-cover rounded-bottom" alt="Banner 1">
-          <div class="overlay"></div>
-          <div class="carousel-caption-custom">
-            <h1 class="fw-bold display-5">Internet de Fibra Óptica de Alta Velocidad</h1>
-          </div>
-        </div>
-
-        <div class="carousel-item position-relative">
-          <img src="./image/carrusel3.png" class="w-100 h-100 object-fit-cover rounded-bottom" alt="Banner 2">
-          <div class="overlay"></div>
-          <div class="carousel-caption-custom">
-            <h1 class="fw-bold display-5">Tecnología al alcance de todos</h1>
-            <p class="lead">Cobertura en múltiples zonas urbanas y rurales</p>
-          </div>
-        </div>
-      </div>
 
       <button class="carousel-control-prev" type="button" data-bs-target="#heroCarrusel" data-bs-slide="prev">
         <span class="carousel-control-prev-icon"></span>
@@ -290,6 +283,34 @@
       </div>
     </div>
 
+      <!-- -------------------------------------------------------------------------------->
+
+  <section class="py-5 bg-light" id="contacto">
+    <div class="container">
+      <h2 class="text-center mb-4">Contáctanos</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <form>
+            <div class="mb-3">
+              <label for="nombre" class="form-label">Nombre</label>
+              <input type="text" class="form-control" id="nombre" placeholder="Tu nombre">
+            </div>
+            <div class="mb-3">
+              <label for="correo" class="form-label">Correo Electrónico</label>
+              <input type="email" class="form-control" id="correo" placeholder="nombre@ejemplo.com">
+            </div>
+            <div class="mb-3">
+              <label for="mensaje" class="form-label">Mensaje</label>
+              <textarea class="form-control" id="mensaje" rows="4" placeholder="Tu mensaje..."></textarea>
+            </div>
+            <button type="submit" class="btn-elegante">Enviar mensaje</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
     <!-- Enlaces adicionales -->
     <div class="row text-center text-md-start mt-5">
       <!-- Atención al Cliente -->
@@ -331,34 +352,6 @@
     </div>
   </div>
 </section>
-
-  <!-- -------------------------------------------------------------------------------->
-
-  <section class="py-5 bg-light" id="contacto">
-    <div class="container">
-      <h2 class="text-center mb-4">Contáctanos</h2>
-      <div class="row justify-content-center">
-        <div class="col-md-8">
-          <form>
-            <div class="mb-3">
-              <label for="nombre" class="form-label">Nombre</label>
-              <input type="text" class="form-control" id="nombre" placeholder="Tu nombre">
-            </div>
-            <div class="mb-3">
-              <label for="correo" class="form-label">Correo Electrónico</label>
-              <input type="email" class="form-control" id="correo" placeholder="nombre@ejemplo.com">
-            </div>
-            <div class="mb-3">
-              <label for="mensaje" class="form-label">Mensaje</label>
-              <textarea class="form-control" id="mensaje" rows="4" placeholder="Tu mensaje..."></textarea>
-            </div>
-            <button type="submit" class="btn-elegante">Enviar mensaje</button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
-
 
   <!-- Footer final  -->
 <footer class="footer-institucional py-4 border-top">
