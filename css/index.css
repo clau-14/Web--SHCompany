@@ -169,6 +169,47 @@ body {
   margin-top: auto;
   align-self: center;
 }
+/* -------------------- TESTIMONIOS -------------------- */
+/* Estilo general para la sección de testimonios */
+#testimonios {
+  background-color: #1c1c1e; /* fondo oscuro elegante */
+  color: #ffffff;
+}
+
+/* Color naranja personalizado */
+.text-orange {
+  color: #f77f00; /* puedes cambiar este color al de tu marca */
+}
+
+/* Tarjeta de testimonio */
+#testimonios .bg-secondary {
+  background-color: #2c2c2e !important;
+  border-left: 5px solid #f77f00; /* borde naranja decorativo */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover animación suave */
+#testimonios .bg-secondary:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+/* Ícono del título */
+#testimonios h2 i {
+  color: #f77f00;
+}
+
+/* Línea divisora */
+#testimonios hr {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Nombre del cliente */
+#testimonios h6 {
+  color: #f77f00;
+  font-weight: 600;
+  margin-top: 10px;
+}
 
 /* -------------------- FORMULARIOS -------------------- */
 form label {
