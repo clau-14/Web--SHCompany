@@ -1,55 +1,73 @@
-    body{
-      background-color:white;
-      
-    }
-  
-    .planes-card {
-      transition: transform 0.3s ease;
-    }
-    .planes-card:hover {
-      transform: scale(1.03);
-    }
+/* style.css */
 
+body {
+  font-family: 'Rubik', sans-serif;
+  background-color: #ffffff;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
 
+/* Navbar */
+.navbar {
+  background-color: rgba(15, 15, 15, 0.95) !important;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
 
-  .lead{
-    font-size: 1.2rem;
-    font-weight: 500;
-    color: #fff;
-   
-  }
- 
-  /* Fondo oscuro suave para todo el carrusel */
+.navbar-brand span {
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+/* Carrusel principal */
 #heroCarrusel {
-  position: relative;
-  background-color: #d4d7d9;
+  height: 80vh;
+  overflow: hidden;
   border-bottom-left-radius: 12px;
   border-bottom-right-radius: 12px;
-  overflow: visible;
   box-shadow: 0 0 25px rgba(15, 15, 15, 0.6);
-  height: 80vh;
 }
 
-/* Bordes redondeados en las imágenes */
-.carousel-item img {
-  border-bottom-left-radius: 12px;
-  border-bottom-right-radius: 12px;
-  object-fit: fill;
+.carousel-item {
   height: 80vh;
+  position: relative;
+  transition: opacity 1.8s ease-in-out;
 }
 
-/* Video responsivo con bordes suaves */
-.carousel-item video {
+.carousel-item img,
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 70%;
-  object-fit: fill;
-  object-position: center;
-  border-bottom-left-radius: 12px;
-  border-bottom-right-radius: 12px;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6));
+  z-index: 1;
 }
 
+.carousel-caption-custom {
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  text-align: center;
+  color: #fff;
+  padding: 0 1rem;
+}
 
-/* Flechas de navegación personalizadas */
+.carousel-caption-custom h1 {
+  font-weight: 800;
+  font-size: 2.5rem;
+}
+
+.carousel-caption-custom .lead {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   background-color: rgba(255, 255, 255, 0.6);
@@ -58,14 +76,10 @@
 }
 
 .carousel-indicators {
-  position: absolute;
-  bottom: -50px;
+  bottom: -40px;
   z-index: 10;
 }
 
-
-
-/* Indicadores personalizados (puntos abajo) */
 .carousel-indicators [data-bs-target] {
   background-color: #2cd166;
   border-radius: 50%;
@@ -73,29 +87,116 @@
   height: 12px;
   opacity: 0.7;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  
 }
+
 .carousel-indicators .active {
   background-color: #3e08c6;
-  opacity: 5;
+  opacity: 1;
 }
 
-/* Transición suave entre slides */
-.carousel-item {
-  transition: opacity 1.8s ease-in-out;
+/* Botón elegante */
+.btn-elegante {
+  background-color: #3e08c6;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
 }
 
- @media screen and (max-width: 576px) {
-  .carousel-item {
-    height: 80vh; /* Ajusta la altura en móviles */
+.btn-elegante:hover {
+  background-color: #2cd166;
+  color: #000;
+}
+
+/* Planes */
+.planes-card {
+  transition: transform 0.3s ease;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.planes-card:hover {
+  transform: scale(1.03);
+}
+
+.card-title {
+  font-weight: 600;
+  color: #3e08c6;
+}
+
+/* Formularios */
+form label {
+  font-weight: 500;
+}
+
+form input,
+form textarea {
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+/* Footer */
+footer {
+  background-color: #0f0f0f;
+  color: #fff;
+  padding: 20px 0;
+  font-size: 0.9rem;
+}
+
+/* Cobertura cards */
+.cobertura-card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  padding: 20px;
+  transition: transform 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 320px;
+}
+
+.cobertura-card:hover {
+  transform: translateY(-5px);
+}
+
+.cobertura-card h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #f25c05;
+}
+
+.cobertura-card p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 0.4rem;
+}
+
+.cobertura-card .btn-elegante {
+  margin-top: auto;
+  align-self: center;
+}
+
+
+/* Responsive */
+@media screen and (max-width: 576px) {
+  .carousel-caption-custom h1 {
+    font-size: 1.8rem;
   }
 
-  .carousel-item video {
-    width: 100vw;
-    height: 80vh;
-    object-fit: fill;
-  
+  .carousel-caption-custom p {
+    font-size: 1rem;
+  }
+
+  .btn-elegante {
+    padding: 8px 20px;
   }
 }
-
-  
