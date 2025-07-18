@@ -1,0 +1,99 @@
+/* empresa.css */
+
+body {
+     font-family: 'Rubik', sans-serif;
+     background-color: #f8f9fa;
+}
+
+.text-orange {
+     color: #f25c05;
+}
+
+.empresa-section {
+     opacity: 0;
+     transform: translateY(30px);
+     transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.empresa-section.visible {
+     opacity: 1;
+     transform: translateY(0);
+}
+
+img.img-fluid {
+     max-width: 100%;
+     height: auto;
+     border-radius: 10px;
+     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+     background-color: #111;
+}
+
+.navbar-brand span {
+     font-weight: 600;
+     font-size: 1.25rem;
+     color: #fff;
+}
+
+.nav-link.active {
+     color: #f25c05 !important;
+     font-weight: 600;
+}
+
+.empresa-section img {
+     max-width: 100%;
+     height: auto;
+     border-radius: 0 50px 50px 0;
+     /* curva lado derecho */
+     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+     transition: transform 0.3s ease;
+}
+
+/* Si la imagen está a la izquierda (visión), usamos .reverse */
+.empresa-section.reverse img {
+     border-radius: 50px 0 0 50px;
+}
+
+/* Texto más grande y legible */
+.texto-empresa {
+     font-size: 1.35rem;
+     line-height: 1.9;
+     color: #222;
+}
+
+/* Imagen más pequeña y curva a la derecha */
+/* Imagen SIN fondo */
+.img-mision {
+     max-width: 20%;
+     height: auto;
+     border-radius: 0;
+     box-shadow: none;
+}
+
+
+/* Caja blanca con curvatura hacia la imagen */
+.box-texto {
+     background-color: white;
+     padding: 2rem 2.5rem;
+     border-radius: 40px 0 0 40px;
+     /* curva derecha */
+     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.valor-card {
+     background-color: #fff;
+     border-radius: 25px;
+     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+     transition: transform 0.3s ease;
+}
+
+.valor-card:hover {
+     transform: translateY(-5px);
+}
+
+.valor-card p {
+     font-size: 1.1rem;
+     color: #333;
+}

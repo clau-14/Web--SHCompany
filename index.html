@@ -23,7 +23,7 @@
       </button>
       <div class="collapse navbar-collapse" id="menuNav">
         <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#Empesa">Empresa</a></li>
+          <li class="nav-item"><a class="nav-link" href="empresa.html">Empresa</a></li>
           <li class="nav-item"><a class="nav-link" href="#planes">Planes</a></li>
           <li class="nav-item"><a class="nav-link" href="#cobertura">Cobertura</a></li>
           <li class="nav-item"><a class="nav-link" href="#testimonios">Clientes</a></li>
@@ -292,16 +292,20 @@
         <div class="col-md-8">
           <form>
             <div class="mb-3">
-              <label for="nombre" class="form-label">Nombre</label>
-              <input type="text" class="form-control" id="nombre" placeholder="Tu nombre">
+              <label for="nombre" class="form-label">Nombre y Apellido</label>
+              <input type="text" class="form-control" id="nombre" placeholder="Tu nombre" required>
+            </div>
+              <div class="mb-3">
+              <label for="telefono" class="form-label">Numero de Telefono</label>
+              <input type="text" class="form-control" id="telefono" placeholder="3148686265" required>
             </div>
             <div class="mb-3">
               <label for="correo" class="form-label">Correo Electrónico</label>
-              <input type="email" class="form-control" id="correo" placeholder="nombre@ejemplo.com">
+              <input type="email" class="form-control" id="correo" placeholder="nombre@ejemplo.com" required>
             </div>
             <div class="mb-3">
               <label for="mensaje" class="form-label">Mensaje</label>
-              <textarea class="form-control" id="mensaje" rows="4" placeholder="Tu mensaje..."></textarea>
+              <textarea class="form-control" id="mensaje" rows="4" placeholder="Tu mensaje..." required></textarea>
             </div>
             <button type="submit" class="btn-elegante">Enviar mensaje</button>
           </form>
@@ -365,7 +369,7 @@
 
       <!-- Información institucional -->
       <div class="col-md-5 mb-3 mb-md-0">
-        <small class="text-muted d-block">
+        <small class="text-white d-block">
           Comisión de Regulación de Comunicaciones<br>
           Dirección: Calle 59A bis No. 5-53 Edificio Link Siete Piso 9<br>
           Bogotá D.C.<br>
@@ -375,14 +379,10 @@
 
       <!-- Información de contacto -->
       <div class="col-md-4">
-        <small class="text-muted d-block">
-          Cra. 8a entre calles 12A y 12B Bogotá<br>
-          Tel: +57 (1) 344 34 60<br>
-          Línea Gratuita: 01-800-0914014<br>
-          Línea Anticorrupción: 01-800-0912667<br>
-          Correo: <a href="mailto:minticresponde@mintic.gov.co" class="text-decoration-none text-danger">minticresponde@mintic.gov.co</a><br>
-          <a href="https://www.mintic.gov.co/" target="_blank" class="text-decoration-none">www.mintic.gov.co</a>
-        </small>
+        <h2 class="text-center text-orange fw-bold mb-4">Contacto</h2>
+        <strong>Dirección:</strong> Cll 25ª # 7ª 12 Barrio la Inmaculada, Ayapel, Córdoba<br>
+      <strong>Celular:</strong> 321 603 1932 - 320 322 0865<br>
+      <strong>Correo:</strong> <a href="mailto:internetjhs@gmail.com">internetjhs@gmail.com</a>
       </div>
     </div>
 
@@ -394,8 +394,9 @@
       <div class="col-md-4 mb-3">
         <img src="./image/mintic-logo.png" alt="MinTIC" class="img-fluid" style="max-height: 60px;">
       </div>
+  
       <div class="col-md-4 mb-3">
-        <p class="text-muted small mt-2">
+        <p class="text-white small mt-2">
           Copyright © 2025 SH COMPANY SAS. Todos los derechos reservados.<br>
         </p>
       </div>

@@ -1,0 +1,138 @@
+<!-- empresa.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Empresa | SH COMPANY SAS</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/index.css">
+  <link rel="stylesheet" href="./css/empresa.css">
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top p-3">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <img src="./image/logo.png" alt="SH Company Logo" height="60">
+        <span>SH COMPANY</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="menuNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="empresa.html">Empresa</a></li>
+          <li class="nav-item"><a class="nav-link" href="planes.html">Planes</a></li>
+          <li class="nav-item"><a class="nav-link" href="cobertura.html">Cobertura</a></li>
+          <li class="nav-item"><a class="nav-link" href="clientes.html">Clientes</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Header -->
+  <header class="bg-dark text-white text-center py-5">
+    <h1 class="display-4 fw-bold">SH COMPANY S.A.S</h1>
+    <p class="lead">Soluciones tecnológicas en telecomunicaciones</p>
+  </header>
+
+  <!-- Misión + Imagen -->
+<section class="empresa-section container py-5 animate-section">
+  <div class="row align-items-center">
+    <div class="col-lg-6">
+      <div class="box-texto">
+        <h1 class="fw-bold text-orange display-5 mb-4">Misión</h1>
+        <p class="texto-empresa">
+          Ser un grupo líder en servicios de telecomunicaciones para hogares, microempresas y empresas colombianas,
+          ofreciendo soluciones innovadoras, cercanas y a precios flexibles.
+        </p>
+      </div>
+    </div>
+    <div class="col-lg-6 text-center">
+      <img src="./image/mision.png" alt="Misión SH COMPANY" class="img-mision">
+    </div>
+  </div>
+</section>
+
+  <!-- Imagen + Visión -->
+  <section class="empresa-section container py-5 d-flex flex-column flex-md-row align-items-center gap-4 flex-md-row-reverse animate-section">
+    <div class="col-md-6">
+      <h2 class="text-orange fw-bold">Visión</h2>
+      <p>
+        Para 2030, consolidarnos como una empresa reconocida a nivel departamental, destacando por innovación, calidad
+        de servicio y contribución al desarrollo del país.
+      </p>
+    </div>
+    <div class="col-md-6 text-center">
+      <img src="./image/vision.jpg" alt="Visión" class="img-fluid rounded shadow-sm">
+    </div>
+  </section>
+
+  <!-- Valores corporativos -->
+<section class="bg-light py-5 animate-section">
+  <div class="container">
+    <h2 class="text-center text-orange fw-bold mb-5">Valores Corporativos</h2>
+    <div class="row g-4 justify-content-center">
+      <div class="col-md-4">
+        <div class="valor-card text-center p-4">
+          <h5 class="fw-bold text-orange mb-2">Escuchar</h5>
+          <p>Escuchamos activamente para proponer soluciones adecuadas.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="valor-card text-center p-4">
+          <h5 class="fw-bold text-orange mb-2">Velocidad</h5>
+          <p>Tomamos decisiones rápidas y actuamos con dinamismo.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="valor-card text-center p-4">
+          <h5 class="fw-bold text-orange mb-2">Rigor</h5>
+          <p>Información clara y objetiva con coherencia.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="valor-card text-center p-4">
+          <h5 class="fw-bold text-orange mb-2">Transparencia</h5>
+          <p>Comunicación abierta, accesible y honesta.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="valor-card text-center p-4">
+          <h5 class="fw-bold text-orange mb-2">Innovación</h5>
+          <p>Buscamos mejoras constantes y soluciones novedosas.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="valor-card text-center p-4">
+          <h5 class="fw-bold text-orange mb-2">Servicio</h5>
+          <p>Resolvemos necesidades con eficiencia y actitud resolutiva.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Organigrama -->
+  <section class="container py-5 animate-section">
+    <h2 class="text-center text-orange fw-bold mb-4">Organigrama</h2>
+    <p class="text-center">Gerencia, Secretaría General, Departamento Comercial, Centro de Atención al Usuario, Departamento de Operaciones, Control de Calidad, Comunicación e Imagen, Asesoría Jurídica y Contable.</p>
+    <!-- Opcional: agregar imagen del organigrama -->
+    <!-- <div class="text-center mt-3"><img src="./image/organigrama.jpg" alt="Organigrama" class="img-fluid"></div> -->
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3">
+    © 2025 SH COMPANY S.A.S - Todos los derechos reservados
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./js/empresa.js"></script>
+</body>
+</html>
