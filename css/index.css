@@ -387,4 +387,10 @@ form textarea {
   .carousel-caption-custom .lead {
     font-size: 1rem;
   }
+
+  .carousel-item img {
+    object-position: center top;
+    /* o cambia a center center si se ve mejor */
+  }
+}
 }
