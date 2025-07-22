@@ -9,6 +9,7 @@ body {
      color: #f25c05;
 }
 
+/* === ANIMACIONES DE SECCIONES === */
 .empresa-section {
      opacity: 0;
      transform: translateY(30px);
@@ -20,13 +21,40 @@ body {
      transform: translateY(0);
 }
 
-img.img-fluid {
-     max-width: 100%;
-     height: auto;
-     border-radius: 10px;
-     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+/* Animaciones específicas para misión y visión */
+.empresa-section.mision-section {
+     opacity: 0;
+     transform: translateX(-100px);
+     transition: opacity 1s ease, transform 1s ease;
 }
 
+.empresa-section.mision-section.visible {
+     opacity: 1;
+     transform: translateX(0);
+}
+
+.empresa-section.mision-section .row {
+     justify-content: flex-start;
+     margin-left: calc(-50vw + 50%);
+}
+
+.empresa-section.vision-section {
+     opacity: 0;
+     transform: translateX(100px);
+     transition: opacity 1s ease, transform 1s ease;
+}
+
+.empresa-section.vision-section.visible {
+     opacity: 1;
+     transform: translateX(0);
+}
+
+.empresa-section.vision-section .row {
+     justify-content: flex-end;
+     margin-right: calc(-50vw + 50%);
+}
+
+/* === ESTILOS GENERALES === */
 footer {
      background-color: #111;
 }
@@ -42,58 +70,437 @@ footer {
      font-weight: 600;
 }
 
-.empresa-section img {
-     max-width: 100%;
-     height: auto;
-     border-radius: 0 50px 50px 0;
-     /* curva lado derecho */
-     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-     transition: transform 0.3s ease;
-}
-
-/* Si la imagen está a la izquierda (visión), usamos .reverse */
-.empresa-section.reverse img {
-     border-radius: 50px 0 0 50px;
-}
-
-/* Texto más grande y legible */
+/* === MISIÓN Y VISIÓN === */
 .texto-empresa {
      font-size: 1.35rem;
      line-height: 1.9;
      color: #222;
+     text-align: justify;
 }
 
-/* Imagen más pequeña y curva a la derecha */
-/* Imagen SIN fondo */
-.img-mision {
-     max-width: 20%;
+.img-mision,
+.img-vision {
+     max-width: 300px !important;
+     width: auto !important;
      height: auto;
-     border-radius: 0;
+     border: none;
+     border-radius: 15px;
      box-shadow: none;
+     background: white;
+     padding: 10px;
+     margin: 0;
+     mix-blend-mode: multiply;
 }
 
+.imagen-container {
+     background: white;
+     border-radius: 15px;
+     padding: 5px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
 
-/* Caja blanca con curvatura hacia la imagen */
 .box-texto {
      background-color: white;
      padding: 2rem 2.5rem;
-     border-radius: 40px 0 0 40px;
-     /* curva derecha */
-     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+     border-radius: 40px;
+     box-shadow: none;
+     display: flex;
+     align-items: center;
+     gap: 2rem;
+}
+
+.texto-contenido {
+     flex: 1;
+}
+
+.texto-contenido .display-5 {
+     text-align: center;
+}
+
+/* === VALORES CORPORATIVOS === */
+.valores-section {
+     background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+     position: relative;
+}
+
+.valores-section::before {
+     content: '';
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="%23f25c05" opacity="0.1"/><circle cx="80" cy="40" r="2" fill="%23f25c05" opacity="0.1"/><circle cx="40" cy="80" r="2" fill="%23f25c05" opacity="0.1"/></svg>');
+     pointer-events: none;
 }
 
 .valor-card {
      background-color: #fff;
      border-radius: 25px;
      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-     transition: transform 0.3s ease;
+     transition: all 0.4s ease;
+     position: relative;
+     overflow: hidden;
+}
+
+.valor-card::before {
+     content: '';
+     position: absolute;
+     top: 0;
+     left: -100%;
+     width: 100%;
+     height: 100%;
+     background: linear-gradient(90deg, transparent, rgba(242, 92, 5, 0.1), transparent);
+     transition: left 0.6s ease;
+}
+
+.valor-card:hover::before {
+     left: 100%;
 }
 
 .valor-card:hover {
-     transform: translateY(-5px);
+     transform: translateY(-15px) scale(1.05);
+     box-shadow: 0 20px 40px rgba(242, 92, 5, 0.2);
+     background: linear-gradient(135deg, #ffffff 0%, #fff8f5 100%);
+}
+
+.valor-card h5 {
+     transition: all 0.3s ease;
+}
+
+.valor-card:hover h5 {
+     transform: scale(1.1);
+     text-shadow: 0 2px 8px rgba(242, 92, 5, 0.3);
+}
+
+.valor-icon {
+     font-size: 3rem;
+     color: #f25c05;
+     margin-bottom: 1rem;
+     transition: all 0.4s ease;
+}
+
+.valor-card:hover .valor-icon {
+     transform: scale(1.2) rotate(10deg);
+     text-shadow: 0 4px 15px rgba(242, 92, 5, 0.4);
 }
 
 .valor-card p {
      font-size: 1.1rem;
      color: #333;
+}
+
+/* === INFORMACIÓN CORPORATIVA === */
+.info-corporativa-section {
+     background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0a0a0a 100%);
+     position: relative;
+     padding: 5rem 0;
+     overflow: hidden;
+}
+
+.info-corporativa-section::before {
+     content: '';
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background:
+          radial-gradient(circle at 20% 30%, rgba(242, 92, 5, 0.1) 0%, transparent 50%),
+          radial-gradient(circle at 80% 70%, rgba(242, 92, 5, 0.05) 0%, transparent 50%),
+          linear-gradient(45deg, transparent 40%, rgba(242, 92, 5, 0.02) 50%, transparent 60%);
+     animation: backgroundPulse 8s ease-in-out infinite;
+}
+
+@keyframes backgroundPulse {
+
+     0%,
+     100% {
+          opacity: 0.3;
+     }
+
+     50% {
+          opacity: 0.7;
+     }
+}
+
+.info-corporativa-section .container {
+     position: relative;
+     z-index: 2;
+}
+
+.info-box {
+     background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+     backdrop-filter: blur(10px);
+     border: 1px solid rgba(242, 92, 5, 0.3);
+     border-radius: 25px;
+     padding: 3rem;
+     height: 100%;
+     min-height: 400px;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     position: relative;
+     overflow: hidden;
+     transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+     opacity: 0;
+     transform: translateY(50px) scale(0.95);
+     box-shadow:
+          0 20px 40px rgba(0, 0, 0, 0.3),
+          inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.info-box.visible {
+     opacity: 1;
+     transform: translateY(0) scale(1);
+}
+
+.info-box::before {
+     content: '';
+     position: absolute;
+     top: 0;
+     left: -100%;
+     width: 100%;
+     height: 100%;
+     background: linear-gradient(90deg,
+               transparent,
+               rgba(242, 92, 5, 0.1),
+               transparent);
+     transition: left 0.8s ease;
+}
+
+.info-box::after {
+     content: '';
+     position: absolute;
+     top: 0;
+     left: 0;
+     right: 0;
+     height: 3px;
+     background: linear-gradient(90deg,
+               #f25c05 0%,
+               #ff6b1a 25%,
+               #f25c05 50%,
+               #e04503 75%,
+               #f25c05 100%);
+     background-size: 200% 100%;
+     animation: gradientShift 3s ease-in-out infinite;
+}
+
+@keyframes gradientShift {
+
+     0%,
+     100% {
+          background-position: 0% 50%;
+     }
+
+     50% {
+          background-position: 100% 50%;
+     }
+}
+
+.info-box:hover {
+     transform: translateY(-20px) scale(1.02);
+     border-color: rgba(242, 92, 5, 0.8);
+     box-shadow:
+          0 30px 60px rgba(242, 92, 5, 0.3),
+          0 0 40px rgba(242, 92, 5, 0.2),
+          inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.info-box:hover::before {
+     left: 100%;
+}
+
+.info-box h3 {
+     color: #f25c05;
+     font-weight: 800;
+     font-size: 1.6rem;
+     margin-bottom: 2rem;
+     text-align: center;
+     position: relative;
+     text-transform: uppercase;
+     letter-spacing: 2px;
+     text-shadow: 0 0 20px rgba(242, 92, 5, 0.5);
+     animation: titleGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes titleGlow {
+     from {
+          text-shadow: 0 0 20px rgba(242, 92, 5, 0.5);
+     }
+
+     to {
+          text-shadow: 0 0 30px rgba(242, 92, 5, 0.8), 0 0 40px rgba(242, 92, 5, 0.3);
+     }
+}
+
+.info-box h3::after {
+     content: '';
+     position: absolute;
+     bottom: -15px;
+     left: 50%;
+     transform: translateX(-50%);
+     width: 80px;
+     height: 2px;
+     background: linear-gradient(90deg, transparent, #f25c05, transparent);
+     animation: lineExpand 2s ease-in-out infinite;
+}
+
+@keyframes lineExpand {
+
+     0%,
+     100% {
+          width: 40px;
+          opacity: 0.5;
+     }
+
+     50% {
+          width: 120px;
+          opacity: 1;
+     }
+}
+
+.info-box p {
+     font-size: 1.1rem;
+     line-height: 1.8;
+     color: rgba(255, 255, 255, 0.9);
+     text-align: justify;
+     margin: 0;
+     flex-grow: 1;
+     display: flex;
+     align-items: center;
+     position: relative;
+     z-index: 1;
+}
+
+.info-box:hover h3 {
+     transform: scale(1.05);
+     color: #ff6b1a;
+}
+
+/* Efectos de partículas futuristas */
+.info-box:nth-child(1)::before {
+     animation: particle1 4s linear infinite;
+}
+
+.info-box:nth-child(2)::before {
+     animation: particle2 4s linear infinite reverse;
+}
+
+@keyframes particle1 {
+     0% {
+          left: -100%;
+     }
+
+     100% {
+          left: 100%;
+     }
+}
+
+@keyframes particle2 {
+     0% {
+          left: 100%;
+     }
+
+     100% {
+          left: -100%;
+     }
+}
+
+/* Efecto de entrada escalonada */
+.info-box:first-child {
+     animation-delay: 0.2s;
+}
+
+.info-box:last-child {
+     animation-delay: 0.4s;
+}
+
+/* === RESPONSIVE DESIGN === */
+@media (max-width: 768px) {
+     .box-texto {
+          flex-direction: column;
+          text-align: center;
+          border-radius: 25px;
+          padding: 1.5rem;
+          gap: 1rem;
+     }
+
+     .img-mision,
+     .img-vision {
+          max-width: 120px !important;
+     }
+
+     .imagen-container {
+          order: -1;
+     }
+
+     .texto-empresa {
+          font-size: 1.1rem;
+          line-height: 1.6;
+          text-align: justify;
+     }
+
+     .empresa-section.mision-section .row,
+     .empresa-section.vision-section .row {
+          justify-content: center !important;
+          margin-left: 0 !important;
+          margin-right: 0 !important;
+     }
+
+     /* Info corporativa responsive */
+     .info-corporativa-section {
+          padding: 3rem 0;
+     }
+
+     .info-box {
+          padding: 2.5rem;
+          border-radius: 20px;
+          margin-bottom: 2rem;
+          min-height: 350px;
+     }
+
+     .info-box h3 {
+          font-size: 1.4rem;
+          letter-spacing: 1px;
+     }
+
+     .info-box p {
+          font-size: 1rem;
+          line-height: 1.6;
+     }
+}
+
+@media (max-width: 576px) {
+
+     .img-mision,
+     .img-vision {
+          max-width: 100px !important;
+          padding: 5px;
+     }
+
+     .box-texto {
+          padding: 1rem;
+     }
+
+     .display-5 {
+          font-size: 2rem;
+     }
+
+     .info-box {
+          padding: 2rem;
+          border-radius: 15px;
+          min-height: 320px;
+     }
+
+     .info-box h3 {
+          font-size: 1.2rem;
+          letter-spacing: 1px;
+     }
+
+     .info-box p {
+          font-size: 0.95rem;
+     }
 }

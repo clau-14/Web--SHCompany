@@ -1,4 +1,3 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="es">
 
@@ -6,7 +5,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SH COMPANY SAS</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/index.css">
 </head>
@@ -32,23 +32,19 @@
       </div>
     </div>
   </nav>
-
   <section class="hero-section">
-    <div id="heroCarrusel" class="carousel slide" data-bs-ride="carousel">
+  <div id="heroCarrusel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
       <div class="carousel-inner">
 
-            <div class="carousel-item position-relative">
+            <div class="carousel-item active position-relative">
               <video class="w-100 h-100 object-fit-cover rounded-bottom" autoplay muted loop playsinline>
               <source src="./image/video1.mp4" type="video/mp4" alt="Banner 1">
               Tu navegador no soporta el elemento de video.
               </video>
                 <div class="overlay"></div>
               <div class="carousel-caption-custom">
-                <p class="lead">Internet veloz y confiable para tu hogar o empresa</p>
-              <a href="#planes" class="btn-elegante mt-2">Ver planes</a>
           </div>
         </div>
-
               <div class="carousel-item position-relative">
               <video class="w-100 h-100 object-fit-cover rounded-bottom" autoplay muted loop playsinline>
               <source src="./image/Video4.mp4" type="video/mp4" alt="Banner 2">
@@ -61,15 +57,18 @@
           </div>
         </div>
 
-        <div class="carousel-item active position-relative">
+        <div class="carousel-item position-relative">
           <img src="./image/ayapel.png" class="w-100 h-100 object-fit-cover rounded-bottom" alt="Banner 3">
-              <div class="carousel-caption-custom">
+          <div class="overlay"></div>
+          <div class="carousel-caption-custom">
             <h1 class="fw-bold display-5">Conéctate sin límites</h1>
             <p class="lead">Internet veloz y confiable para tu hogar o empresa</p>
+            <a href="#planes" class="btn-elegante mt-2">Ver planes</a>
           </div>
-          <div class="overlay"></div>
         </div>
+      </div>
 
+      <!-- botones carousel-inner -->
       <button class="carousel-control-prev" type="button" data-bs-target="#heroCarrusel" data-bs-slide="prev">
         <span class="carousel-control-prev-icon"></span>
       </button>
@@ -77,12 +76,14 @@
         <span class="carousel-control-next-icon"></span>
       </button>
 
+      <!-- Indicadores -->
       <div class="carousel-indicators">
         <button type="button" data-bs-target="#heroCarrusel" data-bs-slide-to="0" class="active"></button>
         <button type="button" data-bs-target="#heroCarrusel" data-bs-slide-to="1"></button>
         <button type="button" data-bs-target="#heroCarrusel" data-bs-slide-to="2"></button>
       </div>
     </div>
+
   </section>
 
   <section class="py-5" id="planes">
@@ -281,10 +282,10 @@
         </div>
       </div>
     </div>
+  </div>
+</section>
 
-      <!-- -------------------------------------------------------------------------------->
-
-  <section class="py-5 bg-light" id="contacto">
+<section class="py-5 bg-light" id="contacto">
     <div class="container">
       <h2 class="text-center mb-4">Contáctanos</h2>
       <div class="row justify-content-center">
@@ -313,20 +314,22 @@
     </div>
   </section>
 
-  
-    <!-- Enlaces adicionales -->
-    <div class="row text-center text-md-start mt-5">
+<!-- Enlaces adicionales -->
+<section class="py-5 bg-dark text-white" id="enlaces-adicionales">
+  <div class="container">
+    <h2 class="text-center text-orange mb-5 fw-bold">Información Adicional</h2>
+    <div class="row text-center text-md-start">
       <!-- Atención al Cliente -->
       <div class="col-md-4 mb-4">
         <h5 class="seccion-titulo text-orange mb-3">Atención al Cliente</h5>
         <ul class="footer-links list-unstyled">
-          <li><a href="#">Control Parental</a></li>
-          <li><a href="#">Indicadores de calidad</a></li>
-          <li><a href="#">Atención al Usuario</a></li>
-          <li><a href="#">Prevención de fraudes</a></li>
-          <li><a href="#">Limitación de velocidad</a></li>
-          <li><a href="#">Gestión de tráfico</a></li>
-          <li><a href="#">Cancelación de servicios</a></li>
+          <li><a href="#" class="text-light text-decoration-none">Control Parental</a></li>
+          <li><a href="#" class="text-light text-decoration-none">Indicadores de calidad</a></li>
+          <li><a href="#" class="text-light text-decoration-none">Atención al Usuario</a></li>
+          <li><a href="#" class="text-light text-decoration-none">Prevención de fraudes</a></li>
+          <li><a href="#" class="text-light text-decoration-none">Limitación de velocidad</a></li>
+          <li><a href="#" class="text-light text-decoration-none">Gestión de tráfico</a></li>
+          <li><a href="#" class="text-light text-decoration-none">Cancelación de servicios</a></li>
         </ul>
       </div>
 
@@ -334,8 +337,8 @@
       <div class="col-md-4 mb-4">
         <h5 class="seccion-titulo text-orange mb-3">Sobre Nosotros</h5>
         <ul class="footer-links list-unstyled">
-          <li><a href="#">Topología de la red</a></li>
-          <li><a href="#">Acceso a internet</a></li>
+          <li><a href="#" class="text-light text-decoration-none">Topología de la red</a></li>
+          <li><a href="#" class="text-light text-decoration-none">Acceso a internet</a></li>
         </ul>
       </div>
 
@@ -343,13 +346,13 @@
       <div class="col-md-4 mb-4">
         <h5 class="seccion-titulo text-orange mb-3">Regulación y Leyes</h5>
         <ul class="footer-links list-unstyled">
-          <li><a href="#">Términos y condiciones</a></li>
-          <li><a href="#">Política de equipos</a></li>
-          <li><a href="#">Compensación automática</a></li>
-          <li><a href="#">Seguridad en la red</a></li>
-          <li><a href="#">Contrato de servicios</a></li>
-          <li><a href="#">Resolución 5111 de 2017</a></li>
-          <li><a href="#">Denuncias de pornografía infantil</a></li>
+          <li><a href="#" class="text-light text-decoration-none">Términos y condiciones</a></li>
+          <li><a href="#" class="text-light text-decoration-none">Política de equipos</a></li>
+          <li><a href="#" class="text-light text-decoration-none">Compensación automática</a></li>
+          <li><a href="#" class="text-light text-decoration-none">Seguridad en la red</a></li>
+          <li><a href="#" class="text-light text-decoration-none">Contrato de servicios</a></li>
+          <li><a href="#" class="text-light text-decoration-none">Resolución 5111 de 2017</a></li>
+          <li><a href="#" class="text-light text-decoration-none">Denuncias de pornografía infantil</a></li>
         </ul>
       </div>
     </div>
@@ -403,7 +406,7 @@
   </div>
 </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>

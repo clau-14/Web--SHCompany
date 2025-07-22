@@ -7,6 +7,7 @@
   <title>Empresa | SH COMPANY SAS</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="./css/index.css">
   <link rel="stylesheet" href="./css/empresa.css">
 </head>
@@ -41,74 +42,134 @@
   </header>
 
   <!-- Misión + Imagen -->
-<section class="empresa-section container py-5 animate-section">
-  <div class="row align-items-center">
-    <div class="col-lg-6">
+<section class="empresa-section mision-section container py-5 animate-section">
+  <div class="row justify-content-center">
+    <div class="col-lg-10">
       <div class="box-texto">
-        <h1 class="fw-bold text-orange display-5 mb-4">Misión</h1>
-        <p class="texto-empresa">
-          Ser un grupo líder en servicios de telecomunicaciones para hogares, microempresas y empresas colombianas,
-          ofreciendo soluciones innovadoras, cercanas y a precios flexibles.
-        </p>
+        <div class="texto-contenido">
+          <h1 class="fw-bold text-orange display-5 mb-4">Misión</h1>
+          <p class="texto-empresa">
+            Ser un grupo líder en servicios de telecomunicaciones para hogares, microempresas y empresas colombianas,
+            ofreciendo soluciones innovadoras, cercanas y a precios flexibles.
+          </p>
+        </div>
+        <div class="imagen-container">
+          <img src="./image/mision.png" alt="Misión SH COMPANY" class="img-mision">
+        </div>
       </div>
-    </div>
-    <div class="col-lg-6 text-center">
-      <img src="./image/mision.png" alt="Misión SH COMPANY" class="img-mision">
     </div>
   </div>
 </section>
 
-  <!-- Imagen + Visión -->
-  <section class="empresa-section container py-5 d-flex flex-column flex-md-row align-items-center gap-4 flex-md-row-reverse animate-section">
-    <div class="col-md-6">
-      <h2 class="text-orange fw-bold">Visión</h2>
-      <p>
-        Para 2030, consolidarnos como una empresa reconocida a nivel departamental, destacando por innovación, calidad
-        de servicio y contribución al desarrollo del país.
-      </p>
+  <!-- Visión + Imagen -->
+<section class="empresa-section vision-section container py-5 animate-section">
+  <div class="row justify-content-center">
+    <div class="col-lg-10">
+      <div class="box-texto">
+        <div class="imagen-container">
+          <img src="./image/vision.png" alt="Visión SH COMPANY" class="img-vision">
+        </div>
+        <div class="texto-contenido">
+          <h1 class="fw-bold text-orange display-5 mb-4">Visión</h1>
+          <p class="texto-empresa">
+            Para 2030, consolidarnos como una empresa reconocida a nivel departamental, destacando por innovación, calidad
+            de servicio y contribución al desarrollo del país.
+          </p>
+        </div>
+      </div>
     </div>
-    <div class="col-md-6 text-center">
-      <img src="./image/vision.jpg" alt="Visión" class="img-fluid rounded shadow-sm">
+  </div>
+</section>
+
+  <!-- Información Corporativa -->
+  <section class="info-corporativa-section animate-section">
+    <div class="container">
+      <div class="row g-4 justify-content-center">
+        <div class="col-lg-6">
+          <div class="info-box">
+            <h3>VALORES CORPORATIVOS</h3>
+            <p>
+              Nuestros valores representan nuestra identidad como colectivo. Somos diferentes 
+              porque las personas que trabajamos en SH COMPANY S.A.S. hacemos de esta empresa 
+              un proyecto único y diferenciador; Somos rápidos, sabemos escuchar, buscamos la 
+              innovación, trabajamos en equipo de forma rigurosa y transparente con un alto 
+              sentido del servicio al Cliente, buscando en todo momento satisfacer sus expectativas.
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <!-- politicas de calidad-->
+          <div class="info-box">
+            <h3>POLÍTICAS DE CALIDAD</h3>
+            <p>
+              Somos una Empresa dedicada a brindar servicios de telecomunicaciones logrando así
+              la satisfacción de nuestros clientes con servicios que aumentan sus
+              expectativas, mantiene y mejora continuamente su sistema de calidad.
+              Con la finalidad de garantizar el cumplimiento de los requisitos de sus
+              partes interesadas clientes, accionistas, trabajador y la población
+              en general.
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Valores corporativos -->
-<section class="bg-light py-5 animate-section">
+<section class="bg-light py-5 animate-section valores-section">
   <div class="container">
     <h2 class="text-center text-orange fw-bold mb-5">Valores Corporativos</h2>
     <div class="row g-4 justify-content-center">
       <div class="col-md-4">
         <div class="valor-card text-center p-4">
+          <div class="valor-icon mb-3">
+            <i class="fas fa-ear-listen"></i>
+          </div>
           <h5 class="fw-bold text-orange mb-2">Escuchar</h5>
           <p>Escuchamos activamente para proponer soluciones adecuadas.</p>
         </div>
       </div>
       <div class="col-md-4">
         <div class="valor-card text-center p-4">
+          <div class="valor-icon mb-3">
+            <i class="fas fa-bolt"></i>
+          </div>
           <h5 class="fw-bold text-orange mb-2">Velocidad</h5>
           <p>Tomamos decisiones rápidas y actuamos con dinamismo.</p>
         </div>
       </div>
       <div class="col-md-4">
         <div class="valor-card text-center p-4">
+          <div class="valor-icon mb-3">
+            <i class="fas fa-crosshairs"></i>
+          </div>
           <h5 class="fw-bold text-orange mb-2">Rigor</h5>
           <p>Información clara y objetiva con coherencia.</p>
         </div>
       </div>
       <div class="col-md-4">
         <div class="valor-card text-center p-4">
+          <div class="valor-icon mb-3">
+            <i class="fas fa-eye"></i>
+          </div>
           <h5 class="fw-bold text-orange mb-2">Transparencia</h5>
           <p>Comunicación abierta, accesible y honesta.</p>
         </div>
       </div>
       <div class="col-md-4">
         <div class="valor-card text-center p-4">
+          <div class="valor-icon mb-3">
+            <i class="fas fa-lightbulb"></i>
+          </div>
           <h5 class="fw-bold text-orange mb-2">Innovación</h5>
           <p>Buscamos mejoras constantes y soluciones novedosas.</p>
         </div>
       </div>
       <div class="col-md-4">
         <div class="valor-card text-center p-4">
+          <div class="valor-icon mb-3">
+            <i class="fas fa-hands-helping"></i>
+          </div>
           <h5 class="fw-bold text-orange mb-2">Servicio</h5>
           <p>Resolvemos necesidades con eficiencia y actitud resolutiva.</p>
         </div>
@@ -117,14 +178,6 @@
   </div>
 </section>
 
-
-  <!-- Organigrama -->
-  <section class="container py-5 animate-section">
-    <h2 class="text-center text-orange fw-bold mb-4">Organigrama</h2>
-    <p class="text-center">Gerencia, Secretaría General, Departamento Comercial, Centro de Atención al Usuario, Departamento de Operaciones, Control de Calidad, Comunicación e Imagen, Asesoría Jurídica y Contable.</p>
-    <!-- Opcional: agregar imagen del organigrama -->
-    <!-- <div class="text-center mt-3"><img src="./image/organigrama.jpg" alt="Organigrama" class="img-fluid"></div> -->
-  </section>
 
   <!-- Footer -->
   <footer class="bg-dark text-white text-center py-3">
