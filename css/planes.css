@@ -1,0 +1,805 @@
+/* planes.css - Estilos para página de planes por sede */
+
+/* === VARIABLES CSS === */
+:root {
+     --color-primary: #f25c05;
+     --color-primary-light: #ff6b1a;
+     --color-primary-dark: #e04503;
+     --color-text: #222;
+     --color-text-light: #495057;
+     --color-text-muted: #6c757d;
+     --color-white: #ffffff;
+     --color-bg-light: #f8f9fa;
+     --color-dark: #0a0a0a;
+     --color-success: #28a745;
+     --shadow-light: 0 4px 16px rgba(0, 0, 0, 0.1);
+     --shadow-medium: 0 10px 30px rgba(0, 0, 0, 0.15);
+     --shadow-heavy: 0 20px 40px rgba(0, 0, 0, 0.2);
+     --transition-default: all 0.3s ease;
+}
+
+/* === HERO HEADER === */
+.planes-hero-header {
+     position: relative;
+     background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #2a2a2a 100%);
+     overflow: hidden;
+     min-height: 80vh;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
+
+.planes-hero-header::before {
+     content: '';
+     position: absolute;
+     top: 0;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     background:
+          radial-gradient(circle at 20% 80%, rgba(242, 92, 5, 0.05) 0%, transparent 30%),
+          radial-gradient(circle at 80% 20%, rgba(255, 107, 26, 0.03) 0%, transparent 30%);
+}
+
+.planes-particles {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     overflow: hidden;
+     z-index: 1;
+}
+
+.planes-particle {
+     position: absolute;
+     background: rgba(242, 92, 5, 0.8);
+     border-radius: 50%;
+     animation: particleFloat 15s linear infinite;
+     box-shadow: 0 0 10px rgba(242, 92, 5, 0.6);
+}
+
+.planes-particle:nth-child(1) {
+     width: 4px;
+     height: 4px;
+     left: 10%;
+     animation-delay: 0s;
+}
+
+.planes-particle:nth-child(2) {
+     width: 6px;
+     height: 6px;
+     left: 20%;
+     animation-delay: 2s;
+}
+
+.planes-particle:nth-child(3) {
+     width: 3px;
+     height: 3px;
+     left: 30%;
+     animation-delay: 4s;
+}
+
+.planes-particle:nth-child(4) {
+     width: 5px;
+     height: 5px;
+     left: 40%;
+     animation-delay: 6s;
+}
+
+.planes-particle:nth-child(5) {
+     width: 4px;
+     height: 4px;
+     left: 50%;
+     animation-delay: 8s;
+}
+
+.planes-particle:nth-child(6) {
+     width: 7px;
+     height: 7px;
+     left: 60%;
+     animation-delay: 10s;
+}
+
+.planes-particle:nth-child(7) {
+     width: 3px;
+     height: 3px;
+     left: 70%;
+     animation-delay: 12s;
+}
+
+.planes-particle:nth-child(8) {
+     width: 5px;
+     height: 5px;
+     left: 80%;
+     animation-delay: 14s;
+}
+
+.planes-particle:nth-child(9) {
+     width: 4px;
+     height: 4px;
+     left: 90%;
+     animation-delay: 16s;
+}
+
+.planes-particle:nth-child(10) {
+     width: 6px;
+     height: 6px;
+     left: 15%;
+     animation-delay: 1s;
+}
+
+@keyframes particleFloat {
+     0% {
+          transform: translateY(100vh) rotate(0deg);
+          opacity: 0;
+     }
+
+     5% {
+          opacity: 1;
+     }
+
+     95% {
+          opacity: 1;
+     }
+
+     100% {
+          transform: translateY(-10vh) rotate(180deg);
+          opacity: 0;
+     }
+}
+
+.planes-hero-content {
+     position: relative;
+     z-index: 2;
+     text-align: center;
+     padding: 2rem;
+}
+
+.planes-icon-container {
+     position: relative;
+     margin-bottom: 2rem;
+}
+
+.planes-main-icon {
+     font-size: 5rem;
+     color: var(--color-primary);
+     animation: iconGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes iconGlow {
+     0% {
+          text-shadow: 0 0 20px rgba(242, 92, 5, 0.5);
+          transform: scale(1);
+     }
+
+     100% {
+          text-shadow: 0 0 30px rgba(242, 92, 5, 0.8);
+          transform: scale(1.05);
+     }
+}
+
+.planes-signal-waves {
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+}
+
+.wave {
+     position: absolute;
+     border: 2px solid var(--color-primary);
+     border-radius: 50%;
+     opacity: 0;
+     animation: waveAnimation 3s ease-out infinite;
+}
+
+.wave-1 {
+     width: 100px;
+     height: 100px;
+     margin: -50px 0 0 -50px;
+     animation-delay: 0s;
+}
+
+.wave-2 {
+     width: 150px;
+     height: 150px;
+     margin: -75px 0 0 -75px;
+     animation-delay: 1s;
+}
+
+.wave-3 {
+     width: 200px;
+     height: 200px;
+     margin: -100px 0 0 -100px;
+     animation-delay: 2s;
+}
+
+@keyframes waveAnimation {
+     0% {
+          opacity: 1;
+          transform: scale(0);
+     }
+
+     100% {
+          opacity: 0;
+          transform: scale(1);
+     }
+}
+
+.planes-hero-title {
+     font-size: clamp(2.5rem, 8vw, 4rem);
+     font-weight: 800;
+     color: #ffffff;
+     margin-bottom: 1rem;
+     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.planes-hero-subtitle {
+     font-size: clamp(1.2rem, 4vw, 1.8rem);
+     color: var(--color-primary);
+     font-weight: 600;
+     margin-bottom: 1rem;
+}
+
+.planes-hero-description {
+     font-size: 1.1rem;
+     color: #e9ecef;
+     margin-bottom: 2rem;
+     max-width: 600px;
+     margin-left: auto;
+     margin-right: auto;
+}
+
+.planes-hero-cta {
+     display: flex;
+     gap: 1rem;
+     justify-content: center;
+     flex-wrap: wrap;
+}
+
+.planes-btn-primary,
+.planes-btn-secondary {
+     padding: 1rem 2rem;
+     border-radius: 50px;
+     text-decoration: none;
+     font-weight: 600;
+     transition: var(--transition-default);
+     display: inline-block;
+}
+
+.planes-btn-primary {
+     background: linear-gradient(45deg, var(--color-primary), var(--color-primary-light));
+     color: white;
+     border: none;
+}
+
+.planes-btn-primary:hover {
+     transform: translateY(-3px);
+     box-shadow: 0 15px 35px rgba(242, 92, 5, 0.4);
+     color: white;
+}
+
+.planes-btn-secondary {
+     background: transparent;
+     color: white;
+     border: 2px solid white;
+}
+
+.planes-btn-secondary:hover {
+     background: white;
+     color: var(--color-primary);
+     transform: translateY(-3px);
+}
+
+/* === SELECTOR DE SEDES === */
+.sede-selector {
+     background: var(--color-bg-light);
+}
+
+.section-title {
+     font-size: 2.5rem;
+     font-weight: 800;
+     color: var(--color-primary);
+     margin-bottom: 1rem;
+}
+
+.section-subtitle {
+     font-size: 1.2rem;
+     color: var(--color-text-muted);
+}
+
+.sede-tabs {
+     display: flex;
+     justify-content: center;
+     gap: 1rem;
+     background: white;
+     border-radius: 60px;
+     padding: 0.5rem;
+     box-shadow: var(--shadow-medium);
+}
+
+.sede-tab {
+     flex: 1;
+     max-width: 200px;
+     padding: 1rem 2rem;
+     border: none;
+     background: transparent;
+     border-radius: 50px;
+     font-weight: 600;
+     color: var(--color-text-muted);
+     transition: var(--transition-default);
+     cursor: pointer;
+}
+
+.sede-tab.active {
+     background: var(--color-primary);
+     color: white;
+     box-shadow: 0 4px 15px rgba(242, 92, 5, 0.3);
+}
+
+.sede-tab:hover:not(.active) {
+     background: rgba(242, 92, 5, 0.1);
+     color: var(--color-primary);
+}
+
+/* === CONTENIDO DE SEDES === */
+.sede-content {
+     display: none;
+}
+
+.sede-content.active {
+     display: block;
+     animation: fadeInUp 0.5s ease-out;
+}
+
+@keyframes fadeInUp {
+     from {
+          opacity: 0;
+          transform: translateY(30px);
+     }
+
+     to {
+          opacity: 1;
+          transform: translateY(0);
+     }
+}
+
+.sede-header {
+     margin-bottom: 3rem;
+}
+
+.sede-title {
+     font-size: 2rem;
+     font-weight: 700;
+     color: var(--color-text);
+     margin-bottom: 0.5rem;
+}
+
+.sede-subtitle {
+     color: var(--color-text-muted);
+     font-size: 1.1rem;
+}
+
+/* === TARJETAS DE PLANES === */
+.plan-card {
+     background: white;
+     border-radius: 20px;
+     padding: 2rem;
+     box-shadow: var(--shadow-light);
+     transition: var(--transition-default);
+     border: 3px solid transparent;
+     position: relative;
+     height: 100%;
+     display: flex;
+     flex-direction: column;
+     margin-top: 20px;
+}
+
+.plan-card:hover {
+     transform: translateY(-10px);
+     box-shadow: var(--shadow-heavy);
+     border-color: var(--color-primary);
+}
+
+.plan-card.featured {
+     border-color: var(--color-primary);
+     transform: scale(1.08);
+     position: relative;
+     background: linear-gradient(135deg, #ffffff 0%, #fff8f5 100%);
+     box-shadow: 0 20px 40px rgba(242, 92, 5, 0.2);
+}
+
+.plan-card.featured:hover {
+     transform: scale(1.08) translateY(-10px);
+     box-shadow: 0 25px 50px rgba(242, 92, 5, 0.3);
+}
+
+.plan-badge {
+     position: absolute;
+     top: -8px;
+     left: 50%;
+     transform: translateX(-50%);
+     background: linear-gradient(45deg, var(--color-primary), var(--color-primary-light));
+     color: white;
+     padding: 0.6rem 1.8rem;
+     border-radius: 25px;
+     font-weight: 700;
+     font-size: 0.9rem;
+     text-transform: uppercase;
+     letter-spacing: 0.8px;
+     box-shadow: 0 8px 25px rgba(242, 92, 5, 0.4);
+     z-index: 10;
+     animation: badgePulse 2s ease-in-out infinite;
+     text-align: center;
+     white-space: nowrap;
+}
+
+@keyframes badgePulse {
+
+     0%,
+     100% {
+          transform: translateX(-50%) scale(1);
+          box-shadow: 0 8px 25px rgba(242, 92, 5, 0.4);
+     }
+
+     50% {
+          transform: translateX(-50%) scale(1.05);
+          box-shadow: 0 12px 30px rgba(242, 92, 5, 0.6);
+     }
+}
+
+.plan-header {
+     text-align: center;
+     margin-bottom: 2rem;
+}
+
+.plan-icon {
+     width: 80px;
+     height: 80px;
+     background: linear-gradient(45deg, var(--color-primary), var(--color-primary-light));
+     border-radius: 50%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     margin: 0 auto 1rem;
+     box-shadow: 0 8px 25px rgba(242, 92, 5, 0.3);
+}
+
+.plan-icon i {
+     font-size: 2rem;
+     color: white;
+}
+
+.plan-name {
+     font-size: 1.5rem;
+     font-weight: 700;
+     color: var(--color-text);
+     margin-bottom: 0.5rem;
+}
+
+.plan-speed {
+     font-size: 1.2rem;
+     color: var(--color-primary);
+     font-weight: 600;
+}
+
+.plan-price {
+     text-align: center;
+     margin-bottom: 2rem;
+}
+
+.price {
+     font-size: 3rem;
+     font-weight: 800;
+     color: var(--color-primary);
+}
+
+.period {
+     font-size: 1.2rem;
+     color: var(--color-text-muted);
+}
+
+.plan-features {
+     flex-grow: 1;
+     margin-bottom: 2rem;
+}
+
+.plan-features ul {
+     list-style: none;
+     padding: 0;
+     margin: 0;
+}
+
+.plan-features li {
+     padding: 0.75rem 0;
+     color: var(--color-text-light);
+     display: flex;
+     align-items: center;
+     gap: 0.5rem;
+}
+
+.plan-features i {
+     font-size: 1.1rem;
+}
+
+.plan-btn {
+     display: block;
+     width: 90%;
+     max-width: 250px;
+     margin: 0 auto;
+     padding: 1.2rem;
+     background: linear-gradient(45deg, var(--color-primary), var(--color-primary-light));
+     color: white;
+     border: none;
+     border-radius: 50px;
+     font-weight: 700;
+     font-size: 1.1rem;
+     text-align: center;
+     text-decoration: none;
+     cursor: pointer;
+     transition: var(--transition-default);
+     box-shadow: 0 4px 15px rgba(242, 92, 5, 0.3);
+}
+
+.plan-btn:hover {
+     transform: translateY(-3px);
+     box-shadow: 0 12px 30px rgba(242, 92, 5, 0.5);
+     color: white;
+     text-decoration: none;
+}
+
+/* === CALL TO ACTION === */
+.planes-cta-section {
+     background: linear-gradient(135deg, var(--color-primary-dark) 0%, var(--color-primary) 100%);
+}
+
+.planes-cta-card {
+     background: rgba(255, 255, 255, 0.1);
+     backdrop-filter: blur(10px);
+     border-radius: 20px;
+     padding: 3rem 2rem;
+     text-align: center;
+     border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.planes-cta-card h3 {
+     color: white;
+     font-size: 2rem;
+     font-weight: 700;
+     margin-bottom: 1rem;
+}
+
+.planes-cta-card p {
+     color: rgba(255, 255, 255, 0.9);
+     font-size: 1.2rem;
+     margin-bottom: 2rem;
+}
+
+.planes-cta-buttons {
+     display: flex;
+     gap: 1rem;
+     justify-content: center;
+     flex-wrap: wrap;
+}
+
+.planes-cta-buttons .planes-btn-primary {
+     background: white;
+     color: var(--color-primary);
+}
+
+.planes-cta-buttons .planes-btn-primary:hover {
+     background: var(--color-bg-light);
+     color: var(--color-primary-dark);
+}
+
+.planes-cta-buttons .planes-btn-secondary {
+     border-color: rgba(255, 255, 255, 0.8);
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+     .planes-hero-header {
+          min-height: 70vh;
+          padding: 1rem;
+     }
+
+     .planes-hero-title {
+          font-size: 2.5rem;
+     }
+
+     .planes-hero-subtitle {
+          font-size: 1.5rem;
+     }
+
+     .planes-hero-cta {
+          flex-direction: column;
+          align-items: center;
+     }
+
+     .sede-tabs {
+          flex-direction: column;
+          padding: 1rem;
+          border-radius: 20px;
+     }
+
+     .sede-tab {
+          max-width: none;
+          margin-bottom: 0.5rem;
+     }
+
+     .plan-card.featured {
+          transform: none;
+     }
+
+     .plan-card.featured:hover {
+          transform: translateY(-5px);
+     }
+
+     .planes-cta-buttons {
+          flex-direction: column;
+          align-items: center;
+     }
+
+     .planes-cta-card {
+          padding: 2rem 1rem;
+     }
+
+     .planes-particle:nth-child(n+6) {
+          display: none;
+     }
+}
+
+@media (max-width: 480px) {
+     .plan-card {
+          padding: 1.5rem;
+     }
+
+     .price {
+          font-size: 2.5rem;
+     }
+
+     .planes-main-icon {
+          font-size: 4rem;
+     }
+}
+
+/* === ESTILOS PLAN-SPEED PARA PLANES SIN ANIMACIONES === */
+.plan-speed {
+     margin: 1rem 0;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     gap: 0.5rem;
+}
+
+.speed-top {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     gap: 0.3rem;
+}
+
+.speed-top i {
+     font-size: 1.8rem;
+     color: var(--color-primary);
+     /* Sin animaciones en la página de planes */
+     transform: none;
+     animation: none !important;
+}
+
+.speed-number {
+     font-size: 2.8rem;
+     font-weight: 900;
+     background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+     background-clip: text;
+     text-shadow: 0 2px 4px rgba(242, 92, 5, 0.3);
+     /* Sin animaciones en la página de planes */
+     animation: none !important;
+     transform: none;
+}
+
+.speed-unit {
+     font-size: 1.4rem;
+     font-weight: 700;
+     color: var(--color-primary);
+     text-transform: uppercase;
+     letter-spacing: 1px;
+}
+
+.speed-bottom {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     gap: 0.3rem;
+     margin-top: 0.2rem;
+}
+
+.speed-bottom i {
+     font-size: 1.4rem;
+     color: var(--color-primary-dark);
+     /* Sin animaciones en la página de planes */
+     animation: none !important;
+     transform: none;
+}
+
+.speed-bottom span {
+     font-size: 1.6rem;
+     font-weight: 700;
+     color: var(--color-primary-dark);
+     text-transform: uppercase;
+     letter-spacing: 0.5px;
+}
+
+/* Responsive para plan-speed en planes */
+@media (max-width: 768px) {
+     .speed-number {
+          font-size: 2.2rem;
+     }
+
+     .speed-unit {
+          font-size: 1.2rem;
+     }
+
+     .speed-bottom span {
+          font-size: 1.4rem;
+     }
+
+     .speed-top i {
+          font-size: 1.6rem;
+     }
+
+     .speed-bottom i {
+          font-size: 1.2rem;
+     }
+
+     .plan-badge {
+          font-size: 0.8rem;
+          padding: 0.5rem 1.5rem;
+          top: -6px;
+     }
+
+     .plan-card.featured {
+          transform: scale(1.02);
+     }
+
+     .plan-card.featured:hover {
+          transform: scale(1.02) translateY(-5px);
+     }
+}
+
+@media (max-width: 480px) {
+     .speed-number {
+          font-size: 2rem;
+     }
+
+     .speed-unit {
+          font-size: 1.1rem;
+     }
+
+     .speed-bottom span {
+          font-size: 1.3rem;
+     }
+
+     .speed-top i {
+          font-size: 1.5rem;
+     }
+
+     .speed-bottom i {
+          font-size: 1.1rem;
+     }
+
+     .plan-badge {
+          font-size: 0.75rem;
+          padding: 0.4rem 1.3rem;
+          top: -5px;
+     }
+
+     .plan-btn {
+          width: 95%;
+          padding: 1rem;
+          font-size: 1rem;
+     }
+}

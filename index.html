@@ -23,8 +23,9 @@
       </button>
       <div class="collapse navbar-collapse" id="menuNav">
         <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
           <li class="nav-item"><a class="nav-link" href="empresa.html">Empresa</a></li>
-          <li class="nav-item"><a class="nav-link" href="#planes">Planes</a></li>
+          <li class="nav-item"><a class="nav-link" href="planes.html">Planes</a></li>
           <li class="nav-item"><a class="nav-link" href="#cobertura">Cobertura</a></li>
           <li class="nav-item"><a class="nav-link" href="#testimonios">Clientes</a></li>
           <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
@@ -37,8 +38,8 @@
       <div class="carousel-inner">
 
             <div class="carousel-item active position-relative">
-              <video class="w-100 h-100 object-fit-cover rounded-bottom" autoplay muted loop playsinline>
-              <source src="./image/video1.mp4" type="video/mp4" alt="Banner 1">
+              <video class="w-100 h-100 object-fit-cover rounded-bottom" autoplay muted loop playsinline webkit-playsinline>
+              <source src="./image/video1.mp4" type="video/mp4">
               Tu navegador no soporta el elemento de video.
               </video>
                 <div class="overlay"></div>
@@ -46,8 +47,8 @@
           </div>
         </div>
               <div class="carousel-item position-relative">
-              <video class="w-100 h-100 object-fit-cover rounded-bottom" autoplay muted loop playsinline>
-              <source src="./image/Video4.mp4" type="video/mp4" alt="Banner 2">
+              <video class="w-100 h-100 object-fit-cover rounded-bottom" autoplay muted loop playsinline webkit-playsinline>
+              <source src="./image/Video4.mp4" type="video/mp4">
               Tu navegador no soporta el elemento de video.
               </video>
                 <div class="overlay"></div>
@@ -63,7 +64,7 @@
           <div class="carousel-caption-custom">
             <h1 class="fw-bold display-5">Conéctate sin límites</h1>
             <p class="lead">Internet veloz y confiable para tu hogar o empresa</p>
-            <a href="#planes" class="btn-elegante mt-2">Ver planes</a>
+            <a href="planes.html" class="btn-elegante mt-2">Ver Planes</a>
           </div>
         </div>
       </div>
@@ -86,38 +87,192 @@
 
   </section>
 
-  <section class="py-5" id="planes">
+  <section class="py-5" id="television">
     <div class="container">
-      <h2 class="text-center mb-4">Nuestros Planes</h2>
+      <div class="text-center mb-5">
+        <h2 class="display-4 fw-bold text-orange mb-3">
+          <i class="bi bi-wifi me-2"></i><i class="bi bi-tv-fill me-3"></i>Internet + TV HD
+        </h2>
+        <p class="lead text-muted">El paquete completo para tu hogar</p>
+        <div class="badge bg-success fs-6 px-4 py-2 rounded-pill">
+          <i class="bi bi-star-fill me-1"></i>Más de 70 canales incluidos
+        </div>
+      </div>
+      
+      <!-- Hero de Internet + TV -->
+      <div class="row align-items-center mb-5">
+        <div class="col-lg-6">
+          <div class="tv-hero-content">
+            <h3 class="fw-bold mb-4">Internet de alta velocidad + Televisión HD en un solo paquete</h3>
+            <p class="fs-5 text-muted mb-4">Disfruta de una amplia parrilla de canales nacionales e internacionales en alta definición. Contenido para que no te pierdas tus programas favoritos</p>
+            <div class="tv-features">
+              <div class="feature-item d-flex align-items-center mb-3">
+                <i class="bi bi-check-circle-fill text-success me-3 fs-4"></i>
+                <span><strong>Internet de alta velocidad</strong> desde 200 Mbps</span>
+              </div>
+              <div class="feature-item d-flex align-items-center mb-3">
+                <i class="bi bi-check-circle-fill text-success me-3 fs-4"></i>
+                <span><strong>Más de 70 canales</strong> en calidad HD</span>
+              </div>
+              <div class="feature-item d-flex align-items-center mb-3">
+                <i class="bi bi-check-circle-fill text-success me-3 fs-4"></i>
+                <span><strong>Contenido nacional e internacional</strong></span>
+              </div>
+              <div class="feature-item d-flex align-items-center mb-3">
+                <i class="bi bi-check-circle-fill text-success me-3 fs-4"></i>
+                <span><strong>Programación para toda la familia</strong></span>
+              </div>
+              <div class="feature-item d-flex align-items-center mb-3">
+                <i class="bi bi-check-circle-fill text-success me-3 fs-4"></i>
+                <span><strong>Instalación y soporte técnico</strong></span>
+              </div>
+            </div>
+            <a href="#contacto" class="btn-elegante btn-lg mt-3">
+              <i class="bi bi-telephone-fill me-2"></i>Solicitar Información
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="tv-visual text-center">
+            <div class="package-visual">
+              <div class="internet-icon">
+                <i class="bi bi-wifi display-1 text-orange"></i>
+              </div>
+              <div class="plus-sign">
+                <span class="fs-1 fw-bold text-orange">+</span>
+              </div>
+              <div class="tv-icon">
+                <i class="bi bi-tv display-1 text-orange"></i>
+              </div>
+              <div class="package-glow"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Categorías de contenido -->
       <div class="row g-4">
+        <div class="col-md-6">
+          <div class="tv-category-card text-center p-4">
+            <i class="bi bi-speedometer2 display-4 text-orange mb-3"></i>
+            <h5 class="fw-bold">Internet de Alta Velocidad</h5>
+            <p class="text-muted">Conexión estable y rápida desde 200 Mbps para streaming, trabajo y navegación sin interrupciones</p>
+            <ul class="list-unstyled text-start mt-3">
+              <li><i class="bi bi-check text-success me-2"></i>Desde 200 Mbps de velocidad</li>
+              <li><i class="bi bi-check text-success me-2"></i>Conexión estable 24/7</li>
+              <li><i class="bi bi-check text-success me-2"></i>Ideal para streaming 4K</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="tv-category-card text-center p-4">
+            <i class="bi bi-tv-fill display-4 text-orange mb-3"></i>
+            <h5 class="fw-bold">Más de 70 Canales HD</h5>
+            <p class="text-muted">Programación variada con canales nacionales e internacionales en alta definición</p>
+            <ul class="list-unstyled text-start mt-3">
+              <li><i class="bi bi-check text-success me-2"></i>Canales de noticias 24/7</li>
+              <li><i class="bi bi-check text-success me-2"></i>Entretenimiento familiar</li>
+              <li><i class="bi bi-check text-success me-2"></i>Deportes en vivo</li>
+              <li><i class="bi bi-check text-success me-2"></i>Contenido educativo</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Planes disponibles -->
+      <div class="row mt-5">
+        <div class="col-12">
+          <h3 class="text-center fw-bold mb-4">Nuestros Paquetes  principales de Internet + TV HD en AYAPEL</h3>
+        </div>
         <div class="col-md-4">
-          <div class="card planes-card">
-            <div class="card-body text-center">
-              <h5 class="card-title">Plan Básico</h5>
-              <p>30 Mbps • Ideal para navegar y redes sociales</p>
-              <h3>$49.900</h3>
-              <a href="#" class="btn-elegante">Contratar</a>
+          <div class="plan-card text-center p-4 h-100">
+            <div class="plan-header">
+              <h5 class="fw-bold text-orange">Paquete Básico</h5>
+              <div class="plan-speed">
+                <div class="speed-top">
+                  <i class="bi bi-speedometer2 me-2"></i>
+                  <span class="speed-number">200</span>
+                  <span class="speed-unit">Mbps</span>
+                </div>
+                <div class="speed-bottom">
+                  <i class="bi bi-tv-fill me-2"></i>
+                  <span>+ TV</span>
+                </div>
+              </div>
             </div>
+            <div class="plan-features">
+              <p><i class="bi bi-wifi me-2"></i>Internet 200 Mbps</p>
+              <p><i class="bi bi-tv me-2"></i>+70 canales HD</p>
+                <p><i class="bi bi-headset me-2"></i>oporte Tecnico</p>
+            </div>
+            <div class="plan-price">
+              <span class="price-amount">$70.000</span>
+              <span class="price-period">/mes</span>
+            </div>
+            <a href="https://wa.me/573148686245?text=Hola,%20me%20interesa%20el%20Paquete%20Básico%20-%20200%20Mbps%20+%20TV%20por%20$70.000/mes.%20¿Podrían%20darme%20más%20información?" target="_blank" class="btn-elegante w-100 mt-3">
+              <i class="bi bi-whatsapp me-2"></i>Contratar por WhatsApp
+            </a>
           </div>
         </div>
         <div class="col-md-4">
-          <div class="card planes-card shadow">
-            <div class="card-body text-center">
-              <h5 class="card-title">Plan Plus</h5>
-              <p>100 Mbps • Streaming y videollamadas</p>
-              <h3>$79.900</h3>
-              <a href="#" class="btn-elegante">Contratar</a>
+          <div class="plan-card featured text-center p-4 h-100">
+            <div class="plan-badge">Más Popular</div>
+            <div class="plan-header">
+              <h5 class="fw-bold text-orange">Paquete Plus</h5>
+              <div class="plan-speed">
+                <div class="speed-top">
+                  <i class="bi bi-speedometer2 me-2"></i>
+                  <span class="speed-number">250</span>
+                  <span class="speed-unit">Mbps</span>
+                </div>
+                <div class="speed-bottom">
+                  <i class="bi bi-tv-fill me-2"></i>
+                  <span>+ TV</span>
+                </div>
+              </div>
             </div>
+            <div class="plan-features">
+              <p><i class="bi bi-wifi me-2"></i>Internet 250 Mbps</p>
+              <p><i class="bi bi-tv me-2"></i>+70 canales HD</p>
+              <p><i class="bi bi-headset me-2"></i>oporte Tecnico</p>
+            </div>
+            <div class="plan-price">
+              <span class="price-amount">$90.000</span>
+              <span class="price-period">/mes</span>
+            </div>
+            <a href="https://wa.me/573148686245?text=Hola,%20me%20interesa%20el%20Paquete%20Plus%20-%20250%20Mbps%20+%20TV%20por%20$90.000/mes.%20¿Podrían%20darme%20más%20información?" target="_blank" class="btn-elegante w-100 mt-3">
+              <i class="bi bi-whatsapp me-2"></i>Contratar por WhatsApp
+            </a>
           </div>
         </div>
         <div class="col-md-4">
-          <div class="card planes-card">
-            <div class="card-body text-center">
-              <h5 class="card-title">Plan Empresarial</h5>
-              <p>300 Mbps • Alto rendimiento y soporte 24/7</p>
-              <h3>$129.900</h3>
-              <a href="#" class="btn-elegante">Contratar</a>
+          <div class="plan-card text-center p-4 h-100">
+            <div class="plan-header">
+              <h5 class="fw-bold text-orange">Paquete Premium</h5>
+              <div class="plan-speed">
+                <div class="speed-top">
+                  <i class="bi bi-speedometer2 me-2"></i>
+                  <span class="speed-number">300</span>
+                  <span class="speed-unit">Mbps</span>
+                </div>
+                <div class="speed-bottom">
+                  <i class="bi bi-tv-fill me-2"></i>
+                  <span>+ TV</span>
+                </div>
+              </div>
             </div>
+            <div class="plan-features">
+          <p><i class="bi bi-wifi me-2"></i>Internet 250 Mbps</p>
+              <p><i class="bi bi-tv me-2"></i>+70 canales HD</p>
+              <p><i class="bi bi-headset me-2"></i>oporte Tecnico</p>
+            </div>
+            <div class="plan-price">
+              <span class="price-amount">$110.000</span>
+              <span class="price-period">/mes</span>
+            </div>
+            <a href="https://wa.me/573148686245?text=Hola,%20me%20interesa%20el%20Paquete%20Premium%20-%20300%20Mbps%20+%20TV%20por%20$110.000/mes.%20¿Podrían%20darme%20más%20información?" target="_blank" class="btn-elegante w-100 mt-3">
+              <i class="bi bi-whatsapp me-2"></i>Contratar por WhatsApp
+            </a>
           </div>
         </div>
       </div>
