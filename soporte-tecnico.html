@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soporte Técnico - SH COMPANY SAS</title>
+    
+    <!-- Bootstrap 5.3 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;800&display=swap" rel="stylesheet">
+    
+    <!-- CSS personalizado -->
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/soporte.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top p-3">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                <img src="./image/logo.png" alt="SH Company Logo" class="logo-redondo" height="80">
+                <span>SH COMPANY</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menuNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="empresa.html">Empresa</a></li>
+                    <li class="nav-item"><a class="nav-link" href="planes.html">Planes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pqrs.html">PQRS</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="soporte-tecnico.html">Soporte Técnico</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8">
+                    <div class="hero-content">
+                        <div class="hero-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h1 class="hero-title">Soporte Técnico</h1>
+                        <p class="hero-subtitle">Te ayudamos a resolver cualquier problema técnico con tu servicio de internet</p>
+                        <div class="hero-badge">
+                            <i class="fas fa-clock me-2"></i>
+                            Atención 24/7
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto Directo -->
+    <section class="contact-section py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="contact-card whatsapp-card">
+                        <div class="contact-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <h4>WhatsApp</h4>
+                        <p>Chatea con nosotros en tiempo real</p>
+                        <div class="contact-numbers">
+                            <a href="https://wa.me/573148686245" target="_blank" class="btn btn-success">
+                                <i class="fab fa-whatsapp me-2"></i>(314) 868-6245
+                            </a>
+                            <a href="https://wa.me/573135362337" target="_blank" class="btn btn-success mt-2">
+                                <i class="fab fa-whatsapp me-2"></i>(313) 536-2337
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4">
+                    <div class="contact-card phone-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h4>Llamada Telefónica</h4>
+                        <p>Comunícate directamente con nuestros técnicos</p>
+                        <div class="contact-numbers">
+                            <a href="tel:+573148686245" class="btn btn-primary">
+                                <i class="fas fa-phone me-2"></i>(314) 868-6245
+                            </a>
+                            <a href="tel:+573135362337" class="btn btn-primary mt-2">
+                                <i class="fas fa-phone me-2"></i>(313) 536-2337
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4">
+                    <div class="contact-card email-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h4>Correo Electrónico</h4>
+                        <p>Envíanos tu consulta detallada</p>
+                        <div class="contact-numbers">
+                            <a href="mailto:internetjhs@gmail.com" class="btn btn-warning">
+                                <i class="fas fa-envelope me-2"></i>internetjhs@gmail.com
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problemas Comunes -->
+    <section class="faq-section py-5 bg-dark">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="section-header text-center mb-5">
+                        <h2 class="text-orange">Problemas Comunes y Soluciones</h2>
+                        <p class="text-light">Encuentra soluciones rápidas a los problemas más frecuentes</p>
+                    </div>
+                    
+                    <div class="accordion" id="faqAccordion">
+                        <!-- FAQ 1 -->
+                        <div class="accordion-item faq-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                    <i class="fas fa-wifi me-3"></i>
+                                    No tengo conexión a internet
+                                </button>
+                            </h2>
+                            <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    <div class="solution-steps">
+                                        <h6><i class="fas fa-tools me-2"></i>Pasos a seguir:</h6>
+                                        <ol>
+                                            <li>Verifica que todos los cables estén conectados correctamente</li>
+                                            <li>Reinicia tu router desconectándolo por 30 segundos</li>
+                                            <li>Verifica las luces del router (deben estar en verde)</li>
+                                            <li>Reinicia tu dispositivo (computador, celular, etc.)</li>
+                                            <li>Si el problema persiste, contáctanos al <strong>(314) 868-6245</strong></li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 2 -->
+                        <div class="accordion-item faq-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                    <i class="fas fa-tachometer-alt me-3"></i>
+                                    Internet muy lento
+                                </button>
+                            </h2>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    <div class="solution-steps">
+                                        <h6><i class="fas fa-tools me-2"></i>Posibles soluciones:</h6>
+                                        <ol>
+                                            <li>Cierra aplicaciones que no estés usando</li>
+                                            <li>Verifica cuántos dispositivos están conectados</li>
+                                            <li>Conéctate directamente con cable ethernet</li>
+                                            <li>Verifica que no haya descargas activas</li>
+                                            <li>Cambia la ubicación del router a un lugar más central</li>
+                                            <li>Contacta soporte para verificar tu plan: <strong>(314) 868-6245</strong></li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 3 -->
+                        <div class="accordion-item faq-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                    <i class="fas fa-exclamation-triangle me-3"></i>
+                                    Conexión intermitente
+                                </button>
+                            </h2>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    <div class="solution-steps">
+                                        <h6><i class="fas fa-tools me-2"></i>Diagnóstico y solución:</h6>
+                                        <ol>
+                                            <li>Verifica si hay interferencias cerca del router</li>
+                                            <li>Aleja el router de otros equipos electrónicos</li>
+                                            <li>Verifica que los cables no estén dañados</li>
+                                            <li>Actualiza los drivers de tu tarjeta de red</li>
+                                            <li>Programa un reinicio automático del router</li>
+                                            <li>Si continúa, puede ser un problema de línea: <strong>(314) 868-6245</strong></li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 4 -->
+                        <div class="accordion-item faq-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                    <i class="fas fa-key me-3"></i>
+                                    Olvidé la contraseña del WiFi
+                                </button>
+                            </h2>
+                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    <div class="solution-steps">
+                                        <h6><i class="fas fa-tools me-2"></i>Cómo recuperarla:</h6>
+                                        <ol>
+                                            <li>Revisa la etiqueta del router (parte posterior o inferior)</li>
+                                            <li>Busca "SSID" y "Password" o "WPA Key"</li>
+                                            <li>En Windows: Ve a Configuración > Red e Internet > WiFi > Propiedades</li>
+                                            <li>También puedes acceder al router desde un navegador (192.168.1.1)</li>
+                                            <li>Si no puedes acceder, contáctanos: <strong>(314) 868-6245</strong></li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ 5 -->
+                        <div class="accordion-item faq-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                                    <i class="fas fa-router me-3"></i>
+                                    Configuración del router
+                                </button>
+                            </h2>
+                            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    <div class="solution-steps">
+                                        <h6><i class="fas fa-tools me-2"></i>Configuración básica:</h6>
+                                        <ol>
+                                            <li>Conecta el router a tu computador con cable ethernet</li>
+                                            <li>Abre un navegador y ve a: <code>192.168.1.1</code></li>
+                                            <li>Usuario: <code>admin</code> - Contraseña: <code>admin</code> (o revisa la etiqueta)</li>
+                                            <li>Ve a "Wireless" o "WiFi" para cambiar nombre y contraseña</li>
+                                            <li>Guarda los cambios y reinicia el router</li>
+                                            <li>Para configuración avanzada: <strong>(314) 868-6245</strong></li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Horarios de Atención -->
+    <section class="schedule-section py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="schedule-card">
+                        <div class="schedule-header text-center mb-4">
+                            <h3><i class="fas fa-clock me-3"></i>Horarios de Atención</h3>
+                        </div>
+                        
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <div class="schedule-item">
+                                    <h5><i class="fas fa-phone me-2"></i>Soporte Telefónico</h5>
+                                    <div class="schedule-times">
+                                        <div class="time-slot">
+                                            <strong>Lunes a Viernes:</strong> 8:00 AM - 6:00 PM
+                                        </div>
+                                        <div class="time-slot">
+                                            <strong>Sábados:</strong> 8:00 AM - 12:00 PM
+                                        </div>
+                                        <div class="time-slot emergency">
+                                            <strong>Emergencias:</strong> 24/7
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <div class="schedule-item">
+                                    <h5><i class="fab fa-whatsapp me-2"></i>WhatsApp</h5>
+                                    <div class="schedule-times">
+                                        <div class="time-slot">
+                                            <strong>Lunes a Domingo:</strong> 7:00 AM - 10:00 PM
+                                        </div>
+                                        <div class="time-slot">
+                                            <strong>Respuesta promedio:</strong> 15 minutos
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solicitar Visita Técnica -->
+    <section class="visit-section py-5 bg-dark">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="visit-card">
+                        <div class="visit-header text-center mb-4">
+                            <h3><i class="fas fa-tools me-3"></i>Solicitar Visita Técnica</h3>
+                            <p>Si no puedes resolver el problema, programa una visita de nuestro equipo técnico</p>
+                        </div>
+                        
+                        <form id="visitForm" class="visit-form">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="nombre" class="form-label">Nombre Completo *</label>
+                                    <input type="text" class="form-control" id="nombre" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="telefono" class="form-label">Teléfono *</label>
+                                    <input type="tel" class="form-control" id="telefono" required>
+                                </div>
+                                <div class="col-12">
+                                    <label for="direccion" class="form-label">Dirección *</label>
+                                    <input type="text" class="form-control" id="direccion" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="fecha" class="form-label">Fecha Preferida *</label>
+                                    <input type="date" class="form-control" id="fecha" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="hora" class="form-label">Hora Preferida *</label>
+                                    <select class="form-select" id="hora" required>
+                                        <option value="">Seleccionar hora</option>
+                                        <option value="8:00-10:00">8:00 AM - 10:00 AM</option>
+                                        <option value="10:00-12:00">10:00 AM - 12:00 PM</option>
+                                        <option value="12:00-14:00">12:00 PM - 2:00 PM</option>
+                                        <option value="14:00-16:00">2:00 PM - 4:00 PM</option>
+                                        <option value="16:00-18:00">4:00 PM - 6:00 PM</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <label for="problema" class="form-label">Describe el problema *</label>
+                                    <textarea class="form-control" id="problema" rows="4" required placeholder="Describe detalladamente el problema que estás experimentando..."></textarea>
+                                </div>
+                                <div class="col-12 text-center">
+                                    <button type="submit" class="btn btn-orange btn-lg">
+                                        <i class="fab fa-whatsapp me-2"></i>Solicitar Visita por WhatsApp
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enlaces adicionales -->
+    <section class="py-5 bg-dark text-white" id="enlaces-adicionales">
+        <div class="container">
+            <h2 class="text-center text-orange mb-5 fw-bold">Información Adicional</h2>
+            <div class="row text-center text-md-start">
+                <!-- Atención al Cliente -->
+                <div class="col-md-4 mb-4">
+                    <h5 class="seccion-titulo text-orange mb-3">Atención al Cliente</h5>
+                    <ul class="footer-links list-unstyled">
+                        <li><a href="#" class="text-light text-decoration-none">Control Parental</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Indicadores de calidad</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Atención al Usuario</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Prevención de fraudes</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Limitación de velocidad</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Gestión de tráfico</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Cancelación de servicios</a></li>
+                    </ul>
+                </div>
+
+                <!-- Sobre Nosotros -->
+                <div class="col-md-4 mb-4">
+                    <h5 class="seccion-titulo text-orange mb-3">Sobre Nosotros</h5>
+                    <ul class="footer-links list-unstyled">
+                        <li><a href="#" class="text-light text-decoration-none">Topología de la red</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Acceso a internet</a></li>
+                    </ul>
+                </div>
+
+                <!-- Regulación y Leyes -->
+                <div class="col-md-4 mb-4">
+                    <h5 class="seccion-titulo text-orange mb-3">Regulación y Leyes</h5>
+                    <ul class="footer-links list-unstyled">
+                        <li><a href="#" class="text-light text-decoration-none">Términos y condiciones</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Política de equipos</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Compensación automática</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Seguridad en la red</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Contrato de servicios</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Resolución 5111 de 2017</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">Denuncias de pornografía infantil</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer final -->
+    <footer class="footer-institucional py-4 border-top">
+        <div class="container">
+            <div class="row align-items-center text-center text-md-start">
+
+                <!-- Logo -->
+                <div class="col-md-3 mb-3 mb-md-0">
+                    <img src="./image/logo.png" alt="SH COMPANY SAS Logo" class="footer-logo">
+                </div>
+
+                <!-- Información institucional -->
+                <div class="col-md-5 mb-3 mb-md-0">
+                    <small class="text-white d-block">
+                        Comisión de Regulación de Comunicaciones<br>
+                        Dirección: Calle 59A bis No. 5-53 Edificio Link Siete Piso 9<br>
+                        Bogotá D.C.<br>
+                        Horario de Atención: Lunes a Viernes 8:30 a.m. a 5:30 p.m
+                    </small>
+                </div>
+
+                <!-- Información de contacto -->
+                <div class="col-md-4">
+                    <h2 class="text-center text-orange fw-bold mb-4">Contacto</h2>
+                    <strong>Dirección:</strong> Cll 25ª # 7ª 12 Barrio la Inmaculada, Ayapel, Córdoba<br>
+                    <strong>Celular:</strong> (314) 868 6245 - (313) 536 2337<br>
+                    <strong>Correo:</strong> <a href="mailto:internetjhs@gmail.com">internetjhs@gmail.com</a>
+                </div>
+            </div>
+
+            <!-- Logos adicionales -->
+            <div class="row mt-4 text-center">
+                <div class="col-md-4 mb-3">
+                    <img src="./image/comunicados-logo.png" alt="Comunicados Como Es" class="img-fluid" style="max-height: 200px;">
+                </div>
+                <div class="col-md-4 mb-3">
+                    <img src="./image/mintic-logo.png" alt="MinTIC" class="img-fluid" style="max-height: 60px;">
+                </div>
+        
+                <div class="col-md-4 mb-3">
+                    <p class="text-white small mt-2">
+                        Copyright © 2025 SH COMPANY SAS. Todos los derechos reservados.<br>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/soporte.js"></script>
+</body>
+</html>

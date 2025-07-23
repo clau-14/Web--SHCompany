@@ -233,4 +233,91 @@ document.addEventListener('DOMContentLoaded', () => {
                setTimeout(typeWriter, 1000);
           }
      }
+
+     // ================== SPEEDTEST FUNCTIONALITY ==================
+     const speedButton = document.getElementById('speedButton');
+     const speedCircle = document.getElementById('speedCircle');
+     const speedStatus = document.getElementById('speedStatus');
+     const speedResults = document.getElementById('speedResults');
+     const downloadSpeed = document.getElementById('downloadSpeed');
+     const uploadSpeed = document.getElementById('uploadSpeed');
+     const pingSpeed = document.getElementById('pingSpeed');
+
+     if (speedButton) {
+          speedButton.addEventListener('click', startSpeedTest);
+     }
+
+     function startSpeedTest() {
+          // Deshabilitar el botón durante la prueba
+          speedButton.style.pointerEvents = 'none';
+          speedCircle.classList.add('testing');
+          speedResults.style.display = 'none';
+
+          // Fase 1: Ping
+          speedStatus.textContent = 'Midiendo ping...';
+          speedButton.querySelector('.speedtest-text').textContent = 'Midiendo...';
+
+          setTimeout(() => {
+               const ping = Math.floor(Math.random() * 50) + 10; // 10-60 ms
+               pingSpeed.textContent = ping;
+
+               // Fase 2: Velocidad de descarga
+               speedStatus.textContent = 'Midiendo velocidad de descarga...';
+
+               let currentDownload = 0;
+               const targetDownload = Math.floor(Math.random() * 80) + 20; // 20-100 Mbps
+
+               const downloadInterval = setInterval(() => {
+                    currentDownload += Math.floor(Math.random() * 10) + 5;
+                    if (currentDownload >= targetDownload) {
+                         currentDownload = targetDownload;
+                         clearInterval(downloadInterval);
+
+                         downloadSpeed.textContent = currentDownload;
+
+                         // Fase 3: Velocidad de subida
+                         speedStatus.textContent = 'Midiendo velocidad de subida...';
+
+                         let currentUpload = 0;
+                         const targetUpload = Math.floor(targetDownload * 0.3) + 5; // Subida típicamente menor
+
+                         const uploadInterval = setInterval(() => {
+                              currentUpload += Math.floor(Math.random() * 5) + 2;
+                              if (currentUpload >= targetUpload) {
+                                   currentUpload = targetUpload;
+                                   clearInterval(uploadInterval);
+
+                                   uploadSpeed.textContent = currentUpload;
+
+                                   // Finalizar prueba
+                                   speedCircle.classList.remove('testing');
+                                   speedButton.querySelector('.speedtest-text').textContent = 'Repetir Test';
+                                   speedStatus.textContent = '¡Prueba completada!';
+                                   speedResults.style.display = 'block';
+                                   speedButton.style.pointerEvents = 'auto';
+
+                                   // Animar resultados
+                                   const resultCards = speedResults.querySelectorAll('.speed-result-card');
+                                   resultCards.forEach((card, index) => {
+                                        setTimeout(() => {
+                                             card.style.opacity = '0';
+                                             card.style.transform = 'translateY(20px)';
+                                             card.style.transition = 'all 0.5s ease';
+
+                                             setTimeout(() => {
+                                                  card.style.opacity = '1';
+                                                  card.style.transform = 'translateY(0)';
+                                             }, 100);
+                                        }, index * 200);
+                                   });
+                              } else {
+                                   uploadSpeed.textContent = currentUpload;
+                              }
+                         }, 150);
+                    } else {
+                         downloadSpeed.textContent = currentDownload;
+                    }
+               }, 100);
+          }, 1000);
+     }
 });
