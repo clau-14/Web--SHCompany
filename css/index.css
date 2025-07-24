@@ -91,6 +91,7 @@ select {
   transition: opacity 1.8s ease-in-out;
 }
 
+/* Estilos básicos para todos los elementos multimedia */
 .carousel-item img,
 .carousel-item video {
   width: 100%;
@@ -100,6 +101,11 @@ select {
   position: absolute;
   top: 0;
   left: 0;
+}
+
+/* Ajuste específico solo para la imagen de Ayapel */
+.carousel-item img[src*="ayapel"] {
+  object-position: center 30%;
 }
 
 .overlay {
@@ -530,11 +536,9 @@ form textarea {
     min-height: 400px;
   }
 
-  .carousel-item img,
-  .carousel-item video {
-    object-position: center top;
-    object-fit: cover;
-    transform: scale(0.9);
+  /* Ajuste para tablet */
+  .carousel-item img[src*="ayapel"] {
+    object-position: center 25%;
   }
 
   .carousel-caption-custom {
@@ -549,6 +553,38 @@ form textarea {
   .carousel-caption-custom .lead {
     font-size: 1rem;
   }
+
+  .package-visual {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    position: relative;
+    padding: 3rem 1rem;
+  }
+
+  .internet-icon,
+  .tv-icon {
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+  }
+
+  .internet-icon i,
+  .tv-icon i {
+    font-size: 4rem;
+    color: #f25c05;
+  }
+
+  .plus-sign {
+    color: #f25c05;
+    font-weight: 800;
+    animation: pulse 2s ease-in-out infinite;
+    flex-shrink: 0;
+  }
+
+  .plus-sign span {
+    font-size: 3rem;
+  }
 }
 
 @media screen and (max-width: 576px) {
@@ -559,11 +595,9 @@ form textarea {
     min-height: 350px;
   }
 
-  .carousel-item img,
-  .carousel-item video {
+  /* Ajuste para móvil */
+  .carousel-item img[src*="ayapel"] {
     object-position: center 20%;
-    object-fit: cover;
-    transform: scale(0.85);
   }
 
   .carousel-caption-custom h1 {
@@ -580,86 +614,95 @@ form textarea {
     padding: 0 1rem;
     transform: translate(-50%, -40%);
   }
+
+  .package-visual {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.5rem 0.5rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .internet-icon,
+  .tv-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .internet-icon i,
+  .tv-icon i {
+    font-size: 2rem !important;
+  }
+
+  .plus-sign {
+    transform: none;
+    margin: 0 0.3rem;
+  }
+
+  .plus-sign span {
+    font-size: 1.5rem !important;
+  }
+
+  .package-glow {
+    width: 150px;
+    height: 80px;
+  }
 }
 
 @media screen and (max-width: 480px) {
-
-  #heroCarrusel,
-  .carousel-item {
-    height: 45vh;
-    min-height: 320px;
+  .package-visual {
+    gap: 0.6rem;
+    padding: 0.8rem 0.3rem;
   }
 
-  .carousel-item img,
-  .carousel-item video {
-    object-position: center 15%;
-    object-fit: cover;
-    transform: scale(0.8);
+  .internet-icon i,
+  .tv-icon i {
+    font-size: 1.8rem !important;
   }
 
-  .carousel-caption-custom h1 {
-    font-size: 1.2rem;
+  .plus-sign span {
+    font-size: 1.3rem !important;
+    margin: 0 0.2rem;
   }
 
-  .carousel-caption-custom .lead {
-    font-size: 0.85rem;
-  }
-
-  .carousel-caption-custom {
-    transform: translate(-50%, -35%);
+  .package-glow {
+    width: 120px;
+    height: 60px;
   }
 }
 
 @media screen and (max-width: 360px) {
-
-  #heroCarrusel,
-  .carousel-item {
-    height: 40vh;
-    min-height: 300px;
+  .package-visual {
+    gap: 0.4rem;
+    padding: 0.6rem 0.2rem;
   }
 
-  .carousel-item img,
-  .carousel-item video {
-    object-position: center 10%;
-    object-fit: cover;
-    transform: scale(0.75);
+  .internet-icon i,
+  .tv-icon i {
+    font-size: 1.5rem !important;
   }
 
-  .carousel-caption-custom {
-    padding: 0 0.5rem;
-    transform: translate(-50%, -30%);
+  .plus-sign span {
+    font-size: 1.1rem !important;
   }
 
-  .carousel-caption-custom h1 {
-    font-size: 1rem;
-    margin-bottom: 0.3rem;
-  }
-
-  .carousel-caption-custom .lead {
-    font-size: 0.8rem;
+  .package-glow {
+    width: 100px;
+    height: 50px;
   }
 }
 
 /* -------------------- MEJORAS ADICIONALES PARA CARRUSEL -------------------- */
-/* Asegurar que videos se reproduzcan correctamente en móvil */
+/* Asegurar que videos se reproduzcan correctamente */
 .carousel-item video {
   width: 100% !important;
   height: 100% !important;
   min-width: 100%;
   min-height: 100%;
-}
-
-/* Mejorar calidad visual en móviles */
-@media screen and (max-width: 768px) {
-  .carousel-item video {
-    object-fit: cover !important;
-    object-position: center center !important;
-  }
-
-  /* Para la imagen específica de Ayapel */
-  .carousel-item img[src*="ayapel"] {
-    object-position: center bottom !important;
-  }
+  object-fit: cover;
+  object-position: center center;
 }
 
 /* Overlay más suave en móviles */
@@ -731,6 +774,7 @@ form textarea {
 .internet-icon,
 .tv-icon {
   transition: all 0.3s ease;
+  flex-shrink: 0;
 }
 
 .package-visual:hover .internet-icon,
@@ -742,6 +786,7 @@ form textarea {
   color: var(--color-primary);
   font-weight: 800;
   animation: pulse 2s ease-in-out infinite;
+  flex-shrink: 0;
 }
 
 .package-glow {
@@ -1142,42 +1187,39 @@ form textarea {
   .tv-hero-content {
     text-align: center;
     padding: 1rem 0;
+    order: 2;
   }
 
-  .package-visual {
-    flex-direction: column;
-    gap: 1rem;
-    padding: 2rem 1rem;
-  }
-
-  .plus-sign {
-    transform: rotate(90deg);
-  }
-
-  .tv-category-card {
-    margin-bottom: 1rem;
-  }
-
-  .plan-card {
+  .tv-visual {
+    order: 1;
     margin-bottom: 2rem;
   }
 
-  .plan-card.featured {
+  .package-visual {
+    flex-direction: row;
+    gap: 1rem;
+    padding: 1.5rem 0.5rem;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .internet-icon i,
+  .tv-icon i {
+    font-size: 2.5rem !important;
+  }
+
+  .plus-sign span {
+    font-size: 2rem !important;
+  }
+
+  .plus-sign {
     transform: none;
-  }
-
-  .plan-card.featured:hover {
-    transform: translateY(-5px);
-  }
-
-  .tv-cta {
-    margin-top: 2rem;
-    padding: 2rem 1rem !important;
+    margin: 0 0.5rem;
   }
 
   .package-glow {
-    width: 250px;
-    height: 150px;
+    width: 200px;
+    height: 100px;
   }
 
   /* Navegación responsive para tablets */
