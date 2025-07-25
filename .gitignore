@@ -1,1 +1,39 @@
-.vercel
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+*.tmp
+*.temp
+
+# Logs
+*.log
+logs/
+
+# Archivos de configuración local
+config.local.php
+.env.local
+
+# Archivos de backup
+*.bak
+*.backup
+
+# Carpetas de caché
+cache/
+temp/
+
+# Archivos IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Node modules (si se usa)
+node_modules/
+package-lock.json
+
+# Archivos de imagen temporales
+image/temp/
+image/cache/
+
+# Archivos PHP específicos
+vendor/
+composer.lock

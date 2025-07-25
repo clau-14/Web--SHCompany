@@ -777,16 +777,21 @@ form textarea {
   flex-shrink: 0;
 }
 
-.package-visual:hover .internet-icon,
-.package-visual:hover .tv-icon {
-  transform: scale(1.1);
+.internet-icon i,
+.tv-icon i {
+  font-size: 6rem;
+  color: #f25c05;
 }
 
 .plus-sign {
-  color: var(--color-primary);
+  color: #f25c05;
   font-weight: 800;
   animation: pulse 2s ease-in-out infinite;
   flex-shrink: 0;
+}
+
+.plus-sign span {
+  font-size: 4rem;
 }
 
 .package-glow {
@@ -1197,7 +1202,7 @@ form textarea {
 
   .package-visual {
     flex-direction: row;
-    gap: 1rem;
+    gap: 1.5rem;
     padding: 1.5rem 0.5rem;
     align-items: center;
     justify-content: center;
@@ -1205,11 +1210,11 @@ form textarea {
 
   .internet-icon i,
   .tv-icon i {
-    font-size: 2.5rem !important;
+    font-size: 3rem !important;
   }
 
   .plus-sign span {
-    font-size: 2rem !important;
+    font-size: 2.5rem !important;
   }
 
   .plus-sign {
@@ -1218,8 +1223,8 @@ form textarea {
   }
 
   .package-glow {
-    width: 200px;
-    height: 100px;
+    width: 250px;
+    height: 120px;
   }
 
   /* Navegación responsive para tablets */
