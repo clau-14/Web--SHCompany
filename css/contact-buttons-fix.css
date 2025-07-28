@@ -1,0 +1,150 @@
+/* CSS Temporal para Depurar Botones de Contacto */
+
+/* Variables para botones */
+:root {
+     --btn-whatsapp: #25d366;
+     --btn-whatsapp-hover: #20c55a;
+     --btn-phone: #1e3a8a;
+     --btn-phone-hover: #1e40af;
+     --btn-email: #f25c05;
+     --btn-email-hover: #f97316;
+}
+
+/* Estilo base para botones de contacto */
+.contact-btn {
+     display: flex !important;
+     align-items: center !important;
+     justify-content: flex-start !important;
+     gap: 1rem !important;
+     padding: 1rem 1.25rem !important;
+     background: #ffffff !important;
+     color: #1e3a8a !important;
+     text-decoration: none !important;
+     border-radius: 12px !important;
+     transition: all 0.3s ease !important;
+     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
+     width: 100% !important;
+     margin-bottom: 0.75rem !important;
+     min-height: 70px !important;
+     border: 2px solid #e5e7eb !important;
+     position: relative !important;
+}
+
+.contact-btn:hover {
+     transform: translateY(-2px) !important;
+     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15) !important;
+     text-decoration: none !important;
+}
+
+/* Botón WhatsApp */
+.contact-btn-whatsapp {
+     background: linear-gradient(135deg, var(--btn-whatsapp) 0%, var(--btn-whatsapp-hover) 100%) !important;
+     color: white !important;
+     border: 2px solid var(--btn-whatsapp) !important;
+}
+
+.contact-btn-whatsapp:hover {
+     background: linear-gradient(135deg, var(--btn-whatsapp-hover) 0%, #1ea952 100%) !important;
+     color: white !important;
+     border-color: var(--btn-whatsapp-hover) !important;
+}
+
+/* Botón Teléfono */
+.contact-btn-phone {
+     background: linear-gradient(135deg, var(--btn-phone) 0%, #3b82f6 100%) !important;
+     color: white !important;
+     border: 2px solid var(--btn-phone) !important;
+}
+
+.contact-btn-phone:hover {
+     background: linear-gradient(135deg, var(--btn-phone-hover) 0%, #2563eb 100%) !important;
+     color: white !important;
+     border-color: var(--btn-phone-hover) !important;
+}
+
+/* Botón Email */
+.contact-btn-email {
+     background: #ffffff !important;
+     color: var(--btn-phone) !important;
+     border: 2px solid #e5e7eb !important;
+}
+
+.contact-btn-email:hover {
+     background: linear-gradient(135deg, var(--btn-email) 0%, var(--btn-email-hover) 100%) !important;
+     color: white !important;
+     border-color: var(--btn-email) !important;
+}
+
+/* Iconos */
+.btn-icon {
+     font-size: 1.5rem !important;
+     min-width: 40px !important;
+     display: flex !important;
+     align-items: center !important;
+     justify-content: center !important;
+     background: rgba(255, 255, 255, 0.2) !important;
+     border-radius: 8px !important;
+     width: 40px !important;
+     height: 40px !important;
+     transition: all 0.3s ease !important;
+}
+
+.contact-btn:hover .btn-icon {
+     transform: scale(1.1) !important;
+     background: rgba(255, 255, 255, 0.3) !important;
+}
+
+/* Contenido */
+.btn-content {
+     display: flex !important;
+     flex-direction: column !important;
+     align-items: flex-start !important;
+     flex-grow: 1 !important;
+}
+
+.btn-title {
+     font-weight: 600 !important;
+     font-size: 1rem !important;
+     margin-bottom: 0.2rem !important;
+     transition: all 0.3s ease !important;
+}
+
+.btn-subtitle {
+     font-size: 0.8rem !important;
+     opacity: 0.8 !important;
+     font-weight: 400 !important;
+     transition: all 0.3s ease !important;
+}
+
+.contact-btn:hover .btn-title,
+.contact-btn:hover .btn-subtitle {
+     transform: translateX(2px) !important;
+}
+
+.contact-btn:hover .btn-subtitle {
+     opacity: 1 !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+     .contact-btn {
+          min-height: 60px !important;
+          padding: 0.75rem 1rem !important;
+          gap: 0.75rem !important;
+     }
+     
+     .btn-icon {
+          font-size: 1.25rem !important;
+          width: 35px !important;
+          height: 35px !important;
+          min-width: 35px !important;
+     }
+     
+     .btn-title {
+          font-size: 0.9rem !important;
+     }
+     
+     .btn-subtitle {
+          font-size: 0.75rem !important;
+     }
+}

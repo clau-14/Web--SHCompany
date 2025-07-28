@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
   <link rel="stylesheet" href="../css/index.css">
-  <link rel="stylesheet" href="../css/pqrs.css">
+  <link rel="stylesheet" href="../css/limitacion-velocidad.css">
 </head>
 
 <body>
@@ -29,7 +29,7 @@
           <li class="nav-item"><a class="nav-link" href="empresa.html">Empresa</a></li>
           <li class="nav-item"><a class="nav-link" href="planes.html">Planes</a></li>
           <li class="nav-item"><a class="nav-link" href="pqrs.html">PQRS</a></li>
-          <li class="nav-item"><a class="nav-link active" href="soporte-tecnico.html">Soporte Técnico</a></li>
+          <li class="nav-item"><a class="nav-link" href="soporte-tecnico.html">Soporte Técnico</a></li>
           <li class="nav-item"><a class="nav-link" href="familiash.html">Familia SH</a></li>
         </ul>
       </div>
@@ -88,73 +88,152 @@
           
           <!-- Introducción -->
           <div class="mb-5">
-            <h2 class="fw-bold text-orange mb-4">Factores Técnicos que Afectan la Velocidad</h2>
-            <p class="fs-5 text-muted mb-4">
-              La velocidad efectiva del internet que experimenta en su hogar puede verse afectada por múltiples factores técnicos. A continuación, le explicamos los principales elementos que pueden influir en su conexión:
-            </p>
-            <div class="alert alert-warning">
-              <i class="bi bi-exclamation-triangle me-2"></i>
-              <strong>Importante:</strong> Para garantizar una conexión estable, es fundamental que el suscriptor 
-              identifique y controle las aplicaciones que consumen alto tráfico 
-              de internet en sus dispositivos (computador, tablet o celular). 
-              Estas aplicaciones, al ejecutarse en segundo plano o actualizarse 
-              automáticamente, pueden afectar la velocidad y calidad del servicio.
+            <div class="text-center mb-5">
+              <h2 class="fw-bold text-orange mb-4 display-5">🚀 Factores Técnicos que Afectan la Velocidad</h2>
+              <div class="row justify-content-center">
+                <div class="col-lg-8">
+                  <p class="fs-5 text-muted mb-4 lead">
+                    La velocidad efectiva del internet que experimenta en su hogar puede verse afectada por múltiples factores técnicos. A continuación, le explicamos los principales elementos que pueden influir en su conexión:
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="row justify-content-center">
+              <div class="col-lg-10">
+                <div class="alert alert-warning border-0 shadow-sm" style="background: linear-gradient(135deg, #fff3cd, #ffeaa7); border-left: 5px solid #f39c12 !important;">
+                  <div class="d-flex align-items-start">
+                    <div class="me-3">
+                      <i class="bi bi-exclamation-triangle-fill text-warning fs-2"></i>
+                    </div>
+                    <div>
+                      <h5 class="alert-heading fw-bold text-dark mb-2">
+                        <i class="bi bi-lightbulb-fill me-2"></i>Información Importante
+                      </h5>
+                      <p class="mb-0 text-dark">
+                        Para garantizar una conexión estable, es fundamental que el suscriptor 
+                        identifique y controle las aplicaciones que consumen alto tráfico 
+                        de internet en sus dispositivos (computador, tablet o celular). 
+                        Estas aplicaciones, al ejecutarse en segundo plano o actualizarse 
+                        automáticamente, pueden afectar la velocidad y calidad del servicio.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
           <!-- Factores de Infraestructura -->
           <div class="mb-5">
-            <h3 class="fw-bold text-orange mb-4">Factores de Infraestructura en las redes de Fibra Óptica</h3>
+            <div class="text-center mb-5">
+              <h3 class="fw-bold text-orange mb-3 display-6">
+                <i class="bi bi-diagram-3-fill me-3"></i>Factores de Infraestructura en Fibra Óptica
+              </h3>
+              <p class="text-muted lead">Elementos externos que pueden afectar su conexión</p>
+            </div>
             <div class="row g-4">
               <div class="col-md-6">
-                <div class="card border-start border-danger border-4 shadow-sm h-100">
-                  <div class="card-body">
+                <div class="card border-0 shadow-lg h-100 factor-card" style="border-left: 5px solid #dc3545 !important;">
+                  <div class="card-body p-4">
                     <div class="d-flex align-items-center mb-3">
-                      <i class="bi bi-scissors text-danger fs-3 me-3"></i>
-                      <h5 class="fw-bold mb-0">Corte de Fibra Óptica</h5>
+                      <div class="icon-wrapper me-3" style="background: linear-gradient(135deg, #dc3545, #ff6b6b); color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                        <i class="bi bi-scissors fs-3"></i>
+                      </div>
+                      <div>
+                        <h5 class="fw-bold mb-1 text-danger">Corte de Fibra Óptica</h5>
+                        <small class="text-muted">Daño físico en cables</small>
+                      </div>
                     </div>
-                    <p class="text-muted">Interrupciones del servicio ocasionadas por daños físicos en los cables de
+                    <p class="text-muted mb-3">Interrupciones del servicio ocasionadas por daños físicos en los cables de
                        fibra óptica, ya sea por accidentes, vandalismo, tensión excesiva en postes, 
                        caída de árboles o condiciones ambientales adversas.</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <span class="badge bg-danger bg-opacity-10 text-danger px-3 py-2">
+                        <i class="bi bi-exclamation-triangle me-1"></i>Alto Impacto
+                      </span>
+                      <small class="text-muted">
+                        <i class="bi bi-clock me-1"></i>Reparación: 2-6 horas
+                      </small>
+                    </div>
                   </div>
                 </div>
               </div>
               <div class="col-md-6">
-                <div class="card border-start border-warning border-4 shadow-sm h-100">
-                  <div class="card-body">
+                <div class="card border-0 shadow-lg h-100 factor-card" style="border-left: 5px solid #ffc107 !important;">
+                  <div class="card-body p-4">
                     <div class="d-flex align-items-center mb-3">
-                      <i class="bi bi-cloud-lightning-rain text-warning fs-3 me-3"></i>
-                      <h5 class="fw-bold mb-0">Afectaciones por Condiciones Climáticas</h5>
+                      <div class="icon-wrapper me-3" style="background: linear-gradient(135deg, #ffc107, #ffeb3b); color: #333; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                        <i class="bi bi-cloud-lightning-rain fs-3"></i>
+                      </div>
+                      <div>
+                        <h5 class="fw-bold mb-1 text-warning">Condiciones Climáticas</h5>
+                        <small class="text-muted">Factores ambientales</small>
+                      </div>
                     </div>
-                    <p class="text-muted"> Lluvias intensas, tormentas eléctricas o fuertes vientos pueden
+                    <p class="text-muted mb-3">Lluvias intensas, tormentas eléctricas o fuertes vientos pueden
                        causar daños indirectos en la infraestructura como caída de postes y árboles o daños en empalmes, afectando la continuidad del servicio.</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <span class="badge bg-warning bg-opacity-10 text-warning px-3 py-2">
+                        <i class="bi bi-cloud-rain me-1"></i>Temporal
+                      </span>
+                      <small class="text-muted">
+                        <i class="bi bi-clock me-1"></i>Duración: Variable
+                      </small>
+                    </div>
                   </div>
                 </div>
               </div>
               <div class="col-md-6">
-                <div class="card border-start border-info border-4 shadow-sm h-100">
-                  <div class="card-body">
+                <div class="card border-0 shadow-lg h-100 factor-card" style="border-left: 5px solid #17a2b8 !important;">
+                  <div class="card-body p-4">
                     <div class="d-flex align-items-center mb-3">
-                      <i class="bi bi-tools text-info fs-3 me-3"></i>
-                      <h5 class="fw-bold mb-0">Mantenimiento Preventivo o Correctivo</h5>
+                      <div class="icon-wrapper me-3" style="background: linear-gradient(135deg, #17a2b8, #20c997); color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                        <i class="bi bi-tools fs-3"></i>
+                      </div>
+                      <div>
+                        <h5 class="fw-bold mb-1 text-info">Mantenimiento</h5>
+                        <small class="text-muted">Trabajos programados</small>
+                      </div>
                     </div>
-                    <p class="text-muted">En ocasiones es necesario realizar trabajos programados o 
+                    <p class="text-muted mb-3">En ocasiones es necesario realizar trabajos programados o 
                       urgentes para mejorar o reparar partes de la red,
                        lo que puede generar breves interrupciones del servicio.</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <span class="badge bg-info bg-opacity-10 text-info px-3 py-2">
+                        <i class="bi bi-calendar-check me-1"></i>Programado
+                      </span>
+                      <small class="text-muted">
+                        <i class="bi bi-clock me-1"></i>Notificación previa
+                      </small>
+                    </div>
                   </div>
                 </div>
               </div>
               <div class="col-md-6">
-                <div class="card border-start border-primary border-4 shadow-sm h-100">
-                  <div class="card-body">
+                <div class="card border-0 shadow-lg h-100 factor-card" style="border-left: 5px solid #007bff !important;">
+                  <div class="card-body p-4">
                     <div class="d-flex align-items-center mb-3">
-                      <i class="bi bi-plug text-primary fs-3 me-3"></i>
-                      <h5 class="fw-bold mb-0">Daños en Empalmes o Conectores</h5>
+                      <div class="icon-wrapper me-3" style="background: linear-gradient(135deg, #007bff, #6610f2); color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                        <i class="bi bi-plug fs-3"></i>
+                      </div>
+                      <div>
+                        <h5 class="fw-bold mb-1 text-primary">Empalmes y Conectores</h5>
+                        <small class="text-muted">Puntos de conexión</small>
+                      </div>
                     </div>
-                    <p class="text-muted">El deterioro natural, 
+                    <p class="text-muted mb-3">El deterioro natural, 
                       la humedad o la manipulación inadecuada de los puntos de empalme
                        y conectores pueden generar pérdidas de señal o disminución
                         en la calidad del servicio.</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                      <span class="badge bg-primary bg-opacity-10 text-primary px-3 py-2">
+                        <i class="bi bi-wrench me-1"></i>Técnico
+                      </span>
+                      <small class="text-muted">
+                        <i class="bi bi-clock me-1"></i>Revisión: 30-60 min
+                      </small>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -162,48 +241,122 @@
           </div>
           <!-- Factores del Usuario -->
           <div class="mb-5">
-            <h3 class="fw-bold text-orange mb-4">Factores en el Hogar del Usuario</h3>
+            <div class="text-center mb-5">
+              <h3 class="fw-bold text-orange mb-3 display-6">
+                <i class="bi bi-house-fill me-3"></i>Factores en el Hogar del Usuario
+              </h3>
+              <p class="text-muted lead">Elementos que puede controlar para optimizar su conexión</p>
+            </div>
             <div class="row g-4">
               <div class="col-md-6">
-                <div class="card bg-light border-0 shadow-sm h-100">
-                  <div class="card-body text-center">
-                    <i class="bi bi-graph-up text-success fs-1 mb-3"></i>
-                    <h5 class="fw-bold">Alto Consumo de Megas</h5>
-                    <p class="text-muted">Aplicaciones instaladas en PC, Tablet y/o celular que consumen grandes cantidades de datos simultáneamente.</p>
+                <div class="card border-0 shadow-lg h-100 user-factor-card">
+                  <div class="card-body text-center p-4" style="background: linear-gradient(135deg, #e8f5e8, #f8fff8);">
+                    <div class="icon-container mb-3" style="background: linear-gradient(135deg, #28a745, #20c997); width: 80px; height: 80px; border-radius: 50%; margin: 0 auto; display: flex; align-items: center; justify-content: center; position: relative;">
+                      <i class="bi bi-graph-up text-white fs-1"></i>
+                      <div class="pulse-ring" style="position: absolute; border: 3px solid #28a745; border-radius: 50%; width: 100px; height: 100px; animation: pulse 2s infinite;"></div>
+                    </div>
+                    <h5 class="fw-bold text-success mb-3">Alto Consumo de Megas</h5>
+                    <p class="text-muted mb-3">Aplicaciones instaladas en PC, Tablet y/o celular que consumen grandes cantidades de datos simultáneamente.</p>
+                    <div class="tips-list text-start">
+                      <div class="tip-item mb-2">
+                        <i class="bi bi-check-circle text-success me-2"></i>
+                        <small>Netflix, YouTube en alta calidad</small>
+                      </div>
+                      <div class="tip-item mb-2">
+                        <i class="bi bi-check-circle text-success me-2"></i>
+                        <small>Actualizaciones automáticas</small>
+                      </div>
+                      <div class="tip-item mb-2">
+                        <i class="bi bi-check-circle text-success me-2"></i>
+                        <small>Videojuegos online</small>
+                      </div>
+                    </div>
                     <div class="mt-3">
-                      <small class="text-success"><strong>Recomendación:</strong> Monitore las aplicaciones activas</small>
+                      <span class="badge bg-success bg-opacity-10 text-success px-3 py-2">
+                        <i class="bi bi-lightbulb me-1"></i>Monitorea tus apps
+                      </span>
                     </div>
                   </div>
                 </div>
               </div>
               <div class="col-md-6">
-                <div class="card bg-light border-0 shadow-sm h-100">
-                  <div class="card-body text-center">
-                    <i class="bi bi-wifi text-warning fs-1 mb-3"></i>
-                    <h5 class="fw-bold">Congestión en la Red WiFi</h5>
-                    <p class="text-muted">Interferencias y saturación de la red inalámbrica doméstica por múltiples dispositivos conectados.</p>
+                <div class="card border-0 shadow-lg h-100 user-factor-card">
+                  <div class="card-body text-center p-4" style="background: linear-gradient(135deg, #fff3cd, #fffdf0);">
+                    <div class="icon-container mb-3" style="background: linear-gradient(135deg, #ffc107, #ff8f00); width: 80px; height: 80px; border-radius: 50%; margin: 0 auto; display: flex; align-items: center; justify-content: center; position: relative;">
+                      <i class="bi bi-wifi text-white fs-1"></i>
+                      <div class="wifi-waves" style="position: absolute;">
+                        <div style="position: absolute; border: 2px solid #ffc107; border-radius: 50%; width: 90px; height: 90px; animation: waveExpand 2s infinite; animation-delay: 0s;"></div>
+                        <div style="position: absolute; border: 2px solid #ffc107; border-radius: 50%; width: 90px; height: 90px; animation: waveExpand 2s infinite; animation-delay: 0.5s;"></div>
+                      </div>
+                    </div>
+                    <h5 class="fw-bold text-warning mb-3">Congestión en Red WiFi</h5>
+                    <p class="text-muted mb-3">Interferencias y saturación de la red inalámbrica doméstica por múltiples dispositivos conectados.</p>
+                    <div class="tips-list text-start">
+                      <div class="tip-item mb-2">
+                        <i class="bi bi-router text-warning me-2"></i>
+                        <small>Ubica el router centralmente</small>
+                      </div>
+                      <div class="tip-item mb-2">
+                        <i class="bi bi-ethernet text-warning me-2"></i>
+                        <small>Usa cable para mejor velocidad</small>
+                      </div>
+                      <div class="tip-item mb-2">
+                        <i class="bi bi-arrow-clockwise text-warning me-2"></i>
+                        <small>Reinicia el router periódicamente</small>
+                      </div>
+                    </div>
                     <div class="mt-3">
-                      <small class="text-warning"><strong>Solución:</strong> Use conexión por cable cuando sea posible</small>
+                      <span class="badge bg-warning bg-opacity-10 text-warning px-3 py-2">
+                        <i class="bi bi-ethernet me-1"></i>Cable es mejor
+                      </span>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="col-md-12">
-                <div class="card bg-info bg-opacity-10 border-info border-2">
-                  <div class="card-body">
+              <div class="col-12">
+                <div class="card border-0 shadow-lg" style="background: linear-gradient(135deg, #e3f2fd, #f0f8ff); border-left: 5px solid #2196f3 !important;">
+                  <div class="card-body p-4">
                     <div class="row align-items-center">
                       <div class="col-md-2 text-center">
-                        <i class="bi bi-devices text-info" style="font-size: 3rem;"></i>
+                        <div class="device-icon" style="background: linear-gradient(135deg, #2196f3, #03a9f4); width: 80px; height: 80px; border-radius: 20px; margin: 0 auto; display: flex; align-items: center; justify-content: center;">
+                          <i class="bi bi-devices text-white" style="font-size: 2.5rem;"></i>
+                        </div>
                       </div>
                       <div class="col-md-10">
-                        <h5 class="fw-bold text-info mb-2">Dispositivos Adicionales Conectados</h5>
-                        <p class="mb-2">La conexión simultánea de varios dispositivos en un mismo hogar o negocio puede afectar la velocidad y estabilidad del servicio.</p>
-                        <ul class="list-unstyled mb-0">
-                          <li><i class="bi bi-check-circle text-success me-2"></i>Verifica la cantidad de dispositivos conectados (TVs, celulares, cámaras, etc.)</li>
-                          <li><i class="bi bi-check-circle text-success me-2"></i>Evita el uso de aplicaciones que consumen mucho ancho de red al mismo tiempo (por ejemplo: YouTube, Netflix, videollamadas)</li>
-                          <li><i class="bi bi-check-circle text-success me-2"></i>Ubica el router en un lugar central y libre de obstáculos</li>
-                          <li><i class="bi bi-check-circle text-success me-2"></i>Reinicia el router si notas lentitud constante</li>
-                        </ul>
+                        <h5 class="fw-bold text-info mb-3">
+                          <i class="bi bi-wifi me-2"></i>Dispositivos Conectados Simultáneamente
+                        </h5>
+                        <p class="mb-3 text-dark">La conexión simultánea de varios dispositivos en un mismo hogar o negocio puede afectar la velocidad y estabilidad del servicio.</p>
+                        <div class="row g-3">
+                          <div class="col-md-6">
+                            <div class="d-flex align-items-center mb-2">
+                              <i class="bi bi-check-circle-fill text-success me-2"></i>
+                              <small class="text-dark">Verifica dispositivos conectados (TVs, celulares, cámaras)</small>
+                            </div>
+                            <div class="d-flex align-items-center mb-2">
+                              <i class="bi bi-check-circle-fill text-success me-2"></i>
+                              <small class="text-dark">Evita apps de alto consumo simultáneo</small>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="d-flex align-items-center mb-2">
+                              <i class="bi bi-check-circle-fill text-success me-2"></i>
+                              <small class="text-dark">Ubica el router en lugar central</small>
+                            </div>
+                            <div class="d-flex align-items-center mb-2">
+                              <i class="bi bi-check-circle-fill text-success me-2"></i>
+                              <small class="text-dark">Reinicia el router si hay lentitud</small>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="mt-3">
+                          <span class="badge bg-info bg-opacity-10 text-info px-3 py-2 me-2">
+                            <i class="bi bi-speedometer2 me-1"></i>Optimización
+                          </span>
+                          <span class="badge bg-primary bg-opacity-10 text-primary px-3 py-2">
+                            <i class="bi bi-shield-check me-1"></i>Control Total
+                          </span>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -273,27 +426,134 @@
           </div>
 
           <!-- Contacto para dudas -->
-          <div class="bg-light rounded-4 p-4 text-center">
-            <h4 class="fw-bold text-orange mb-3">¿Experimenta problemas de velocidad?</h4>
-            <p class="text-muted mb-4">Nuestro equipo de soporte técnico está disponible para analizar su conexión y brindarle asistencia personalizada.</p>
-            <div class="d-flex justify-content-center gap-3 flex-wrap">
-              <a href="https://wa.me/573148686245?text=Hola%2C%20necesito%20ayuda%20para%20analizar%20problemas%20de%20velocidad%20en%20mi%20conexi%C3%B3n." target="_blank" class="btn btn-success">
-                <i class="bi bi-whatsapp me-2"></i>WhatsApp Soporte
-              </a>
-              <a href="mailto:internetjhs@gmail.com?subject=Consulta%20sobre%20velocidad%20de%20internet" class="btn btn-primary">
-                <i class="bi bi-envelope me-2"></i>Email Técnico
-              </a>
-              <a href="soporte-tecnico.html" class="btn btn-outline-orange">
-                <i class="bi bi-headset me-2"></i>Soporte Especializado
-              </a>
+          <div class="contact-hero-section" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 25px; padding: 3rem 2rem; position: relative; overflow: hidden; color: white;">
+            <!-- Elementos decorativos -->
+            <div class="contact-decorations" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none;">
+              <div style="position: absolute; top: -50px; right: -50px; width: 150px; height: 150px; background: rgba(255, 255, 255, 0.1); border-radius: 50%; animation: float 6s ease-in-out infinite;"></div>
+              <div style="position: absolute; bottom: -30px; left: -30px; width: 100px; height: 100px; background: rgba(255, 255, 255, 0.05); border-radius: 50%; animation: float 4s ease-in-out infinite reverse;"></div>
+              <div style="position: absolute; top: 20%; left: 10%; width: 4px; height: 4px; background: rgba(255, 255, 255, 0.6); border-radius: 50%; animation: twinkle 3s infinite;"></div>
+              <div style="position: absolute; top: 60%; right: 20%; width: 6px; height: 6px; background: rgba(255, 255, 255, 0.4); border-radius: 50%; animation: twinkle 2s infinite 0.5s;"></div>
+              <div style="position: absolute; bottom: 30%; left: 30%; width: 3px; height: 3px; background: rgba(255, 255, 255, 0.7); border-radius: 50%; animation: twinkle 4s infinite 1s;"></div>
             </div>
-            <div class="mt-4 text-start">
-              <small class="text-muted">
-                <strong>Horarios de atención técnica:</strong><br>
-                • Lunes a Viernes 8:00 AM - 6:00 PM - Sábados: 8:00 AM - 12:00 PM<br>
-                • Soporte Técnico vía WhatsApp<br>
-                • Tiempo promedio de respuesta: 15 minutos
-              </small>
+            
+            <div class="text-center position-relative" style="z-index: 2;">
+              <!-- Icono principal animado -->
+              <div class="contact-icon-container mb-4" style="position: relative; display: inline-block;">
+                <div class="main-contact-icon" style="background: rgba(255, 255, 255, 0.15); width: 100px; height: 100px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto; backdrop-filter: blur(10px); border: 2px solid rgba(255, 255, 255, 0.2);">
+                  <i class="bi bi-headset" style="font-size: 3rem; color: #ffd700; animation: iconBounce 2s infinite ease-in-out;"></i>
+                </div>
+                <!-- Ondas de soporte -->
+                <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+                  <div style="position: absolute; width: 120px; height: 120px; border: 2px solid rgba(255, 215, 0, 0.3); border-radius: 50%; animation: supportWave 2s infinite ease-out;"></div>
+                  <div style="position: absolute; width: 120px; height: 120px; border: 2px solid rgba(255, 215, 0, 0.3); border-radius: 50%; animation: supportWave 2s infinite ease-out 0.5s;"></div>
+                  <div style="position: absolute; width: 120px; height: 120px; border: 2px solid rgba(255, 215, 0, 0.3); border-radius: 50%; animation: supportWave 2s infinite ease-out 1s;"></div>
+                </div>
+              </div>
+              
+              <h4 class="fw-bold mb-3" style="font-size: 2.2rem; text-shadow: 0 2px 10px rgba(0,0,0,0.3);">
+                <i class="bi bi-lightning-fill text-warning me-2"></i>¿Problemas de Velocidad?
+              </h4>
+              <p class="mb-4 fs-5" style="max-width: 600px; margin: 0 auto; opacity: 0.95;">
+                Nuestro equipo de soporte técnico especializado está disponible para analizar tu conexión y brindarte 
+                <strong>asistencia personalizada</strong> en tiempo real.
+              </p>
+              
+              <!-- Estadísticas de soporte -->
+              <div class="support-stats mb-4">
+                <div class="row g-3 justify-content-center">
+                  <div class="col-auto">
+                    <div class="stat-bubble" style="background: rgba(255, 255, 255, 0.1); padding: 1rem 1.5rem; border-radius: 20px; backdrop-filter: blur(5px);">
+                      <div class="d-flex align-items-center">
+                        <i class="bi bi-clock-fill text-warning me-2"></i>
+                        <div class="text-start">
+                          <div class="fw-bold">15 min</div>
+                          <small style="opacity: 0.8;">Respuesta promedio</small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-auto">
+                    <div class="stat-bubble" style="background: rgba(255, 255, 255, 0.1); padding: 1rem 1.5rem; border-radius: 20px; backdrop-filter: blur(5px);">
+                      <div class="d-flex align-items-center">
+                        <i class="bi bi-shield-check-fill text-success me-2"></i>
+                        <div class="text-start">
+                          <div class="fw-bold">24/7</div>
+                          <small style="opacity: 0.8;">Disponibilidad</small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-auto">
+                    <div class="stat-bubble" style="background: rgba(255, 255, 255, 0.1); padding: 1rem 1.5rem; border-radius: 20px; backdrop-filter: blur(5px);">
+                      <div class="d-flex align-items-center">
+                        <i class="bi bi-people-fill text-info me-2"></i>
+                        <div class="text-start">
+                          <div class="fw-bold">98%</div>
+                          <small style="opacity: 0.8;">Satisfacción</small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Botones de contacto mejorados -->
+              <div class="d-flex justify-content-center gap-3 flex-wrap mb-4">
+                <a href="https://wa.me/573148686245?text=Hola%2C%20necesito%20ayuda%20para%20analizar%20problemas%20de%20velocidad%20en%20mi%20conexi%C3%B3n." target="_blank" 
+                   class="btn btn-success btn-lg contact-btn" style="border-radius: 25px; padding: 0.8rem 2rem; font-weight: 600; position: relative; overflow: hidden; transform: translateY(0); transition: all 0.3s ease;">
+                  <span style="position: relative; z-index: 2;">
+                    <i class="bi bi-whatsapp me-2"></i>WhatsApp Soporte
+                  </span>
+                  <div style="position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent); transition: left 0.5s;"></div>
+                </a>
+                <a href="mailto:internetjhs@gmail.com?subject=Consulta%20sobre%20velocidad%20de%20internet" 
+                   class="btn btn-primary btn-lg contact-btn" style="border-radius: 25px; padding: 0.8rem 2rem; font-weight: 600; position: relative; overflow: hidden; transform: translateY(0); transition: all 0.3s ease;">
+                  <span style="position: relative; z-index: 2;">
+                    <i class="bi bi-envelope me-2"></i>Email Técnico
+                  </span>
+                  <div style="position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent); transition: left 0.5s;"></div>
+                </a>
+                <a href="soporte-tecnico.html" 
+                   class="btn btn-outline-light btn-lg contact-btn" style="border-radius: 25px; padding: 0.8rem 2rem; font-weight: 600; position: relative; overflow: hidden; transform: translateY(0); transition: all 0.3s ease; border: 2px solid rgba(255,255,255,0.3);">
+                  <span style="position: relative; z-index: 2;">
+                    <i class="bi bi-tools me-2"></i>Soporte Especializado
+                  </span>
+                  <div style="position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent); transition: left 0.5s;"></div>
+                </a>
+              </div>
+              
+              <!-- Información de horarios mejorada -->
+              <div class="schedule-info" style="background: rgba(0, 0, 0, 0.2); border-radius: 15px; padding: 1.5rem; backdrop-filter: blur(5px); border: 1px solid rgba(255, 255, 255, 0.1);">
+                <div class="row g-3 text-start">
+                  <div class="col-md-4">
+                    <div class="d-flex align-items-center">
+                      <i class="bi bi-calendar3 text-warning me-2 fs-5"></i>
+                      <div>
+                        <div class="fw-bold small">Lunes - Viernes</div>
+                        <small style="opacity: 0.8;">8:00 AM - 6:00 PM</small>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="d-flex align-items-center">
+                      <i class="bi bi-calendar-week text-info me-2 fs-5"></i>
+                      <div>
+                        <div class="fw-bold small">Sábados</div>
+                        <small style="opacity: 0.8;">8:00 AM - 12:00 PM</small>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="d-flex align-items-center">
+                      <i class="bi bi-whatsapp text-success me-2 fs-5"></i>
+                      <div>
+                        <div class="fw-bold small">WhatsApp</div>
+                        <small style="opacity: 0.8;">Disponible 24/7</small>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -313,7 +573,7 @@
           <ul class="footer-links list-unstyled">
             <li><a href="control-parental.html" class="text-light text-decoration-none">Control Parental</a></li>
             <li><a href="indicadores-calidad.html" class="text-light text-decoration-none">Indicadores de calidad</a></li>
-            <li><span class="text-muted link-disabled">Atención al Usuario</span></li>
+            <li><a href="soporte-tecnico.html" class="text-light text-decoration-none">Atención al Usuario</a></li>
             <li><span class="text-muted link-disabled">Prevención de fraudes</span></li>
             <li><a href="limitacion-velocidad.html" class="text-light text-decoration-none">Limitación de velocidad</a></li>
             <li><span class="text-muted link-disabled">Gestión de tráfico</span></li>
@@ -339,8 +599,8 @@
             <li><span class="text-muted link-disabled">Compensación automática</span></li>
             <li><span class="text-muted link-disabled">Seguridad en la red</span></li>
             <li><span class="text-muted link-disabled">Contrato de servicios</span></li>
-            <li><span class="text-muted link-disabled">Resolución 5111 de 2017</span></li>
-            <li><span class="text-muted link-disabled">Denuncias de pornografía infantil</span></li>
+            <li><a href="../docs/resolucioin_5111_de_ 2017.pdf" target="_blank" class="text-light text-decoration-none">Resolución 5111 de 2017</a></li>
+            <li><a href="proteccion-infantil.html" class="text-light text-decoration-none"><i class="bi bi-shield-fill-check me-1"></i>Protección Infantil</a></li>
           </ul>
         </div>
       </div>
@@ -379,5 +639,6 @@
 
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/limitacion-velocidad.js"></script>
 </body>
 </html>

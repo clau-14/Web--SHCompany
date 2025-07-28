@@ -1,0 +1,1340 @@
+/* Protección Infantil - CSS Específico */
+
+/* Variables CSS */
+:root {
+     --protection-blue: #1e3a8a;
+     --protection-green: #059669;
+     --protection-red: #dc2626;
+     --protection-orange: #f25c05;
+     --protection-light: #f8fafc;
+     --protection-gray: #64748b;
+}
+
+/* Hero Section Styles */
+.hero-protection {
+     background: linear-gradient(135deg, var(--protection-blue) 0%, #3b82f6 50%, var(--protection-green) 100%);
+     color: white;
+     min-height: 70vh;
+     display: flex;
+     align-items: center;
+     position: relative;
+     overflow: hidden;
+}
+
+.hero-protection::before {
+     content: '';
+     position: absolute;
+     top: 0;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="shield-pattern" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23shield-pattern)"/></svg>');
+     opacity: 0.3;
+}
+
+.protection-hero-content {
+     position: relative;
+     z-index: 2;
+}
+
+.protection-badge {
+     background: rgba(255, 255, 255, 0.2);
+     backdrop-filter: blur(10px);
+     border-radius: 25px;
+     padding: 0.5rem 1.5rem;
+     display: inline-flex;
+     align-items: center;
+     margin-bottom: 1.5rem;
+     border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.protection-title {
+     font-size: 3.5rem;
+     font-weight: 800;
+     margin-bottom: 1rem;
+     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.protection-subtitle {
+     font-size: 1.5rem;
+     margin-bottom: 1.5rem;
+     opacity: 0.9;
+}
+
+.protection-visual {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     position: relative;
+}
+
+.protection-shield {
+     width: 200px;
+     height: 200px;
+     background: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.1) 100%);
+     border-radius: 50%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     border: 3px solid rgba(255, 255, 255, 0.3);
+     animation: protectionPulse 3s ease-in-out infinite;
+     position: relative;
+}
+
+.protection-shield::before {
+     content: '';
+     position: absolute;
+     width: 120%;
+     height: 120%;
+     border: 2px solid rgba(255, 255, 255, 0.2);
+     border-radius: 50%;
+     animation: protectionRipple 2s ease-out infinite;
+}
+
+.protection-shield i {
+     font-size: 5rem;
+     color: white;
+     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Animaciones personalizadas */
+@keyframes protectionPulse {
+
+     0%,
+     100% {
+          transform: scale(1);
+     }
+
+     50% {
+          transform: scale(1.05);
+     }
+}
+
+@keyframes protectionRipple {
+     0% {
+          transform: scale(1);
+          opacity: 1;
+     }
+
+     100% {
+          transform: scale(1.5);
+          opacity: 0;
+     }
+}
+
+/* Animaciones especiales para botones de contacto */
+@keyframes pulseWhatsApp {
+     0%, 100% {
+          box-shadow: 0 8px 30px rgba(37, 211, 102, 0.3);
+     }
+     50% {
+          box-shadow: 0 8px 30px rgba(37, 211, 102, 0.6);
+     }
+}
+
+@keyframes pulsePhone {
+     0%, 100% {
+          box-shadow: 0 8px 30px rgba(30, 58, 138, 0.3);
+     }
+     50% {
+          box-shadow: 0 8px 30px rgba(30, 58, 138, 0.6);
+     }
+}
+
+@keyframes rippleWhatsApp {
+     0% {
+          transform: scale(1);
+          opacity: 1;
+     }
+     100% {
+          transform: scale(1.8);
+          opacity: 0;
+     }
+}
+
+@keyframes ripplePhone {
+     0% {
+          transform: scale(1);
+          opacity: 1;
+     }
+     100% {
+          transform: scale(1.8);
+          opacity: 0;
+     }
+}
+
+/* Efecto de destello para botones llamativos */
+@keyframes shimmer {
+     0% {
+          background-position: -200px 0;
+     }
+     100% {
+          background-position: calc(200px + 100%) 0;
+     }
+}
+
+.contact-btn-whatsapp::before,
+.contact-btn-phone::before {
+     content: '';
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background: linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.3) 50%, transparent 70%);
+     background-size: 200px 100%;
+     animation: shimmer 3s ease-in-out infinite;
+     border-radius: 20px;
+}
+
+/* Law Cards */
+.law-card {
+     background: white;
+     border-radius: 15px;
+     padding: 2rem;
+     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+     transition: transform 0.3s ease, box-shadow 0.3s ease;
+     height: 100%;
+     border-left: 5px solid var(--protection-blue);
+}
+
+.law-card:hover {
+     transform: translateY(-5px);
+     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.law-icon {
+     width: 80px;
+     height: 80px;
+     background: linear-gradient(135deg, var(--protection-blue), #3b82f6);
+     border-radius: 50%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     color: white;
+     font-size: 2rem;
+     margin: 0 auto 1.5rem;
+}
+
+/* Commitment Cards */
+.commitment-card {
+     background: linear-gradient(135deg, rgba(5, 150, 105, 0.1) 0%, rgba(30, 58, 138, 0.1) 100%);
+     border-radius: 15px;
+     padding: 2rem;
+     border: 2px solid rgba(5, 150, 105, 0.2);
+     height: 100%;
+     transition: all 0.3s ease;
+}
+
+.commitment-card:hover {
+     border-color: var(--protection-green);
+     background: linear-gradient(135deg, rgba(5, 150, 105, 0.15) 0%, rgba(30, 58, 138, 0.15) 100%);
+}
+
+.commitment-icon {
+     font-size: 3rem;
+     color: var(--protection-green);
+     margin-bottom: 1rem;
+}
+
+/* Alert Protection */
+.alert-protection {
+     background: linear-gradient(135deg, rgba(220, 38, 38, 0.1) 0%, rgba(239, 68, 68, 0.1) 100%);
+     border: 2px solid rgba(220, 38, 38, 0.3);
+     border-radius: 15px;
+     color: var(--protection-red);
+}
+
+/* Document Links */
+.document-link {
+     display: inline-flex;
+     align-items: center;
+     padding: 0.75rem 1.5rem;
+     background: linear-gradient(135deg, var(--protection-blue), #3b82f6);
+     color: white;
+     text-decoration: none;
+     border-radius: 25px;
+     transition: all 0.3s ease;
+     margin: 0.25rem;
+     box-shadow: 0 4px 15px rgba(30, 58, 138, 0.3);
+}
+
+.document-link:hover {
+     color: white;
+     transform: translateY(-2px);
+     box-shadow: 0 8px 25px rgba(30, 58, 138, 0.4);
+}
+
+.document-link i {
+     margin-right: 0.5rem;
+}
+
+/* Statistics Section */
+.statistics-section {
+     background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+     border-radius: 20px;
+     padding: 3rem;
+     margin: 3rem 0;
+     position: relative;
+     overflow: hidden;
+}
+
+.statistics-section::before {
+     content: '';
+     position: absolute;
+     top: 0;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="stats-pattern" x="0" y="0" width="50" height="50" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="2" fill="rgba(30,58,138,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23stats-pattern)"/></svg>');
+     opacity: 0.5;
+}
+
+.stat-item {
+     text-align: center;
+     padding: 2rem 1rem;
+     background: white;
+     border-radius: 15px;
+     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+     transition: all 0.3s ease;
+     position: relative;
+     height: 100%;
+}
+
+.stat-item:hover {
+     transform: translateY(-10px);
+     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+.stat-icon {
+     margin-bottom: 1rem;
+}
+
+.stat-number {
+     font-size: 3.5rem;
+     font-weight: 800;
+     color: var(--protection-blue);
+     display: block;
+     transition: all 0.3s ease;
+}
+
+.stat-label {
+     color: var(--protection-blue);
+     font-weight: 700;
+     font-size: 1.1rem;
+     margin: 0.5rem 0;
+}
+
+.stat-description {
+     color: #64748b;
+     font-size: 0.9rem;
+     margin-top: 0.5rem;
+}
+
+/* Impact Cards */
+.impact-card {
+     background: white;
+     border-radius: 15px;
+     padding: 2rem;
+     text-align: center;
+     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+     transition: all 0.3s ease;
+     height: 100%;
+     border-top: 4px solid var(--protection-green);
+}
+
+.impact-card:hover {
+     transform: translateY(-5px);
+     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.impact-icon {
+     font-size: 2.5rem;
+     color: var(--protection-green);
+     margin-bottom: 1rem;
+}
+
+/* Contact Section Styles */
+.contact-protection-section {
+     background: linear-gradient(135deg, var(--protection-blue) 0%, #3b82f6 100%);
+     border-radius: 25px;
+     overflow: hidden;
+     position: relative;
+     min-height: 500px;
+}
+
+.contact-hero-bg {
+     background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="contact-pattern" x="0" y="0" width="30" height="30" patternUnits="userSpaceOnUse"><circle cx="15" cy="15" r="1" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23contact-pattern)"/></svg>');
+     padding: 3rem 2rem;
+     position: relative;
+}
+
+.contact-visual {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     min-height: 400px;
+}
+
+.contact-shield-container {
+     position: relative;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
+.contact-shield {
+     width: 150px;
+     height: 150px;
+     background: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.1) 100%);
+     border-radius: 50%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     border: 3px solid rgba(255, 255, 255, 0.3);
+     position: relative;
+     z-index: 2;
+}
+
+.contact-shield i {
+     font-size: 4rem;
+     color: white;
+     animation: contactPulse 2s ease-in-out infinite;
+}
+
+.contact-waves {
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+}
+
+.wave {
+     position: absolute;
+     border: 2px solid rgba(255, 255, 255, 0.3);
+     border-radius: 50%;
+     width: 150px;
+     height: 150px;
+     animation: waveExpand 3s ease-out infinite;
+}
+
+.wave-1 {
+     animation-delay: 0s;
+}
+
+.wave-2 {
+     animation-delay: 1s;
+}
+
+.wave-3 {
+     animation-delay: 2s;
+}
+
+@keyframes contactPulse {
+
+     0%,
+     100% {
+          transform: scale(1);
+     }
+
+     50% {
+          transform: scale(1.1);
+     }
+}
+
+@keyframes waveExpand {
+     0% {
+          width: 150px;
+          height: 150px;
+          opacity: 1;
+     }
+
+     100% {
+          width: 300px;
+          height: 300px;
+          opacity: 0;
+     }
+}
+
+.contact-content {
+     color: white;
+     padding: 2rem;
+}
+
+.contact-badge {
+     background: rgba(255, 255, 255, 0.2);
+     backdrop-filter: blur(10px);
+     border-radius: 25px;
+     padding: 0.75rem 1.5rem;
+     display: inline-flex;
+     align-items: center;
+     border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.contact-title {
+     font-size: 2.5rem;
+     font-weight: 800;
+     line-height: 1.2;
+}
+
+.highlight-text {
+     color: #fbbf24;
+     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.gradient-text {
+     background: linear-gradient(45deg, #fbbf24, #f59e0b);
+     background-clip: text;
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+     font-weight: 900;
+}
+
+.contact-subtitle {
+     font-size: 1.1rem;
+     opacity: 0.9;
+     line-height: 1.6;
+}
+
+.contact-features {
+     display: flex;
+     flex-direction: column;
+     gap: 1rem;
+}
+
+.feature-item {
+     display: flex;
+     align-items: center;
+     gap: 1rem;
+     font-weight: 500;
+}
+
+.feature-item i {
+     font-size: 1.2rem;
+     color: #fbbf24;
+     width: 20px;
+}
+
+/* Contact Buttons - Versión Mejorada y Limpia */
+.contact-btn {
+     display: flex;
+     align-items: center;
+     justify-content: flex-start;
+     gap: 1rem;
+     padding: 1.25rem 1.5rem;
+     background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+     color: var(--protection-blue);
+     text-decoration: none;
+     border-radius: 15px;
+     transition: all 0.3s ease;
+     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+     width: 100%;
+     margin-bottom: 1rem;
+     min-height: 80px;
+     border: 2px solid transparent;
+     position: relative;
+     overflow: hidden;
+}
+
+.contact-btn::before {
+     content: '';
+     position: absolute;
+     top: 0;
+     left: -100%;
+     width: 100%;
+     height: 100%;
+     background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+     transition: left 0.5s ease;
+}
+
+.contact-btn:hover::before {
+     left: 100%;
+}
+
+.contact-btn:hover {
+     transform: translateY(-3px);
+     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+     text-decoration: none;
+}
+
+/* Botón WhatsApp - Más llamativo */
+.contact-btn-whatsapp {
+     background: linear-gradient(135deg, #25d366 0%, #20c55a 100%);
+     color: white;
+     border: 2px solid rgba(37, 211, 102, 0.3);
+     animation: pulseWhatsApp 2s ease-in-out infinite;
+}
+
+.contact-btn-whatsapp:hover {
+     background: linear-gradient(135deg, #20c55a 0%, #1ea952 100%);
+     color: white;
+     border-color: #25d366;
+     box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+     animation: none;
+}
+
+/* Botón Teléfono - Más llamativo */
+.contact-btn-phone {
+     background: linear-gradient(135deg, var(--protection-blue) 0%, #3b82f6 100%);
+     color: white;
+     border: 2px solid rgba(30, 58, 138, 0.3);
+     animation: pulsePhone 2s ease-in-out infinite 0.5s;
+}
+
+.contact-btn-phone:hover {
+     background: linear-gradient(135deg, #1e40af 0%, #2563eb 100%);
+     color: white;
+     border-color: var(--protection-blue);
+     box-shadow: 0 8px 25px rgba(30, 58, 138, 0.4);
+     animation: none;
+}
+
+/* Botón Email */
+.contact-btn-email {
+     background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+     color: var(--protection-blue);
+     border: 2px solid rgba(30, 58, 138, 0.2);
+}
+
+.contact-btn-email:hover {
+     background: linear-gradient(135deg, var(--protection-orange) 0%, #f97316 100%);
+     color: white;
+     border-color: var(--protection-orange);
+     box-shadow: 0 8px 25px rgba(242, 92, 5, 0.4);
+}
+
+/* Iconos de los botones */
+.btn-icon {
+     font-size: 1.8rem;
+     min-width: 45px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     background: rgba(255, 255, 255, 0.2);
+     border-radius: 12px;
+     width: 50px;
+     height: 50px;
+     transition: all 0.3s ease;
+     position: relative;
+}
+
+.contact-btn:hover .btn-icon {
+     transform: scale(1.1);
+     background: rgba(255, 255, 255, 0.3);
+}
+
+/* Iconos específicos para WhatsApp y Phone */
+.contact-btn-whatsapp .btn-icon,
+.contact-btn-phone .btn-icon {
+     background: rgba(255, 255, 255, 0.2);
+}
+
+.contact-btn-whatsapp:hover .btn-icon,
+.contact-btn-phone:hover .btn-icon {
+     background: rgba(255, 255, 255, 0.3);
+}
+
+/* Contenido de los botones */
+.btn-content {
+     display: flex;
+     flex-direction: column;
+     align-items: flex-start;
+     flex-grow: 1;
+}
+
+.btn-title {
+     font-weight: 700;
+     font-size: 1.1rem;
+     margin-bottom: 0.2rem;
+     transition: all 0.3s ease;
+}
+
+.btn-subtitle {
+     font-size: 0.85rem;
+     opacity: 0.8;
+     font-weight: 400;
+     transition: all 0.3s ease;
+}
+
+.contact-btn:hover .btn-title {
+     transform: translateX(3px);
+}
+
+.contact-btn:hover .btn-subtitle {
+     opacity: 1;
+     transform: translateX(3px);
+}
+
+.emergency-info {
+     background: rgba(220, 38, 38, 0.2);
+     border: 2px solid rgba(220, 38, 38, 0.3);
+     border-radius: 15px;
+     padding: 1rem;
+     text-align: center;
+}
+
+.emergency-badge {
+     color: #fbbf24;
+     font-weight: 600;
+}
+
+.protection-shield {
+     width: 200px;
+     height: 200px;
+     background: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.1) 100%);
+     border-radius: 50%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     border: 3px solid rgba(255, 255, 255, 0.3);
+     animation: protectionPulse 3s ease-in-out infinite;
+     position: relative;
+}
+
+.protection-shield::before {
+     content: '';
+     position: absolute;
+     width: 120%;
+     height: 120%;
+     border: 2px solid rgba(255, 255, 255, 0.2);
+     border-radius: 50%;
+     animation: protectionRipple 2s ease-out infinite;
+}
+
+.protection-shield i {
+     font-size: 5rem;
+     color: white;
+     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Tarjetas de leyes */
+.law-card {
+     background: white;
+     border-radius: 15px;
+     padding: 2rem;
+     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+     transition: all 0.3s ease;
+     height: 100%;
+     border-left: 5px solid var(--protection-blue);
+     position: relative;
+     overflow: hidden;
+}
+
+.law-card::before {
+     content: '';
+     position: absolute;
+     top: 0;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     background: linear-gradient(135deg, rgba(30, 58, 138, 0.05) 0%, transparent 50%);
+     opacity: 0;
+     transition: opacity 0.3s ease;
+}
+
+.law-card:hover {
+     transform: translateY(-10px);
+     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+     border-left-color: var(--protection-green);
+}
+
+.law-card:hover::before {
+     opacity: 1;
+}
+
+.law-icon {
+     width: 80px;
+     height: 80px;
+     background: linear-gradient(135deg, var(--protection-blue), #3b82f6);
+     border-radius: 50%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     color: white;
+     font-size: 2rem;
+     margin: 0 auto 1.5rem;
+     transition: all 0.3s ease;
+}
+
+.law-card:hover .law-icon {
+     background: linear-gradient(135deg, var(--protection-green), #10b981);
+     transform: scale(1.1);
+}
+
+/* Tarjetas de compromisos */
+.commitment-card {
+     background: linear-gradient(135deg, rgba(5, 150, 105, 0.1) 0%, rgba(30, 58, 138, 0.1) 100%);
+     border-radius: 15px;
+     padding: 2rem;
+     border: 2px solid rgba(5, 150, 105, 0.2);
+     height: 100%;
+     transition: all 0.3s ease;
+     position: relative;
+     overflow: hidden;
+}
+
+.commitment-card::before {
+     content: '';
+     position: absolute;
+     top: -50%;
+     left: -50%;
+     width: 200%;
+     height: 200%;
+     background: radial-gradient(circle, rgba(5, 150, 105, 0.1) 0%, transparent 70%);
+     opacity: 0;
+     transition: opacity 0.3s ease;
+}
+
+.commitment-card:hover {
+     border-color: var(--protection-green);
+     background: linear-gradient(135deg, rgba(5, 150, 105, 0.15) 0%, rgba(30, 58, 138, 0.15) 100%);
+     transform: translateY(-5px);
+     box-shadow: 0 15px 35px rgba(5, 150, 105, 0.2);
+}
+
+.commitment-card:hover::before {
+     opacity: 1;
+}
+
+.commitment-icon {
+     font-size: 3rem;
+     color: var(--protection-green);
+     margin-bottom: 1rem;
+     transition: all 0.3s ease;
+}
+
+.commitment-card:hover .commitment-icon {
+     color: var(--protection-blue);
+     transform: scale(1.1);
+}
+
+/* Alertas de protección */
+.alert-protection {
+     background: linear-gradient(135deg, rgba(220, 38, 38, 0.1) 0%, rgba(239, 68, 68, 0.1) 100%);
+     border: 2px solid rgba(220, 38, 38, 0.3);
+     border-radius: 15px;
+     color: var(--protection-red);
+     position: relative;
+     overflow: hidden;
+}
+
+.alert-protection::before {
+     content: '';
+     position: absolute;
+     top: 0;
+     left: -100%;
+     width: 100%;
+     height: 100%;
+     background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.2) 50%, transparent 100%);
+     animation: shimmer 3s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+     0% {
+          left: -100%;
+     }
+
+     100% {
+          left: 100%;
+     }
+}
+
+/* Enlaces de documentos */
+.document-link {
+     display: inline-flex;
+     align-items: center;
+     padding: 0.75rem 1.5rem;
+     background: linear-gradient(135deg, var(--protection-blue), #3b82f6);
+     color: white;
+     text-decoration: none;
+     border-radius: 25px;
+     transition: all 0.3s ease;
+     margin: 0.25rem;
+     box-shadow: 0 4px 15px rgba(30, 58, 138, 0.3);
+     position: relative;
+     overflow: hidden;
+}
+
+.document-link::before {
+     content: '';
+     position: absolute;
+     top: 0;
+     left: -100%;
+     width: 100%;
+     height: 100%;
+     background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.2) 50%, transparent 100%);
+     transition: left 0.5s ease;
+}
+
+.document-link:hover {
+     color: white;
+     transform: translateY(-3px);
+     box-shadow: 0 10px 30px rgba(30, 58, 138, 0.4);
+     background: linear-gradient(135deg, var(--protection-green), #10b981);
+}
+
+.document-link:hover::before {
+     left: 100%;
+}
+
+/* Sección de estadísticas */
+.statistics-section {
+     background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+     border-radius: 20px;
+     padding: 3rem;
+     margin: 3rem 0;
+     position: relative;
+     overflow: hidden;
+}
+
+.statistics-section::before {
+     content: '';
+     position: absolute;
+     top: 0;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="stats-pattern" x="0" y="0" width="50" height="50" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="2" fill="rgba(30,58,138,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23stats-pattern)"/></svg>');
+     opacity: 0.5;
+}
+
+.stat-item {
+     text-align: center;
+     padding: 1.5rem;
+     position: relative;
+}
+
+.stat-number {
+     font-size: 3rem;
+     font-weight: 800;
+     color: var(--protection-blue);
+     display: block;
+     transition: all 0.3s ease;
+}
+
+.stat-item:hover .stat-number {
+     color: var(--protection-green);
+     transform: scale(1.1);
+}
+
+.stat-label {
+     color: var(--protection-gray);
+     font-weight: 600;
+     margin-top: 0.5rem;
+     transition: color 0.3s ease;
+}
+
+.stat-item:hover .stat-label {
+     color: var(--protection-blue);
+}
+
+/* Sección de reporte */
+.report-section {
+     background: linear-gradient(135deg, var(--protection-red) 0%, #ef4444 100%);
+     color: white;
+     border-radius: 20px;
+     padding: 3rem;
+     text-align: center;
+     margin: 3rem 0;
+     position: relative;
+     overflow: hidden;
+}
+
+.report-section::before {
+     content: '';
+     position: absolute;
+     top: 0;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="warning-pattern" x="0" y="0" width="30" height="30" patternUnits="userSpaceOnUse"><polygon points="15,5 25,20 5,20" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23warning-pattern)"/></svg>');
+     opacity: 0.2;
+}
+
+.report-button {
+     background: white;
+     color: var(--protection-red);
+     border: none;
+     padding: 1rem 2rem;
+     border-radius: 25px;
+     font-weight: 600;
+     text-decoration: none;
+     display: inline-block;
+     margin: 0.5rem;
+     transition: all 0.3s ease;
+     position: relative;
+     overflow: hidden;
+}
+
+.report-button::before {
+     content: '';
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     width: 0;
+     height: 0;
+     background: var(--protection-red);
+     border-radius: 50%;
+     transition: all 0.5s ease;
+     transform: translate(-50%, -50%);
+}
+
+.report-button:hover {
+     color: white;
+     transform: translateY(-3px);
+     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.report-button:hover::before {
+     width: 300px;
+     height: 300px;
+}
+
+.report-button i {
+     position: relative;
+     z-index: 2;
+}
+
+.report-button span {
+     position: relative;
+     z-index: 2;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+     .protection-title {
+          font-size: 2.5rem;
+     }
+
+     .protection-shield {
+          width: 150px;
+          height: 150px;
+     }
+
+     .protection-shield i {
+          font-size: 3rem;
+     }
+
+     .law-card,
+     .commitment-card {
+          margin-bottom: 1.5rem;
+     }
+
+     .stat-number {
+          font-size: 2.5rem;
+     }
+
+     .statistics-section,
+     .report-section {
+          padding: 2rem;
+     }
+}
+
+@media (max-width: 576px) {
+     .protection-title {
+          font-size: 2rem;
+     }
+
+     .protection-shield {
+          width: 120px;
+          height: 120px;
+     }
+
+     .protection-shield i {
+          font-size: 2.5rem;
+     }
+
+     .law-icon {
+          width: 60px;
+          height: 60px;
+          font-size: 1.5rem;
+     }
+
+     .commitment-icon {
+          font-size: 2.5rem;
+     }
+
+     .document-link {
+          padding: 0.5rem 1rem;
+          font-size: 0.9rem;
+     }
+
+     .report-button {
+          padding: 0.75rem 1.5rem;
+          font-size: 0.9rem;
+     }
+}
+
+/* Mejoras de accesibilidad */
+.law-card:focus-within,
+.commitment-card:focus-within {
+     outline: 3px solid var(--protection-blue);
+     outline-offset: 2px;
+}
+
+.document-link:focus,
+.report-button:focus {
+     outline: 3px solid rgba(255, 255, 255, 0.7);
+     outline-offset: 2px;
+}
+
+/* Animaciones de entrada */
+.law-card,
+.commitment-card {
+     opacity: 0;
+     transform: translateY(30px);
+     animation: fadeInUp 0.6s ease forwards;
+}
+
+.law-card:nth-child(1) {
+     animation-delay: 0.1s;
+}
+
+.law-card:nth-child(2) {
+     animation-delay: 0.2s;
+}
+
+.law-card:nth-child(3) {
+     animation-delay: 0.3s;
+}
+
+.law-card:nth-child(4) {
+     animation-delay: 0.4s;
+}
+
+.commitment-card:nth-child(1) {
+     animation-delay: 0.1s;
+}
+
+.commitment-card:nth-child(2) {
+     animation-delay: 0.2s;
+}
+
+.commitment-card:nth-child(3) {
+     animation-delay: 0.3s;
+}
+
+.commitment-card:nth-child(4) {
+     animation-delay: 0.4s;
+}
+
+.commitment-card:nth-child(5) {
+     animation-delay: 0.5s;
+}
+
+.commitment-card:nth-child(6) {
+     animation-delay: 0.6s;
+}
+
+@keyframes fadeInUp {
+     to {
+          opacity: 1;
+          transform: translateY(0);
+     }
+}
+
+/* Efectos hover mejorados */
+.protection-badge:hover {
+     background: rgba(255, 255, 255, 0.3);
+     transform: scale(1.05);
+}
+
+.stat-item:hover {
+     transform: translateY(-5px);
+}
+
+/* Estilos para impresión */
+@media print {
+
+     .protection-hero,
+     .report-section,
+     .statistics-section {
+          background: white !important;
+          color: black !important;
+     }
+
+     .document-link,
+     .report-button {
+          background: transparent !important;
+          color: black !important;
+          border: 1px solid black !important;
+     }
+}
+
+/* Report Section */
+.report-section {
+     background: linear-gradient(135deg, var(--protection-red) 0%, #ef4444 100%);
+     color: white;
+     border-radius: 20px;
+     padding: 3rem;
+     text-align: center;
+     margin: 3rem 0;
+     position: relative;
+     overflow: hidden;
+}
+
+.report-section::before {
+     content: '';
+     position: absolute;
+     top: 0;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="alert-pattern" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23alert-pattern)"/></svg>');
+     opacity: 0.3;
+}
+
+.report-section>* {
+     position: relative;
+     z-index: 2;
+}
+
+.report-button {
+     background: white;
+     color: var(--protection-red);
+     border: none;
+     padding: 1rem 2rem;
+     border-radius: 25px;
+     font-weight: 600;
+     text-decoration: none;
+     display: inline-flex;
+     align-items: center;
+     justify-content: center;
+     margin: 0.5rem;
+     transition: all 0.3s ease;
+     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+     min-width: 280px;
+}
+
+.report-button:hover {
+     color: var(--protection-red);
+     transform: translateY(-3px);
+     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+     background: #f8f9fa;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+     .protection-title {
+          font-size: 2.5rem;
+     }
+
+          .protection-shield {
+               width: 150px;
+               height: 150px;
+          }
+
+          .protection-shield i {
+               font-size: 3rem;
+          }
+
+          .law-card,
+          .commitment-card {
+               margin-bottom: 1.5rem;
+          }
+
+          .statistics-section {
+               padding: 2rem 1rem;
+          }
+
+          .stat-item {
+               padding: 1.5rem 1rem;
+          }
+
+          .stat-number {
+               font-size: 2.5rem;
+          }
+
+          .impact-card {
+               margin-bottom: 1.5rem;
+               padding: 1.5rem;
+          }
+          
+          /* Botones de contacto en móvil */
+          .contact-btn {
+               min-height: 70px;
+               margin-bottom: 0.75rem;
+               padding: 1rem;
+               gap: 0.75rem;
+          }
+          
+          .btn-icon {
+               font-size: 1.5rem;
+               width: 40px;
+               height: 40px;
+               min-width: 40px;
+          }
+          
+          .btn-title {
+               font-size: 1rem;
+          }
+          
+          .btn-subtitle {
+               font-size: 0.8rem;
+          }
+
+          .contact-title {
+               font-size: 2rem;
+          }
+
+          .contact-hero-bg {
+               padding: 2rem 1rem;
+          }
+
+          .contact-shield {
+               width: 120px;
+               height: 120px;
+          }
+
+          .contact-shield i {
+               font-size: 3rem;
+          }
+
+          .contact-features {
+               margin-bottom: 2rem;
+          }
+
+     .contact-btn {
+          padding: 1.25rem 1rem;
+          justify-content: center;
+          text-align: center;
+          gap: 1rem;
+          min-height: 85px;
+          margin-bottom: 1rem;
+          border-radius: 18px;
+     }
+
+     .btn-icon {
+          font-size: 2rem;
+          width: 55px;
+          height: 55px;
+          min-width: 55px;
+     }
+
+     .btn-title {
+          font-size: 1.1rem;
+     }
+
+     .btn-subtitle {
+          font-size: 0.85rem;
+     }          .btn-content {
+               align-items: center;
+          }
+
+          .btn-icon {
+               font-size: 1.5rem;
+               min-width: 35px;
+          }
+
+          .report-section {
+               padding: 2rem 1rem;
+               margin: 2rem 0;
+          }
+
+          .report-button {
+               min-width: 100%;
+               margin: 0.25rem 0;
+               padding: 0.875rem 1.5rem;
+               font-size: 0.9rem;
+          }
+     }
