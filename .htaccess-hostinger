@@ -1,0 +1,15 @@
+# Configuración simple para Hostinger
+DirectoryIndex index.html
+
+# Solo redirigir index.html a raíz
+RewriteEngine On
+RewriteRule ^index\.html$ / [R=301,L]
+
+# Configuración básica de cache
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresByType text/css "access plus 1 week"
+ExpiresByType application/javascript "access plus 1 week"
+ExpiresByType image/png "access plus 1 week"
+ExpiresByType image/jpeg "access plus 1 week"
+</IfModule>
