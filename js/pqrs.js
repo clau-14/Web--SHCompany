@@ -284,8 +284,71 @@ function inicializarPQRS() {
      validarFormulario();
      inicializarTooltips();
      mostrarInformacionContextual();
+     inicializarScrollSuave();
 
      console.log('Sistema PQRS inicializado correctamente');
+}
+
+// Función para scroll suave
+function inicializarScrollSuave() {
+     // Scroll suave para el botón CTA
+     const ctaBtn = document.querySelector('.pqrs-cta-btn');
+     if (ctaBtn) {
+          ctaBtn.addEventListener('click', function (e) {
+               e.preventDefault();
+               const target = document.querySelector('#pqrsForm');
+               if (target) {
+                    target.scrollIntoView({
+                         behavior: 'smooth',
+                         block: 'start'
+                    });
+               }
+          });
+     }
+
+     // Scroll suave para la flecha
+     const scrollArrow = document.querySelector('.scroll-arrow');
+     if (scrollArrow) {
+          scrollArrow.addEventListener('click', function () {
+               const target = document.querySelector('.pqrs-types-section');
+               if (target) {
+                    target.scrollIntoView({
+                         behavior: 'smooth',
+                         block: 'start'
+                    });
+               }
+          });
+     }
+
+     // Efectos de parallax ligeros en el header
+     window.addEventListener('scroll', function () {
+          const scrolled = window.pageYOffset;
+          const particles = document.querySelectorAll('.pqrs-particle');
+          const bgShapes = document.querySelectorAll('.pqrs-bg-shape');
+
+          particles.forEach((particle, index) => {
+               const speed = (index + 1) * 0.2;
+               particle.style.transform = `translateY(${scrolled * speed}px)`;
+          });
+
+          bgShapes.forEach((shape, index) => {
+               const speed = (index + 1) * 0.1;
+               shape.style.transform = `translateY(${scrolled * speed}px)`;
+          });
+     });
+
+     // Animaciones de entrada para los indicadores de tipos
+     const typeIndicators = document.querySelectorAll('.type-indicator');
+     typeIndicators.forEach((indicator, index) => {
+          indicator.style.opacity = '0';
+          indicator.style.transform = 'translateY(30px)';
+
+          setTimeout(() => {
+               indicator.style.transition = 'all 0.6s ease';
+               indicator.style.opacity = '1';
+               indicator.style.transform = 'translateY(0)';
+          }, 2000 + (index * 200));
+     });
 }
 
 // Ejecutar cuando el DOM esté completamente cargado

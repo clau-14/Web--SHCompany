@@ -1,0 +1,504 @@
+/* Cancelación de Servicios - Estilos */
+
+.hero-cancelacion {
+     position: relative;
+     min-height: 90vh;
+     display: flex;
+     align-items: center;
+     overflow: hidden;
+     background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f4c75 100%);
+}
+
+.hero-background {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     z-index: 1;
+}
+
+.hero-particles {
+     position: absolute;
+     width: 100%;
+     height: 100%;
+}
+
+.particle {
+     position: absolute;
+     background: rgba(242, 92, 5, 0.3);
+     border-radius: 50%;
+     animation: float 6s ease-in-out infinite;
+}
+
+.particle:nth-child(1) {
+     width: 4px;
+     height: 4px;
+     top: 20%;
+     left: 10%;
+     animation-delay: 0s;
+}
+
+.particle:nth-child(2) {
+     width: 6px;
+     height: 6px;
+     top: 60%;
+     left: 80%;
+     animation-delay: 1s;
+}
+
+.particle:nth-child(3) {
+     width: 3px;
+     height: 3px;
+     top: 80%;
+     left: 20%;
+     animation-delay: 2s;
+}
+
+.particle:nth-child(4) {
+     width: 5px;
+     height: 5px;
+     top: 30%;
+     left: 70%;
+     animation-delay: 3s;
+}
+
+.particle:nth-child(5) {
+     width: 4px;
+     height: 4px;
+     top: 70%;
+     left: 50%;
+     animation-delay: 4s;
+}
+
+.particle:nth-child(6) {
+     width: 7px;
+     height: 7px;
+     top: 10%;
+     left: 60%;
+     animation-delay: 5s;
+}
+
+.particle:nth-child(7) {
+     width: 3px;
+     height: 3px;
+     top: 90%;
+     left: 90%;
+     animation-delay: 1.5s;
+}
+
+.particle:nth-child(8) {
+     width: 5px;
+     height: 5px;
+     top: 40%;
+     left: 30%;
+     animation-delay: 2.5s;
+}
+
+@keyframes float {
+
+     0%,
+     100% {
+          transform: translateY(0px) rotate(0deg);
+          opacity: 0.5;
+     }
+
+     50% {
+          transform: translateY(-20px) rotate(180deg);
+          opacity: 1;
+     }
+}
+
+.hero-gradient {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background: radial-gradient(circle at 30% 50%, rgba(242, 92, 5, 0.1) 0%, transparent 50%);
+}
+
+.container {
+     position: relative;
+     z-index: 2;
+}
+
+.hero-content {
+     color: white;
+     padding: 2rem 0;
+}
+
+.hero-badge {
+     display: inline-flex;
+     align-items: center;
+     background: rgba(242, 92, 5, 0.2);
+     border: 1px solid rgba(242, 92, 5, 0.5);
+     padding: 0.5rem 1rem;
+     border-radius: 50px;
+     font-size: 0.875rem;
+     font-weight: 500;
+     margin-bottom: 1.5rem;
+     backdrop-filter: blur(10px);
+}
+
+.hero-title {
+     font-size: 3.5rem;
+     font-weight: 800;
+     line-height: 1.1;
+     margin-bottom: 1rem;
+}
+
+.title-highlight {
+     color: #f25c05;
+     display: block;
+}
+
+.title-main {
+     color: white;
+     display: block;
+}
+
+.hero-subtitle {
+     font-size: 1.5rem;
+     font-weight: 300;
+     margin-bottom: 1.5rem;
+     color: rgba(255, 255, 255, 0.9);
+}
+
+.hero-description {
+     font-size: 1.125rem;
+     line-height: 1.6;
+     margin-bottom: 2rem;
+     color: rgba(255, 255, 255, 0.8);
+}
+
+.hero-features {
+     display: flex;
+     gap: 2rem;
+     margin-bottom: 2.5rem;
+     flex-wrap: wrap;
+}
+
+.feature-item {
+     display: flex;
+     align-items: center;
+     gap: 0.5rem;
+     color: rgba(255, 255, 255, 0.9);
+}
+
+.feature-item i {
+     color: #f25c05;
+     font-size: 1.2rem;
+}
+
+.hero-buttons {
+     display: flex;
+     gap: 1rem;
+     flex-wrap: wrap;
+}
+
+.btn-hero-primary {
+     background: linear-gradient(45deg, #f25c05, #ff7b29);
+     border: none;
+     color: white;
+     padding: 1rem 2rem;
+     border-radius: 50px;
+     font-weight: 600;
+     text-decoration: none;
+     transition: all 0.3s ease;
+     box-shadow: 0 4px 15px rgba(242, 92, 5, 0.3);
+}
+
+.btn-hero-primary:hover {
+     transform: translateY(-2px);
+     box-shadow: 0 6px 20px rgba(242, 92, 5, 0.4);
+     color: white;
+}
+
+.btn-hero-secondary {
+     background: rgba(255, 255, 255, 0.1);
+     border: 2px solid rgba(255, 255, 255, 0.3);
+     color: white;
+     padding: 1rem 2rem;
+     border-radius: 50px;
+     font-weight: 600;
+     text-decoration: none;
+     transition: all 0.3s ease;
+     backdrop-filter: blur(10px);
+}
+
+.btn-hero-secondary:hover {
+     background: rgba(255, 255, 255, 0.2);
+     border-color: rgba(255, 255, 255, 0.5);
+     color: white;
+     transform: translateY(-2px);
+}
+
+.hero-visual {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     height: 100%;
+}
+
+.visual-container {
+     position: relative;
+     width: 400px;
+     height: 400px;
+}
+
+.visual-card {
+     position: absolute;
+     background: rgba(255, 255, 255, 0.1);
+     backdrop-filter: blur(20px);
+     border: 1px solid rgba(255, 255, 255, 0.2);
+     border-radius: 20px;
+     transition: all 0.3s ease;
+}
+
+.main-card {
+     width: 280px;
+     height: 180px;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     padding: 2rem;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     animation: mainCardFloat 4s ease-in-out infinite;
+}
+
+.card-icon i {
+     font-size: 3rem;
+     color: #f25c05;
+     margin-bottom: 1rem;
+}
+
+.card-content h3 {
+     color: white;
+     font-size: 1.5rem;
+     font-weight: 700;
+     margin-bottom: 0.5rem;
+}
+
+.card-content p {
+     color: rgba(255, 255, 255, 0.7);
+     margin: 0;
+}
+
+.card-status {
+     position: absolute;
+     top: 1rem;
+     right: 1rem;
+     width: 30px;
+     height: 30px;
+     border-radius: 50%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
+
+.card-status.success {
+     background: #28a745;
+}
+
+.card-status i {
+     color: white;
+     font-size: 1rem;
+}
+
+.secondary-card {
+     width: 120px;
+     height: 60px;
+     padding: 1rem;
+     display: flex;
+     align-items: center;
+     gap: 0.5rem;
+}
+
+.card-1 {
+     top: 20px;
+     left: 20px;
+     animation: secondaryFloat1 3s ease-in-out infinite;
+}
+
+.card-2 {
+     top: 20px;
+     right: 20px;
+     animation: secondaryFloat2 3.5s ease-in-out infinite;
+}
+
+.card-3 {
+     bottom: 20px;
+     left: 50%;
+     transform: translateX(-50%);
+     animation: secondaryFloat3 4.2s ease-in-out infinite;
+}
+
+.card-mini-icon i {
+     color: #f25c05;
+     font-size: 1.5rem;
+}
+
+.secondary-card span {
+     color: white;
+     font-size: 0.875rem;
+     font-weight: 600;
+}
+
+.floating-elements {
+     position: absolute;
+     width: 100%;
+     height: 100%;
+}
+
+.floating-icon {
+     position: absolute;
+     width: 40px;
+     height: 40px;
+     background: rgba(242, 92, 5, 0.2);
+     border-radius: 50%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     backdrop-filter: blur(10px);
+}
+
+.floating-icon i {
+     color: #f25c05;
+     font-size: 1.2rem;
+}
+
+.icon-1 {
+     top: 60px;
+     left: 300px;
+     animation: iconFloat1 2s ease-in-out infinite;
+}
+
+.icon-2 {
+     bottom: 80px;
+     right: 300px;
+     animation: iconFloat2 2.5s ease-in-out infinite;
+}
+
+.icon-3 {
+     top: 200px;
+     right: 50px;
+     animation: iconFloat3 3s ease-in-out infinite;
+}
+
+@keyframes mainCardFloat {
+
+     0%,
+     100% {
+          transform: translate(-50%, -50%) translateY(0px);
+     }
+
+     50% {
+          transform: translate(-50%, -50%) translateY(-10px);
+     }
+}
+
+@keyframes secondaryFloat1 {
+
+     0%,
+     100% {
+          transform: translateY(0px) rotate(0deg);
+     }
+
+     50% {
+          transform: translateY(-5px) rotate(2deg);
+     }
+}
+
+@keyframes secondaryFloat2 {
+
+     0%,
+     100% {
+          transform: translateY(0px) rotate(0deg);
+     }
+
+     50% {
+          transform: translateY(-8px) rotate(-2deg);
+     }
+}
+
+@keyframes secondaryFloat3 {
+
+     0%,
+     100% {
+          transform: translateX(-50%) translateY(0px);
+     }
+
+     50% {
+          transform: translateX(-50%) translateY(-6px);
+     }
+}
+
+@keyframes iconFloat1 {
+
+     0%,
+     100% {
+          transform: translateY(0px);
+     }
+
+     50% {
+          transform: translateY(-15px);
+     }
+}
+
+@keyframes iconFloat2 {
+
+     0%,
+     100% {
+          transform: translateY(0px);
+     }
+
+     50% {
+          transform: translateY(-12px);
+     }
+}
+
+@keyframes iconFloat3 {
+
+     0%,
+     100% {
+          transform: translateY(0px);
+     }
+
+     50% {
+          transform: translateY(-18px);
+     }
+}
+
+@media (max-width: 768px) {
+     .hero-title {
+          font-size: 2.5rem;
+     }
+
+     .hero-subtitle {
+          font-size: 1.25rem;
+     }
+
+     .hero-features {
+          gap: 1rem;
+     }
+
+     .visual-container {
+          width: 300px;
+          height: 300px;
+     }
+
+     .main-card {
+          width: 220px;
+          height: 140px;
+          padding: 1.5rem;
+     }
+
+     .secondary-card {
+          width: 100px;
+          height: 50px;
+          padding: 0.5rem;
+     }
+}

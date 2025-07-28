@@ -7,16 +7,16 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="./css/index.css">
-  <link rel="stylesheet" href="./css/pqrs.css">
+  <link rel="stylesheet" href="../css/index.css">
+  <link rel="stylesheet" href="../css/pqrs.css">
 </head>
 
 <body>
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top p-3">
     <div class="container">
-      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
-        <img src="./image/logo.png" alt="SH Company Logo" height="60">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="../index.html">
+        <img src="../image/logo.png" alt="SH Company Logo" height="60">
         <span>SH COMPANY</span>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav">
@@ -24,7 +24,7 @@
       </button>
       <div class="collapse navbar-collapse" id="menuNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
                     <li class="nav-item"><a class="nav-link" href="empresa.html">Empresa</a></li>
                     <li class="nav-item"><a class="nav-link" href="planes.html">Planes</a></li>
                     <li class="nav-item"><a class="nav-link active" href="pqrs.html">PQRS</a></li>
@@ -36,30 +36,146 @@
   </nav>
 
   <!-- Hero PQRS Header -->
-  <header class="pqrs-hero-section">
-    <div class="pqrs-particles">
-      <div class="pqrs-particle"></div>
-      <div class="pqrs-particle"></div>
-      <div class="pqrs-particle"></div>
-      <div class="pqrs-particle"></div>
-      <div class="pqrs-particle"></div>
+  <header class="hero-pqrs" role="banner">
+    <div class="hero-background" aria-hidden="true">
+      <div class="hero-waves">
+        <div class="wave wave-1"></div>
+        <div class="wave wave-2"></div>
+        <div class="wave wave-3"></div>
+      </div>
+      <div class="hero-grid">
+        <div class="grid-line"></div>
+        <div class="grid-line"></div>
+        <div class="grid-line"></div>
+        <div class="grid-line"></div>
+        <div class="grid-line"></div>
+      </div>
     </div>
+    
     <div class="container">
-      <div class="pqrs-hero-content">
-        <div class="pqrs-icon-container">
-          <i class="fas fa-comments pqrs-main-icon"></i>
-          <div class="pqrs-signal-waves">
-            <div class="pqrs-wave wave-1"></div>
-            <div class="pqrs-wave wave-2"></div>
-            <div class="pqrs-wave wave-3"></div>
+      <div class="row align-items-center min-vh-75">
+        <!-- Content Column -->
+        <div class="col-lg-6">
+          <div class="hero-content">
+            <div class="hero-badge">
+              <i class="fas fa-comments me-2" aria-hidden="true"></i>
+              <span>Sistema de Atención al Cliente</span>
+            </div>
+            
+            <h1 class="hero-title">
+              <span class="title-highlight">PQRS</span>
+              <span class="title-main">Digital</span>
+            </h1>
+            
+            <h2 class="hero-subtitle">
+              Tu opinión es <strong>importante</strong> para nosotros
+            </h2>
+            
+            <p class="hero-description">
+              Presenta tus <strong>Peticiones, Quejas, Reclamos y Sugerencias</strong> 
+              de manera fácil y rápida para mejorar continuamente nuestros servicios.
+            </p>
+            
+            <!-- Hero Metrics - Stats de PQRS -->
+            <div class="hero-metrics" role="group" aria-label="Estadísticas PQRS">
+              <div class="metric-item">
+                <div class="metric-value">15</div>
+                <div class="metric-label">Días máx. respuesta</div>
+              </div>
+              <div class="metric-item">
+                <div class="metric-value">24/7</div>
+                <div class="metric-label">Disponible</div>
+              </div>
+              <div class="metric-item">
+                <div class="metric-value">100%</div>
+                <div class="metric-label">Confidencial</div>
+              </div>
+            </div>
+            
+            <!-- CTA Buttons -->
+            <div class="hero-buttons">
+              <a href="#pqrsForm" class="btn btn-hero-primary" aria-label="Crear nueva PQRS">
+                <i class="fas fa-edit me-2" aria-hidden="true"></i>
+                Crear PQRS
+              </a>
+              <a href="https://wa.me/573148686245?text=Hola,%20necesito%20ayuda%20con%20una%20consulta%20sobre%20PQRS." 
+                 target="_blank" rel="noopener" class="btn btn-hero-secondary" aria-label="Consultar por WhatsApp">
+                <i class="fab fa-whatsapp me-2" aria-hidden="true"></i>
+                WhatsApp
+              </a>
+            </div>
           </div>
         </div>
-        <h1 class="pqrs-hero-title">PQRS</h1>
-        <h2 class="pqrs-hero-subtitle">Peticiones, Quejas, Reclamos y Sugerencias</h2>
-        <p class="pqrs-hero-description">
-          Tu opinión es importante para nosotros. Aquí puedes presentar tus peticiones, quejas, reclamos o sugerencias 
-          para mejorar continuamente nuestros servicios de internet y televisión.
-        </p>
+        
+        <!-- Visual Column -->
+        <div class="col-lg-6">
+          <div class="hero-visual">
+            <div class="pqrs-dashboard-container">
+              <div class="pqrs-dashboard-card">
+                <div class="dashboard-header">
+                  <h4>Panel PQRS</h4>
+                  <div class="status-indicator online" aria-label="Sistema en línea"></div>
+                </div>
+                
+                <!-- Tipos de PQRS -->
+                <div class="pqrs-types-grid">
+                  <div class="pqrs-type-box peticion">
+                    <div class="type-icon">
+                      <i class="fas fa-hand-paper" aria-hidden="true"></i>
+                    </div>
+                    <div class="type-data">
+                      <span class="type-name">Petición</span>
+                      <span class="type-desc">Solicitar información</span>
+                    </div>
+                  </div>
+                  
+                  <div class="pqrs-type-box queja">
+                    <div class="type-icon">
+                      <i class="fas fa-exclamation-triangle" aria-hidden="true"></i>
+                    </div>
+                    <div class="type-data">
+                      <span class="type-name">Queja</span>
+                      <span class="type-desc">Manifestar inconformidad</span>
+                    </div>
+                  </div>
+                  
+                  <div class="pqrs-type-box reclamo">
+                    <div class="type-icon">
+                      <i class="fas fa-gavel" aria-hidden="true"></i>
+                    </div>
+                    <div class="type-data">
+                      <span class="type-name">Reclamo</span>
+                      <span class="type-desc">Solicitar solución</span>
+                    </div>
+                  </div>
+                  
+                  <div class="pqrs-type-box sugerencia">
+                    <div class="type-icon">
+                      <i class="fas fa-lightbulb" aria-hidden="true"></i>
+                    </div>
+                    <div class="type-data">
+                      <span class="type-name">Sugerencia</span>
+                      <span class="type-desc">Compartir ideas</span>
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- Progress indicator -->
+                <div class="pqrs-progress-section">
+                  <div class="progress-header">
+                    <span>Proceso PQRS</span>
+                    <span class="progress-status">Activo</span>
+                  </div>
+                  <div class="progress-steps">
+                    <div class="step active">1. Envío</div>
+                    <div class="step">2. Revisión</div>
+                    <div class="step">3. Respuesta</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </header>
@@ -332,10 +448,10 @@
             <i class="fas fa-clock pqrs-info-icon"></i>
             <h5 class="pqrs-info-title">Tiempos de Respuesta</h5>
             <div class="pqrs-info-text">
-              <p><strong>Peticiones:</strong> 15 días hábiles</p>
-              <p><strong>Quejas:</strong> 15 días hábiles</p>
-              <p><strong>Reclamos:</strong> 15 días hábiles</p>
-              <p><strong>Sugerencias:</strong> 30 días hábiles</p>
+              <p><strong>Peticiones:</strong> 5 días hábiles</p>
+              <p><strong>Quejas:</strong> 5 días hábiles</p>
+              <p><strong>Reclamos:</strong> 5 días hábiles</p>
+              <p><strong>Sugerencias:</strong> 5 días hábiles</p>
             </div>
           </div>
         </div>
@@ -420,8 +536,8 @@
 
         <!-- Logo -->
         <div class="col-md-4 mb-3 mb-md-0">
-          <a href="/pqrs.html" class="d-inline-block">
-            <img src="./image/logo.png" alt="SH COMPANY SAS Logo" class="footer-logo">
+          <a href="pqrs.html" class="d-inline-block">
+            <img src="../image/logo.png" alt="SH COMPANY SAS Logo" class="footer-logo">
           </a>
         </div>
 
@@ -445,6 +561,6 @@
 
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="./js/pqrs.js"></script>
+  <script src="../js/pqrs.js"></script>
 </body>
 </html>
