@@ -70,6 +70,153 @@ img {
      transform: scale(1.05);
 }
 
+/* Tabla Responsiva para Móviles */
+@media (max-width: 768px) {
+     .table-responsive {
+          border: none;
+          overflow: visible;
+     }
+
+     .responsive-table {
+          display: none;
+     }
+
+     .mobile-metrics {
+          display: block;
+     }
+
+     .mobile-metric-card {
+          background: white;
+          border-radius: var(--border-radius);
+          box-shadow: var(--shadow-sm);
+          margin-bottom: 1rem;
+          padding: 1rem;
+          border-left: 4px solid var(--primary-orange);
+          transition: transform var(--transition-base), box-shadow var(--transition-base);
+          animation: fadeInUp 0.6s ease forwards;
+          opacity: 0;
+          transform: translateY(20px);
+     }
+
+     .mobile-metric-card:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+     }
+
+     .mobile-metric-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 0.75rem;
+          padding-bottom: 0.5rem;
+          border-bottom: 1px solid #eee;
+     }
+
+     .mobile-metric-month {
+          font-weight: 600;
+          color: var(--primary-orange);
+          font-size: 1.1rem;
+     }
+
+     .mobile-metric-status {
+          padding: 0.25rem 0.75rem;
+          border-radius: 20px;
+          font-size: 0.85rem;
+          font-weight: 500;
+     }
+
+     .mobile-metric-details {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+          gap: 0.75rem;
+     }
+
+     .mobile-metric-item {
+          text-align: center;
+          padding: 0.5rem;
+          background: rgba(248, 249, 250, 0.5);
+          border-radius: 6px;
+          transition: background-color var(--transition-base);
+     }
+
+     .mobile-metric-item:hover {
+          background: rgba(255, 149, 5, 0.1);
+     }
+
+     .mobile-metric-label {
+          font-size: 0.85rem;
+          color: #6c757d;
+          margin-bottom: 0.25rem;
+          font-weight: 500;
+     }
+
+     .mobile-metric-value {
+          font-size: 1.25rem;
+          font-weight: 600;
+          color: #333;
+     }
+
+     .mobile-metric-value.success {
+          color: var(--primary-success);
+     }
+
+     .mobile-metric-value.warning {
+          color: var(--primary-warning);
+     }
+
+     .mobile-metric-value.primary {
+          color: var(--primary-blue);
+     }
+}
+
+@media (min-width: 769px) {
+     .mobile-metrics {
+          display: none;
+     }
+
+     .responsive-table {
+          display: table;
+     }
+}
+
+/* Optimización para tablets */
+@media (max-width: 992px) and (min-width: 769px) {
+     .table {
+          font-size: 0.9rem;
+     }
+
+     .table th,
+     .table td {
+          padding: 0.6rem 0.5rem;
+     }
+
+     .badge {
+          font-size: 0.75rem;
+          padding: 0.35rem 0.6rem;
+     }
+}
+
+/* Mejoras para pantallas muy pequeñas */
+@media (max-width: 576px) {
+     .mobile-metric-details {
+          grid-template-columns: 1fr;
+          gap: 0.5rem;
+     }
+
+     .mobile-metric-item {
+          padding: 0.75rem;
+     }
+
+     .mobile-metric-value {
+          font-size: 1.5rem;
+     }
+
+     .mobile-metric-card {
+          margin-bottom: 0.75rem;
+          padding: 0.75rem;
+     }
+}
+
 /* Animaciones con GPU acceleration */
 @keyframes fadeInUp {
      0% {
@@ -84,6 +231,10 @@ img {
 }
 
 .metric-row {
+     animation: fadeInUp 0.6s ease forwards;
+}
+
+.mobile-metric-card {
      animation: fadeInUp 0.6s ease forwards;
 }
 
