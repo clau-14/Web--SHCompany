@@ -124,18 +124,24 @@
 
 /* Animaciones especiales para botones de contacto */
 @keyframes pulseWhatsApp {
-     0%, 100% {
+
+     0%,
+     100% {
           box-shadow: 0 8px 30px rgba(37, 211, 102, 0.3);
      }
+
      50% {
           box-shadow: 0 8px 30px rgba(37, 211, 102, 0.6);
      }
 }
 
 @keyframes pulsePhone {
-     0%, 100% {
+
+     0%,
+     100% {
           box-shadow: 0 8px 30px rgba(30, 58, 138, 0.3);
      }
+
      50% {
           box-shadow: 0 8px 30px rgba(30, 58, 138, 0.6);
      }
@@ -146,6 +152,7 @@
           transform: scale(1);
           opacity: 1;
      }
+
      100% {
           transform: scale(1.8);
           opacity: 0;
@@ -157,6 +164,7 @@
           transform: scale(1);
           opacity: 1;
      }
+
      100% {
           transform: scale(1.8);
           opacity: 0;
@@ -168,6 +176,7 @@
      0% {
           background-position: -200px 0;
      }
+
      100% {
           background-position: calc(200px + 100%) 0;
      }
@@ -181,7 +190,7 @@
      left: 0;
      width: 100%;
      height: 100%;
-     background: linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.3) 50%, transparent 70%);
+     background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.3) 50%, transparent 70%);
      background-size: 200px 100%;
      animation: shimmer 3s ease-in-out infinite;
      border-radius: 20px;
@@ -1219,80 +1228,80 @@
           font-size: 2.5rem;
      }
 
-          .protection-shield {
-               width: 150px;
-               height: 150px;
-          }
+     .protection-shield {
+          width: 150px;
+          height: 150px;
+     }
 
-          .protection-shield i {
-               font-size: 3rem;
-          }
+     .protection-shield i {
+          font-size: 3rem;
+     }
 
-          .law-card,
-          .commitment-card {
-               margin-bottom: 1.5rem;
-          }
+     .law-card,
+     .commitment-card {
+          margin-bottom: 1.5rem;
+     }
 
-          .statistics-section {
-               padding: 2rem 1rem;
-          }
+     .statistics-section {
+          padding: 2rem 1rem;
+     }
 
-          .stat-item {
-               padding: 1.5rem 1rem;
-          }
+     .stat-item {
+          padding: 1.5rem 1rem;
+     }
 
-          .stat-number {
-               font-size: 2.5rem;
-          }
+     .stat-number {
+          font-size: 2.5rem;
+     }
 
-          .impact-card {
-               margin-bottom: 1.5rem;
-               padding: 1.5rem;
-          }
-          
-          /* Botones de contacto en móvil */
-          .contact-btn {
-               min-height: 70px;
-               margin-bottom: 0.75rem;
-               padding: 1rem;
-               gap: 0.75rem;
-          }
-          
-          .btn-icon {
-               font-size: 1.5rem;
-               width: 40px;
-               height: 40px;
-               min-width: 40px;
-          }
-          
-          .btn-title {
-               font-size: 1rem;
-          }
-          
-          .btn-subtitle {
-               font-size: 0.8rem;
-          }
+     .impact-card {
+          margin-bottom: 1.5rem;
+          padding: 1.5rem;
+     }
 
-          .contact-title {
-               font-size: 2rem;
-          }
+     /* Botones de contacto en móvil */
+     .contact-btn {
+          min-height: 70px;
+          margin-bottom: 0.75rem;
+          padding: 1rem;
+          gap: 0.75rem;
+     }
 
-          .contact-hero-bg {
-               padding: 2rem 1rem;
-          }
+     .btn-icon {
+          font-size: 1.5rem;
+          width: 40px;
+          height: 40px;
+          min-width: 40px;
+     }
 
-          .contact-shield {
-               width: 120px;
-               height: 120px;
-          }
+     .btn-title {
+          font-size: 1rem;
+     }
 
-          .contact-shield i {
-               font-size: 3rem;
-          }
+     .btn-subtitle {
+          font-size: 0.8rem;
+     }
 
-          .contact-features {
-               margin-bottom: 2rem;
-          }
+     .contact-title {
+          font-size: 2rem;
+     }
+
+     .contact-hero-bg {
+          padding: 2rem 1rem;
+     }
+
+     .contact-shield {
+          width: 120px;
+          height: 120px;
+     }
+
+     .contact-shield i {
+          font-size: 3rem;
+     }
+
+     .contact-features {
+          margin-bottom: 2rem;
+     }
 
      .contact-btn {
           padding: 1.25rem 1rem;
@@ -1317,24 +1326,26 @@
 
      .btn-subtitle {
           font-size: 0.85rem;
-     }          .btn-content {
-               align-items: center;
-          }
-
-          .btn-icon {
-               font-size: 1.5rem;
-               min-width: 35px;
-          }
-
-          .report-section {
-               padding: 2rem 1rem;
-               margin: 2rem 0;
-          }
-
-          .report-button {
-               min-width: 100%;
-               margin: 0.25rem 0;
-               padding: 0.875rem 1.5rem;
-               font-size: 0.9rem;
-          }
      }
+
+     .btn-content {
+          align-items: center;
+     }
+
+     .btn-icon {
+          font-size: 1.5rem;
+          min-width: 35px;
+     }
+
+     .report-section {
+          padding: 2rem 1rem;
+          margin: 2rem 0;
+     }
+
+     .report-button {
+          min-width: 100%;
+          margin: 0.25rem 0;
+          padding: 0.875rem 1.5rem;
+          font-size: 0.9rem;
+     }
+}
