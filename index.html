@@ -25,6 +25,7 @@
   <link rel="stylesheet" href="css/index.css">
 </head>
 
+
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark sticky-top p-3">
     <div class="container">
@@ -48,59 +49,51 @@
     </div>
   </nav>
 
-  <section class="hero-section">
-    <div id="heroCarrusel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
-      <div class="carousel-inner">
-
-        <div class="carousel-item active position-relative">
-          <video autoplay muted loop playsinline webkit-playsinline>
-            <source src="image/video1.mp4" type="video/mp4">
-            Tu navegador no soporta el elemento de video.
-          </video>
-          <div class="overlay"></div>
-          <div class="carousel-caption-custom">
+  <!-- Hero Header Animado SH COMPANY SAS -->
+  <header class="hero-shcompany">
+    <!-- Fondo animado de puntos y red fibra óptica -->
+    <canvas id="fiber-bg-canvas" class="fiber-bg-canvas"></canvas>
+    <div class="container hero-content">
+      <div class="row align-items-center">
+        <div class="col-lg-7 text-lg-start text-center">
+          <h1 class="display-2 fw-bold mb-3 text-white hero-title">Bienvenido a <span class="text-orange">SH COMPANY SAS</span></h1>
+          <p class="lead text-white-50 mb-4 hero-subtitle">Internet de alta velocidad en fibra óptica para Ayapel</p>
+          <div class="d-flex flex-wrap gap-3 justify-content-lg-start justify-content-center mb-4 hero-panels">
+            <div class="hero-panel bg-orange animate-panel">
+              <i class="bi bi-wifi fs-2"></i>
+              <span>Internet Fibra</span>
+            </div>
+            <div class="hero-panel bg-blue animate-panel" style="animation-delay:0.2s;">
+              <i class="bi bi-tv fs-2"></i>
+              <span>TV HD</span>
+            </div>
+            <div class="hero-panel bg-green animate-panel" style="animation-delay:0.4s;">
+              <i class="bi bi-headset fs-2"></i>
+              <span>Soporte</span>
+            </div>
           </div>
         </div>
-
-        <div class="carousel-item position-relative">
-          <video autoplay muted loop playsinline webkit-playsinline>
-            <source src="image/Video4.mp4" type="video/mp4">
-            Tu navegador no soporta el elemento de video.
-          </video>
-          <div class="overlay"></div>
-          <div class="carousel-caption-custom">
-            <h1 class="fw-bold display-5">Conectividad sin límites</h1>
-            <p class="lead">Explora nuestra red con calidad y velocidad garantizada</p>
+        <div class="col-lg-5 d-flex justify-content-lg-end justify-content-center mt-lg-0 mt-4">
+          <div class="fiber-svg-visual">
+            <svg width="220" height="220" viewBox="0 0 220 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="110" cy="110" r="100" stroke="#2cd166" stroke-width="6" opacity="0.2"/>
+              <circle cx="110" cy="110" r="80" stroke="#3e08c6" stroke-width="4" opacity="0.3"/>
+              <circle cx="110" cy="110" r="60" stroke="#f25c05" stroke-width="3" opacity="0.5"/>
+              <circle class="fiber-dot" cx="110" cy="30" r="8" fill="#fff"/>
+              <circle class="fiber-dot" cx="190" cy="110" r="8" fill="#fff"/>
+              <circle class="fiber-dot" cx="110" cy="190" r="8" fill="#fff"/>
+              <circle class="fiber-dot" cx="30" cy="110" r="8" fill="#fff"/>
+              <circle class="fiber-dot" cx="170" cy="50" r="5" fill="#2cd166"/>
+              <circle class="fiber-dot" cx="170" cy="170" r="5" fill="#3e08c6"/>
+              <circle class="fiber-dot" cx="50" cy="170" r="5" fill="#f25c05"/>
+              <circle class="fiber-dot" cx="50" cy="50" r="5" fill="#fff"/>
+              <animateTransform attributeName="transform" type="rotate" from="0 110 110" to="360 110 110" dur="10s" repeatCount="indefinite"/>
+            </svg>
           </div>
         </div>
-
-        <div class="carousel-item position-relative">
-          <img src="image/ayapel.png" alt="Banner 3" class="w-100 h-100" style="object-fit: cover;">
-          <div class="overlay"></div>
-          <div class="carousel-caption-custom">
-            <h1 class="fw-bold display-5">Conéctate sin límites</h1>
-            <p class="lead">Internet veloz y confiable para tu hogar o empresa</p>
-            <a href="/planes" class="btn-elegante mt-2">Ver Planes</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- botones carousel-inner -->
-      <button class="carousel-control-prev" type="button" data-bs-target="#heroCarrusel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon"></span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#heroCarrusel" data-bs-slide="next">
-        <span class="carousel-control-next-icon"></span>
-      </button>
-
-      <!-- Indicadores -->
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#heroCarrusel" data-bs-slide-to="0" class="active"></button>
-        <button type="button" data-bs-target="#heroCarrusel" data-bs-slide-to="1"></button>
-        <button type="button" data-bs-target="#heroCarrusel" data-bs-slide-to="2"></button>
       </div>
     </div>
-  </section>
+  </header>
 
   <section class="py-5" id="television">
     <div class="container">
@@ -297,7 +290,7 @@
   <!-- Zona de cobertura -->
   <section id="cobertura" class="py-5 bg-light">
     <div class="container">
-      <h2 class="text-center mb-5">Zonas de Cobertura</h2>
+      <h2 class="text-center mb-5">Zonas de Cobertura de SH Company</h2>
       <div class="row g-4 justify-content-center">
 
         <!-- Ayapel -->
@@ -353,8 +346,8 @@
           <div class="bg-secondary rounded-4 p-4 h-100 shadow-lg">
             <p class="fs-5 fst-italic">"Desde que contratamos SH Company, el internet nunca ha fallado. El mejor servicio que hemos tenido."</p>
             <hr class="border-light opacity-25">
-            <h6 class="mb-0">Carlos Gutiérrez</h6>
-            <small class="text-muted">Cliente empresarial</small>
+            <h6 class="mb-0">Mario Gutiérrez</h6>
+            <small class="text-muted">Cliente empresarial de SH Company</small>
           </div>
         </div>
         <!-- Testimonio 2 -->
@@ -363,7 +356,7 @@
             <p class="fs-5 fst-italic">"Excelente atención al cliente y soporte inmediato. Muy recomendados."</p>
             <hr class="border-light opacity-25">
             <h6 class="mb-0">María Fernanda</h6>
-            <small class="text-muted">Emprendedora digital</small>
+            <small class="text-muted">Emprendedora digital de SH Company</small>
           </div>
         </div>
         <!-- Testimonio 3 -->
@@ -371,8 +364,8 @@
           <div class="bg-secondary rounded-4 p-4 h-100 shadow-lg">
             <p class="fs-5 fst-italic">"Trabajo desde casa y nunca he tenido problemas con la velocidad. 10/10."</p>
             <hr class="border-light opacity-25">
-            <h6 class="mb-0">Luis Mendoza</h6>
-            <small class="text-muted">Desarrollador remoto</small>
+            <h6 class="mb-0">cesar Mendoza</h6>
+            <small class="text-muted">Desarrollador remoto de SH Company</small>
           </div>
         </div>
       </div>
@@ -574,6 +567,6 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/index.js"></script>
 </body>
-
 </html>
